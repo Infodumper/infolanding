@@ -5,151 +5,940 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Arquitectura de Software, Business Intelligence e Inteligencia Artificial para Empresas.">
-    <title>Ignacio Vizoso | Sistemas Humanos</title>
+        content="Ignacio Vizoso — Arquitecto de Software, Datos, Automatización y Agentes de Inteligencia Artificial. Enfoque: Procesos → Datos → Software → Automatización → IA.">
+    <meta name="author" content="Ignacio Vizoso">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://infodumper.com/">
+    <title>Ignacio Vizoso | Software Architect & AI Systems</title>
 
+    <!-- Open Graph / Redes Sociales & AI Search Engines -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ignacio Vizoso | Sistemas & IA">
+    <meta property="og:title" content="Ignacio Vizoso — Arquitecto de Software, Datos & Agentes IA">
+    <meta property="og:description" content="Especialista en transformar complejidad operativa en software ágil, bases de datos confiables, automatizaciones de alto rendimiento y agentes de IA aplicados.">
+    <meta property="og:url" content="https://infodumper.com/">
+    <meta property="og:image" content="https://infodumper.com/styles/images/developer_hero.jpg">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ignacio Vizoso — Arquitecto de Software, Datos & Agentes IA">
+    <meta name="twitter:description" content="Especialista en transformar complejidad operativa en software ágil, bases de datos confiables y agentes de IA.">
+    <meta name="twitter:image" content="https://infodumper.com/styles/images/developer_hero.jpg">
+
+    <!-- Google Fonts: Outfit & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/human.css">
+    <link rel="stylesheet" href="styles/human.css?v=5">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) para Motores de Búsqueda y GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://infodumper.com/#person",
+          "name": "Ignacio Vizoso",
+          "alternateName": "Nacho Vizoso",
+          "jobTitle": "Arquitecto de Software, Consultor de Datos & Sistemas de IA",
+          "description": "Especialista en diseño de procesos, bases de datos relacionales, backend modular, automatizaciones y agentes de inteligencia artificial aplicados al negocio.",
+          "url": "https://infodumper.com/sobre-mi.html",
+          "image": "https://infodumper.com/styles/images/developer_hero.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/ignacio-vizoso/",
+            "https://github.com/Infodumper"
+          ],
+          "knowsAbout": [
+            "Python", "PHP", "JavaScript", "HTML", "CSS", "PowerShell",
+            "SQL", "MySQL", "MariaDB", "PostgreSQL", "SQLite", "Pandas", "NumPy", "Matplotlib", "Jupyter", "Colab",
+            "REST API", "FastAPI", "PHP/PDO", "JSON",
+            "LLM", "RAG", "Agentes de IA", "Ollama", "Qwen", "LM Studio", "MCP (Model Context Protocol)",
+            "Tailwind CSS", "Interfaces web", "Desarrollo Frontend",
+            "Git", "GitHub", "Linux", "Vercel", "Hostinger", "InfinityFree", "CI/CD", "Servidores locales",
+            "Jira", "Notion", "Documentación técnica", "Gestión de requerimientos",
+            "ISO 27001", "Gestión de riesgos", "SoA", "Seguridad web", "ISO 42001", "IA responsable",
+            "Revit", "BIM", "Dynamo", "Cómputos métricos", "Presupuestos", "OPC"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://infodumper.com/#service",
+          "name": "Ignacio Vizoso — Consultoría de Sistemas & IA (Infodumper)",
+          "url": "https://infodumper.com/",
+          "founder": {
+            "@id": "https://infodumper.com/#person"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mar del Plata",
+            "addressRegion": "Buenos Aires",
+            "addressCountry": "AR"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Mar del Plata"
+            },
+            {
+              "@type": "Country",
+              "name": "Argentina"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Remoto / Global"
+            }
+          ],
+          "description": "Consultoría y arquitectura de software para empresas: transformación de procesos operativos en bases de datos relacionales, backend modular, automatizaciones y agentes de inteligencia artificial.",
+          "priceRange": "$$"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://infodumper.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué tipo de empresas se benefician más de este enfoque?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pymes y empresas que experimentan cuellos de botella por tareas manuales repetitivas, datos dispersos en hojas de cálculo no estructuradas o que buscan incorporar Inteligencia Artificial con rigor técnico y seguridad real, sin modas pasajeras."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo abordan la privacidad de datos al usar Inteligencia Artificial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Priorizo arquitecturas locales y privadas con modelos open-source (Ollama, Qwen, LM Studio) o entornos cerrados donde los datos corporativos nunca alimentan modelos externos, garantizando el cumplimiento de normativas de seguridad (ISO 27001 e ISO 42001)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo es la dinámica de trabajo y plazos de entrega?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Iniciamos con un diagnóstico técnico y de procesos sin costo. Luego estructuramos el proyecto en sprints modulares con entregables funcionales en semanas, no meses. Cada módulo agrega valor inmediato e independiente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Trabajan con sistemas y software ya existentes en la empresa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Gran parte del trabajo consiste en integrar herramientas actuales mediante APIs REST, automatizar pasajes de datos entre plataformas o construir capas analíticas sobre bases de datos preexistentes."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
     <site-header base-path="./"></site-header>
 
-    <main class="content-wrapper">
+    <main>
 
-        <!-- Hero -->
-        <section class="hero-section">
-            <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <span class="overline">ESTRUCTURA PARA TU EMPRESA</span>
-                <h1 style="font-size: clamp(2.34rem, 6.3vw, 4.05rem);">Información útil, <em
-                        class="serif accent-text">automatización</em> e IA para tu Empresa</h1>
-                <p class="hero-subtitle">
-                    Ayudo a empresas a resolver problemas complejos mejorando los sistemas, ordenando sus datos e
-                    implementando agentes de inteligencia artificial.
-                    Soluciones escalables que generan resultados reales.
-                </p>
-                <div class="hero-ctas" style="justify-content: center;">
-                    <a href="contacto.html" class="btn btn-primary">AGENDAR UNA REUNIÓN</a>
+        <!-- ==========================================
+             HERO CAROUSEL — 4 Pilares de Especialidad
+             (Similar a landing_asesora_ms)
+             ========================================== -->
+        <section class="hero-carousel-section" id="inicio" aria-label="Carrusel Principal de Especialidades">
+            <div class="hero-carousel-track" id="hero-carousel-track">
+                
+                <!-- Slide 1: Datos y BI -->
+                <div class="hero-slide active" data-slide="0">
+                    <img src="styles/images/carrusel/slide_datos_bi.jpg" alt="Datos y Business Intelligence" class="hero-slide-bg" loading="eager" fetchpriority="high">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-slide-kicker"><i class="fas fa-database"></i> 01 / Arquitectura de Datos</span>
+                        <h2 class="hero-slide-title title-blue">Datos & Business Intelligence</h2>
+                        <p class="hero-slide-desc">
+                            Modelado relacional riguroso, pipelines con SQL/Pandas y tableros analíticos en tiempo real para tomar decisiones estratégicas con certeza matemática.
+                        </p>
+                        <div class="hero-slide-actions">
+                            <a href="#skills" class="btn-hero-primary" onclick="filterCategory('datos')">
+                                <i class="fas fa-layer-group"></i> Ver Stack de Datos
+                            </a>
+                            <a href="contacto.html" class="btn-hero-secondary">
+                                <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Sistemas y Automatizaciones -->
+                <div class="hero-slide" data-slide="1">
+                    <img src="styles/images/carrusel/slide_sistemas_auto.jpg" alt="Sistemas y Automatizaciones" class="hero-slide-bg" loading="lazy">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-slide-kicker kicker-green"><i class="fas fa-cogs"></i> 02 / Software & Operativa</span>
+                        <h2 class="hero-slide-title title-green">Sistemas & Automatizaciones</h2>
+                        <p class="hero-slide-desc">
+                            Desarrollo de CRM, ERP y APIs REST modulares de alta velocidad. Eliminación sistemática de cuellos de botella y tareas manuales repetitivas.
+                        </p>
+                        <div class="hero-slide-actions">
+                            <a href="#enfoque" class="btn-hero-primary" style="background: #5A8259;">
+                                <i class="fas fa-diagram-project"></i> Conocer Metodología
+                            </a>
+                            <a href="#casos" class="btn-hero-secondary">
+                                <i class="fas fa-laptop-code"></i> Ver Casos Reales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Agentes de IA -->
+                <div class="hero-slide" data-slide="2">
+                    <img src="styles/images/carrusel/slide_agentes_ia.jpg" alt="Agentes de Inteligencia Artificial" class="hero-slide-bg" loading="lazy">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-slide-kicker"><i class="fas fa-brain"></i> 03 / Inteligencia Artificial Aplicada</span>
+                        <h2 class="hero-slide-title title-blue">Agentes de IA & Sistemas RAG</h2>
+                        <p class="hero-slide-desc">
+                            Agentes cognitivos autónomos y sistemas de recuperación sobre datos privados corporativos con modelos locales (Ollama/Qwen) y seguridad ISO 42001.
+                        </p>
+                        <div class="hero-slide-actions">
+                            <a href="#skills" class="btn-hero-primary" onclick="filterCategory('ia')">
+                                <i class="fas fa-robot"></i> Explorar Agentes
+                            </a>
+                            <a href="contacto.html" class="btn-hero-secondary">
+                                <i class="fas fa-envelope"></i> Consultar Integración
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: AEC (Arquitectura, Ingeniería y Construcción) -->
+                <div class="hero-slide" data-slide="3">
+                    <img src="styles/images/carrusel/slide_aec_bim.jpg" alt="AEC Arquitectura Ingeniería y Construcción" class="hero-slide-bg" loading="lazy">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-slide-kicker kicker-green"><i class="fas fa-cubes"></i> 04 / Ingeniería & Modelado</span>
+                        <h2 class="hero-slide-title title-green">AEC & Automatización BIM</h2>
+                        <p class="hero-slide-desc">
+                            Automatización algorítmica con Dynamo y Revit, estructuración de cómputos métricos, presupuestos y control técnico integral para proyectos de construcción.
+                        </p>
+                        <div class="hero-slide-actions">
+                            <a href="#skills" class="btn-hero-primary" onclick="filterCategory('bim')" style="background: #5A8259;">
+                                <i class="fas fa-drafting-compass"></i> Ver Especialidad AEC
+                            </a>
+                            <a href="contacto.html" class="btn-hero-secondary">
+                                <i class="fas fa-comments"></i> Hablemos de tu Proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles del Carrusel -->
+            <button class="hero-arrow prev" id="hero-prev-btn" aria-label="Slide anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-arrow next" id="hero-next-btn" aria-label="Slide siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores / Dots -->
+            <div class="hero-carousel-nav" id="hero-dots-container" role="tablist" aria-label="Selector de Diapositivas">
+                <button class="hero-dot active" data-index="0" aria-label="Ir a slide 1: Datos y BI"></button>
+                <button class="hero-dot" data-index="1" aria-label="Ir a slide 2: Sistemas y Automatizaciones"></button>
+                <button class="hero-dot" data-index="2" aria-label="Ir a slide 3: Agentes de IA"></button>
+                <button class="hero-dot" data-index="3" aria-label="Ir a slide 4: AEC"></button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             MENÚ DE ICONOS / RIBBON DE ESPECIALIDADES
+             (Stack Tecnológico & Especialidades)
+             ========================================== -->
+        <section class="ribbon-section" aria-label="Especialidades y Stack Tecnológico">
+            <div class="ribbon-container">
+                <div class="ribbon-header-title">Explorá mis especialidades técnicas</div>
+                <div class="ribbon-scroll" id="ribbon-scroll">
+                    
+                    <!-- 1. IA & Agentes -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('ia')" aria-label="Ver especialidad IA y Agentes">
+                        <div class="ribbon-icon-wrapper" style="color: #726c8d; background: #ebeaf2;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="ribbon-label">IA & Agentes</span>
+                    </a>
+
+                    <!-- 2. Programación -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('programacion')" aria-label="Ver especialidad Programación">
+                        <div class="ribbon-icon-wrapper" style="color: #4a6b8c; background: #e3ebf2;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="ribbon-label">Programación</span>
+                    </a>
+
+                    <!-- 3. Datos & Analítica -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('datos')" aria-label="Ver especialidad Datos y Analítica">
+                        <div class="ribbon-icon-wrapper" style="color: #528999; background: #e3edf0;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="ribbon-label">Datos & BI</span>
+                    </a>
+
+                    <!-- 4. Backend & APIs -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('backend')" aria-label="Ver especialidad Backend y APIs">
+                        <div class="ribbon-icon-wrapper" style="color: #558273; background: #e5ede8;">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <span class="ribbon-label">Backend & APIs</span>
+                    </a>
+
+                    <!-- 5. Seguridad & Normas -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('seguridad')" aria-label="Ver especialidad Seguridad y Normas">
+                        <div class="ribbon-icon-wrapper" style="color: #995d6a; background: #f0e6e8;">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <span class="ribbon-label">Seguridad & ISO</span>
+                    </a>
+
+                    <!-- 6. DevOps & Infra -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('devops')" aria-label="Ver especialidad DevOps e Infraestructura">
+                        <div class="ribbon-icon-wrapper" style="color: #526071; background: #e8ecf0;">
+                            <i class="fas fa-cloud-arrow-up"></i>
+                        </div>
+                        <span class="ribbon-label">DevOps & Infra</span>
+                    </a>
+
+                    <!-- 7. Frontend & UI -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('frontend')" aria-label="Ver especialidad Frontend y UI">
+                        <div class="ribbon-icon-wrapper" style="color: #9b7a4e; background: #f2ebe3;">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <span class="ribbon-label">Frontend & UI</span>
+                    </a>
+
+                    <!-- 8. Gestión & Req. -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('gestion')" aria-label="Ver especialidad Gestión y Requerimientos">
+                        <div class="ribbon-icon-wrapper" style="color: #836787; background: #eee6f0;">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <span class="ribbon-label">Gestión Ágil</span>
+                    </a>
+
+                    <!-- 9. AEC / BIM -->
+                    <a href="#skills" class="ribbon-item" onclick="filterCategory('bim')" aria-label="Ver especialidad AEC y BIM">
+                        <div class="ribbon-icon-wrapper" style="color: #8c7349; background: #f0ebe1;">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <span class="ribbon-label">AEC / BIM</span>
+                    </a>
+
                 </div>
             </div>
         </section>
 
-        <!-- Qué resuelvo -->
-        <section class="section-center" style="padding-top: 2rem;">
-            <span class="overline">QUÉ RESUELVO</span>
-            <h2>Tres pilares para un crecimiento <em class="serif">sostenible</em></h2>
-            <div class="hide-scrollbar"
-                style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding-bottom: 1rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin-top: 3rem;">
-                <a href="soluciones/datos.html" class="process-item"
-                    style="display: block; text-decoration: none; color: inherit; text-align: left; padding: 2rem; background: var(--card-bg); border: 1px solid var(--card-border); box-shadow: var(--card-shadow); border-radius: 12px; flex: 0 0 260px; scroll-snap-align: start;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                        <img src="styles/icons/database.png" alt="Datos" style="width: 48px; height: 48px;">
-                        <h3 style="margin: 0; font-size: 1.25rem;">Datos</h3>
+        <!-- ==========================================
+             PERFIL PERSONAL & ENFOQUE
+             ========================================== -->
+        <section class="hero-wrapper" id="perfil">
+            <div class="content-wrapper">
+                <div class="hero-grid">
+                    <!-- Left: Hero Text & Profile -->
+                    <div class="hero-text-col">
+                        <span class="hero-intro">Hola, soy</span>
+                        <h1 class="hero-name">Ignacio Vizoso</h1>
+                        <h2 class="hero-role">Arquitecto de Software & Consultor de Sistemas</h2>
+
+                        <p class="hero-tagline">
+                            Especialista en transformar la complejidad operativa en software ágil, bases de datos confiables, 
+                            automatizaciones de alto rendimiento y agentes de inteligencia artificial aplicados al negocio.
+                        </p>
+
+                        <!-- Pipeline Enfoque Pill -->
+                        <div class="hero-pipeline-badge" title="Enfoque de Arquitectura">
+                            <span class="pipe-step">Procesos</span>
+                            <span class="pipe-arrow">&rarr;</span>
+                            <span class="pipe-step">Datos</span>
+                            <span class="pipe-arrow">&rarr;</span>
+                            <span class="pipe-step">Software</span>
+                            <span class="pipe-arrow">&rarr;</span>
+                            <span class="pipe-step">Automatización</span>
+                            <span class="pipe-arrow">&rarr;</span>
+                            <span class="pipe-step highlight">IA</span>
+                        </div>
+
+                        <!-- Social Icons Row -->
+                        <div class="hero-social-row">
+                            <a href="https://github.com/Infodumper" target="_blank" rel="noopener noreferrer" class="social-badge" title="GitHub / Infodumper" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ignacio-vizoso/" target="_blank" rel="noopener noreferrer" class="social-badge" title="LinkedIn / Ignacio Vizoso" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="contacto.html" class="social-badge" title="Enviar Mensaje" aria-label="Contacto por Correo">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-badge" title="WhatsApp" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+
+                        <!-- Hero Action Buttons -->
+                        <div class="hero-actions">
+                            <a href="contacto.html" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
+                            </a>
+                            <a href="#skills" class="btn btn-outline">
+                                <i class="fas fa-code"></i> Explorar Stack
+                            </a>
+                        </div>
                     </div>
-                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Datos confiables, Tableros y
-                        estructuración de la información para la toma de decisiones estratégicas.</p>
-                </a>
-                <a href="#" class="process-item"
-                    style="display: block; text-decoration: none; color: inherit; text-align: left; padding: 2rem; background: var(--card-bg); border: 1px solid var(--card-border); box-shadow: var(--card-shadow); border-radius: 12px; flex: 0 0 260px; scroll-snap-align: start;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                        <img src="styles/icons/gear.png" alt="Automatización" style="width: 48px; height: 48px;">
-                        <h3 style="margin: 0; font-size: 1.25rem;">Automatización</h3>
+
+                    <!-- Right: Developer at Desk Illustration -->
+                    <div class="hero-illustration-col">
+                        <div class="hero-illustration-card">
+                            <img src="styles/images/developer_hero.jpg" alt="Ignacio Vizoso - Arquitectura de Software e IA" class="hero-developer-img">
+                        </div>
                     </div>
-                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Optimización de flujos de trabajo,
-                        integración de sistemas y reducción de tareas manuales repetitivas.</p>
-                </a>
-                <a href="#" class="process-item"
-                    style="display: block; text-decoration: none; color: inherit; text-align: left; padding: 2rem; background: var(--card-bg); border: 1px solid var(--card-border); box-shadow: var(--card-shadow); border-radius: 12px; flex: 0 0 260px; scroll-snap-align: start;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                        <img src="styles/icons/robot.png" alt="Agentes IA" style="width: 48px; height: 48px;">
-                        <h3 style="margin: 0; font-size: 1.25rem;">Agentes IA</h3>
-                    </div>
-                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Implementación de asistentes
-                        inteligentes y procesos cognitivos para potenciar tus operaciones.</p>
-                </a>
+                </div>
             </div>
         </section>
 
-        <!-- Servicios Destacados -->
-        <section id="servicios">
-            <div class="section-header">
-                <span class="overline">SERVICIOS DESTACADOS</span>
-                <h2>Soluciones que <em class="serif">escalan</em><br> con tu empresa</h2>
-            </div>
-            <div class="card-grid">
-                <a href="#" class="eleven-card" style="text-decoration: none; color: inherit;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div class="service-icon outline-icon" style="margin-bottom: 0;">
-                            <img src="styles/icons/hard-drives.png" alt="Sistemas" style="width: 48px; height: 48px;">
+        <!-- ==========================================
+             ENFOQUE: Procesos → Datos → Software → Automatización → IA
+             ========================================== -->
+        <section class="pipeline-section" id="enfoque">
+            <div class="content-wrapper">
+                <div class="section-center" style="padding-top: 0; padding-bottom: 0;">
+                    <span class="overline overline-green">METODOLOGÍA INTEGRAL</span>
+                    <h2 class="title-green">De los Procesos a la Inteligencia Artificial</h2>
+                    <p class="section-subtitle">
+                        No implemento herramientas aisladas: sigo una secuencia lógica probada donde cada fase 
+                        fortalece la siguiente para lograr sistemas duraderos y rentables.
+                    </p>
+                </div>
+
+                <div class="pipeline-grid">
+                    <!-- 01. Procesos -->
+                    <div class="pipeline-card">
+                        <span class="pipeline-step-badge">Fase 01</span>
+                        <h3>Procesos</h3>
+                        <p>Mapeo de flujos operativos, detección de cuellos de botella y definición rigurosa de requerimientos para que el software resuelva necesidades genuinas.</p>
+                        <div class="pipeline-tags">
+                            <span class="pipeline-tag">Jira</span>
+                            <span class="pipeline-tag">Notion</span>
+                            <span class="pipeline-tag">Requerimientos</span>
                         </div>
-                        <h3 style="margin: 0;">Sistemas Empresariales</h3>
                     </div>
-                    <p>CRM, ERP, control de stock, compras y ventas centralizadas.</p>
-                </a>
-                <a href="#" class="eleven-card" style="text-decoration: none; color: inherit;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div class="service-icon outline-icon" style="margin-bottom: 0;">
-                            <img src="styles/icons/chart-pie-slice.png" alt="BI" style="width: 48px; height: 48px;">
+
+                    <!-- 02. Datos -->
+                    <div class="pipeline-card">
+                        <span class="pipeline-step-badge">Fase 02</span>
+                        <h3>Datos</h3>
+                        <p>Modelado relacional, bases de datos consistentes y delegación de cálculos pesados al motor SQL. Tableros analíticos e higiene de datos.</p>
+                        <div class="pipeline-tags">
+                            <span class="pipeline-tag">SQL</span>
+                            <span class="pipeline-tag">PostgreSQL</span>
+                            <span class="pipeline-tag">Pandas</span>
                         </div>
-                        <h3 style="margin: 0;">Business Intelligence</h3>
                     </div>
-                    <p>Dashboards, KPIs y reporting automatizado para visibilidad total.</p>
-                </a>
-                <a href="#" class="eleven-card" style="text-decoration: none; color: inherit;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div class="service-icon outline-icon" style="margin-bottom: 0;">
-                            <img src="styles/icons/brain.png" alt="IA" style="width: 48px; height: 48px;">
+
+                    <!-- 03. Software -->
+                    <div class="pipeline-card">
+                        <span class="pipeline-step-badge">Fase 03</span>
+                        <h3>Software</h3>
+                        <p>Arquitectura modular (Vertical Slicing), APIs REST veloces y frontends reactivos sin dependencias innecesarias que ralenticen la operativa.</p>
+                        <div class="pipeline-tags">
+                            <span class="pipeline-tag">Python</span>
+                            <span class="pipeline-tag">FastAPI</span>
+                            <span class="pipeline-tag">PHP/PDO</span>
                         </div>
-                        <h3 style="margin: 0;">Inteligencia Artificial</h3>
                     </div>
-                    <p>Agentes inteligentes, automatización y análisis cognitivo.</p>
-                </a>
+
+                    <!-- 04. Automatización -->
+                    <div class="pipeline-card">
+                        <span class="pipeline-step-badge">Fase 04</span>
+                        <h3>Automatización</h3>
+                        <p>Sincronización de sistemas, eliminación sistemática de tareas manuales repetitivas, scripting en entornos Linux/PowerShell y pipelines CI/CD.</p>
+                        <div class="pipeline-tags">
+                            <span class="pipeline-tag">PowerShell</span>
+                            <span class="pipeline-tag">CI/CD</span>
+                            <span class="pipeline-tag">Linux</span>
+                        </div>
+                    </div>
+
+                    <!-- 05. IA -->
+                    <div class="pipeline-card" style="border-color: rgba(37, 99, 235, 0.4); background: linear-gradient(to bottom, #ffffff, #eff6ff);">
+                        <span class="pipeline-step-badge" style="background: var(--accent); color: #fff;">Fase 05</span>
+                        <h3>Inteligencia Artificial</h3>
+                        <p>Agentes cognitivos con roles específicos, RAG sobre bases de conocimiento privado, modelos locales (Ollama/Qwen) y gobernanza ISO 42001.</p>
+                        <div class="pipeline-tags">
+                            <span class="pipeline-tag">RAG</span>
+                            <span class="pipeline-tag">Agentes</span>
+                            <span class="pipeline-tag">MCP</span>
+                            <span class="pipeline-tag">Ollama</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Casos de Éxito Destacados -->
-        <section id="casos" class="section-center">
-            <span class="overline">RESULTADOS REALES</span>
-            <h2>Casos de <em class="serif">Éxito</em></h2>
-            <div class="hide-scrollbar"
-                style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding-bottom: 1.5rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin-top: 3rem; text-align: left;">
-                <a href="casos/clip26.html" class="eleven-card"
-                    style="text-decoration: none; color: inherit; flex: 0 0 85%; max-width: 350px; scroll-snap-align: start;">
-                    <span class="status-badge">Gestión</span>
-                    <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">CliP26</h3>
-                    <p>Pequeño sistema de Gestión de grupos para Venta directa, ideal para uso desde el celular.</p>
-                </a>
-                <a href="casos/ms-bellass.html" class="eleven-card"
-                    style="text-decoration: none; color: inherit; flex: 0 0 85%; max-width: 350px; scroll-snap-align: start;">
-                    <span class="status-badge">Ecommerce</span>
-                    <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">MS-Bellass</h3>
-                    <p>Landing page para promoción de servicios profesionales con una tienda integrada para la venta de
-                        productos.</p>
-                </a>
-                <a href="casos/tienda-joyas.html" class="eleven-card"
-                    style="text-decoration: none; color: inherit; flex: 0 0 85%; max-width: 350px; scroll-snap-align: start;">
-                    <span class="status-badge">Ecommerce</span>
-                    <h3 style="font-size: 1.25rem; margin-top: 1.5rem;">Tienda Joyas</h3>
-                    <p>Catálogo avanzado con filtros por material y talles, e interfaz de administración para gestión de
-                        stock y pedidos.</p>
-                </a>
+        <!-- ==========================================
+             QUÉ RESUELVO (CARRUSEL HORIZONTAL OBLIGATORIO)
+             ========================================== -->
+        <section class="resuelvo-section" id="resuelvo">
+            <div class="content-wrapper">
+                <div class="section-center" style="padding: 0;">
+                    <span class="overline overline-blue">QUÉ RESUELVO</span>
+                    <h2 class="title-blue">Tres pilares para un crecimiento sostenible</h2>
+                    <p class="section-subtitle">
+                        Soluciones arquitectónicas diseñadas para empresas que necesitan orden, escala y automatización.
+                    </p>
+                </div>
+
+                <!-- Carrusel con scroll horizontal obligatorio según regla de usuario -->
+                <div class="carrusel-pilares">
+                    <!-- Pilar 1: Datos -->
+                    <a href="soluciones/datos.html" class="pilar-card">
+                        <div class="pilar-icon-wrapper">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Datos & Business Intelligence</h3>
+                        <p>Bases de datos confiables, modelado relacional riguroso y tableros en tiempo real para tomar decisiones con certeza matemática.</p>
+                        <ul class="pilar-features">
+                            <li><i class="fas fa-check"></i> Estructuración SQL (Postgres / MySQL)</li>
+                            <li><i class="fas fa-check"></i> Pipelines con Pandas & NumPy</li>
+                            <li><i class="fas fa-check"></i> Dashboards y KPIs automatizados</li>
+                        </ul>
+                    </a>
+
+                    <!-- Pilar 2: Software & Automatización -->
+                    <div class="pilar-card">
+                        <div class="pilar-icon-wrapper">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Sistemas & Automatización</h3>
+                        <p>Desarrollo a medida de CRM, ERP y APIs REST de alto rendimiento. Conexión de herramientas y eliminación de trabajo manual reiterativo.</p>
+                        <ul class="pilar-features">
+                            <li><i class="fas fa-check"></i> Arquitectura limpia en FastAPI & PHP</li>
+                            <li><i class="fas fa-check"></i> Scripts PowerShell & cron jobs en Linux</li>
+                            <li><i class="fas fa-check"></i> Integración fluida entre plataformas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pilar 3: Agentes IA -->
+                    <div class="pilar-card">
+                        <div class="pilar-icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Agentes e Inteligencia Artificial</h3>
+                        <p>Implementación de agentes cognitivos y sistemas RAG locales que interactúan con tus documentos y datos sin exponer información sensible.</p>
+                        <ul class="pilar-features">
+                            <li><i class="fas fa-check"></i> Modelos locales privados (Ollama, LM Studio)</li>
+                            <li><i class="fas fa-check"></i> Protocolos MCP y arquitecturas RAG</li>
+                            <li><i class="fas fa-check"></i> IA Responsable bajo norma ISO 42001</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- CTA Final -->
-        <section id="contacto" class="section-contacto">
-            <div class="section-center">
-                <span class="overline">HABLEMOS</span>
-                <h2>¿Empezamos a darle <em class="serif">forma</em> a tu proyecto?</h2>
-                <p>Agenda una reunión sin compromisos para analizar la situación de tu negocio.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="contacto.html" class="btn btn-primary btn-full"
-                        style="max-width: 300px; margin: 0 auto;">AGENDAR REUNIÓN</a>
+        <!-- ==========================================
+             STACK TÉCNICO & SKILLS (PERFIL TÉCNICO COMPLETO)
+             ========================================== -->
+        <section class="skills-section" id="skills">
+            <div class="content-wrapper">
+                <div class="section-center" style="padding-top: 0; padding-bottom: 1rem;">
+                    <span class="overline overline-green">PERFIL TÉCNICO</span>
+                    <h2 class="title-green">Stack Tecnológico & Especialidades</h2>
+                    <p class="section-subtitle">
+                        Herramientas dominadas y aplicadas en producción para construir software seguro, escalable e inteligente.
+                    </p>
+                </div>
+
+                <!-- Filtros Interactivos por Categoría -->
+                <div class="skills-filters-nav" role="tablist">
+                    <button class="filter-chip active" data-filter="all">Todos (9)</button>
+                    <button class="filter-chip" data-filter="ia">IA & Agentes</button>
+                    <button class="filter-chip" data-filter="datos">Datos</button>
+                    <button class="filter-chip" data-filter="backend">Backend</button>
+                    <button class="filter-chip" data-filter="programacion">Programación</button>
+                    <button class="filter-chip" data-filter="seguridad">Seguridad & ISO</button>
+                    <button class="filter-chip" data-filter="devops">DevOps & Infra</button>
+                    <button class="filter-chip" data-filter="frontend">Frontend</button>
+                    <button class="filter-chip" data-filter="gestion">Gestión</button>
+                    <button class="filter-chip" data-filter="bim">AEC / BIM</button>
+                </div>
+
+                <!-- Grilla de Habilidades Técnicas -->
+                <div class="skills-grid" id="skills-container">
+
+                    <!-- 1. IA -->
+                    <div class="skill-category-card" data-category="ia">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-ai">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Inteligencia Artificial</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Cognitivo & Agentes</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Diseño de sistemas RAG sobre bases de conocimiento corporativo, agentes autónomos y ejecución de modelos locales privados.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">LLM</span>
+                            <span class="tech-badge featured">RAG</span>
+                            <span class="tech-badge featured">Agentes</span>
+                            <span class="tech-badge">Ollama</span>
+                            <span class="tech-badge">Qwen</span>
+                            <span class="tech-badge">LM Studio</span>
+                            <span class="tech-badge featured">MCP</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 2. PROGRAMACIÓN -->
+                    <div class="skill-category-card" data-category="programacion">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-prog">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Programación</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Lenguajes Core</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Desarrollo multiplataforma, scripts de automatización de tareas y construcción de lógica de negocio modular y limpia.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">Python</span>
+                            <span class="tech-badge featured">PHP</span>
+                            <span class="tech-badge featured">JavaScript</span>
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">PowerShell</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 3. DATOS -->
+                    <div class="skill-category-card" data-category="datos">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-data">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Datos & Analítica</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">SQL & Data Science</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Modelado de bases de datos relacionales, optimización de consultas complejas y análisis estadístico exploratorio.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">SQL</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">MariaDB</span>
+                            <span class="tech-badge featured">PostgreSQL</span>
+                            <span class="tech-badge">SQLite</span>
+                            <span class="tech-badge featured">Pandas</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">Matplotlib</span>
+                            <span class="tech-badge">Jupyter</span>
+                            <span class="tech-badge">Colab</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 4. BACKEND -->
+                    <div class="skill-category-card" data-category="backend">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-backend">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Backend & APIs</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Arquitectura de Servicios</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Creación de APIs REST rápidas y seguras con tipado estricto, manejo transaccional PDO y estructuración JSON.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">REST API</span>
+                            <span class="tech-badge featured">FastAPI</span>
+                            <span class="tech-badge">PHP / PDO</span>
+                            <span class="tech-badge">JSON</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 5. SEGURIDAD -->
+                    <div class="skill-category-card" data-category="seguridad">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-sec">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Seguridad & Normas</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Gobernanza & Riesgos</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Gestión integral de riesgos de la información, seguridad web y marcos de adopción responsable de Inteligencia Artificial.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">ISO 27001</span>
+                            <span class="tech-badge">Gestión de riesgos</span>
+                            <span class="tech-badge">SoA</span>
+                            <span class="tech-badge">Seguridad web</span>
+                            <span class="tech-badge featured">ISO 42001</span>
+                            <span class="tech-badge">IA responsable</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 6. DEVOPS / INFRA -->
+                    <div class="skill-category-card" data-category="devops">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-devops">
+                                <i class="fas fa-cloud-arrow-up"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>DevOps & Infraestructura</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Despliegue & Servidores</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Control de versiones, pipelines de integración y entrega continua, gestión en Linux y servidores locales y cloud.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">Git</span>
+                            <span class="tech-badge">GitHub</span>
+                            <span class="tech-badge featured">Linux</span>
+                            <span class="tech-badge">Vercel</span>
+                            <span class="tech-badge">Hostinger</span>
+                            <span class="tech-badge">InfinityFree</span>
+                            <span class="tech-badge featured">CI/CD</span>
+                            <span class="tech-badge">Servidores locales</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 7. FRONTEND -->
+                    <div class="skill-category-card" data-category="frontend">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-frontend">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Frontend & UI</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Interfaces Web</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Construcción de interfaces interactivas, responsivas y accesibles con código ligero y estilos mantenibles.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">JavaScript</span>
+                            <span class="tech-badge featured">Tailwind CSS</span>
+                            <span class="tech-badge">Interfaces web</span>
+                            <span class="tech-badge">Vanilla CSS</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 8. GESTIÓN -->
+                    <div class="skill-category-card" data-category="gestion">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-mgmt">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>Gestión & Requerimientos</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Metodologías Ágiles</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Documentación técnica de arquitectura, levantamiento de especificaciones funcionales y seguimiento de entregables.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">Jira</span>
+                            <span class="tech-badge featured">Notion</span>
+                            <span class="tech-badge">Documentación</span>
+                            <span class="tech-badge">Gestión de requerimientos</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- 9. AEC / BIM -->
+                    <div class="skill-category-card" data-category="bim">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon icon-bim">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="skill-card-title-group">
+                                <h3>AEC / BIM</h3>
+                                <span class="overline" style="font-size: 0.7rem; margin: 0;">Modelado & Cómputos</span>
+                            </div>
+                            <button class="skill-expand-btn" aria-label="Desplegar tecnologías" title="Desplegar tecnologías">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="skill-card-desc">Automatización algorítmica de modelos con Dynamo, estructuración de cómputos métricos, presupuestos y control de obra.</p>
+                        <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">Revit</span>
+                            <span class="tech-badge featured">BIM</span>
+                            <span class="tech-badge featured">Dynamo</span>
+                            <span class="tech-badge">Cómputos</span>
+                            <span class="tech-badge">Presupuestos</span>
+                            <span class="tech-badge">OPC</span>
+                        </div>
+                        <button class="skill-toggle-trigger" type="button" aria-expanded="false">
+                            <span class="toggle-text">Ver tecnologías</span>
+                            <i class="fas fa-plus toggle-icon"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CASOS DE ÉXITO & PROYECTOS
+             ========================================== -->
+        <section class="proyectos-section" id="casos">
+            <div class="content-wrapper">
+                <div class="section-center" style="padding: 0;">
+                    <span class="overline overline-blue">PROYECTOS DESTACADOS</span>
+                    <h2 class="title-blue">Resultados y Sistemas en Producción</h2>
+                    <p class="section-subtitle">
+                        Implementaciones reales construidas combinando procesos optimizados, datos y software a medida.
+                    </p>
+                </div>
+
+                <div class="proyectos-grid">
+                    <!-- Caso 1 -->
+                    <a href="casos/clip26.html" class="proyecto-card">
+                        <span class="proyecto-tag">Gestión Móvil</span>
+                        <h3>CliP26</h3>
+                        <p>Sistema ligero de gestión de grupos operativos y venta directa con sincronización en tiempo real y optimizado para uso en dispositivos móviles.</p>
+                        <span class="proyecto-link">Ver Caso de Estudio <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Caso 2 -->
+                    <a href="casos/ms-bellass.html" class="proyecto-card">
+                        <span class="proyecto-tag">Plataforma Web</span>
+                        <h3>MS-Bellass</h3>
+                        <p>Landing page interactiva para promoción de servicios profesionales con tienda integrada, cotización dinámica y catálogo de productos.</p>
+                        <span class="proyecto-link">Ver Caso de Estudio <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Caso 3 -->
+                    <a href="casos/tienda-joyas.html" class="proyecto-card">
+                        <span class="proyecto-tag">E-Commerce & Stock</span>
+                        <h3>Tienda Joyas</h3>
+                        <p>Catálogo avanzado con filtros dinámicos por material y medidas, administración de stock en vivo y control automatizado de pedidos.</p>
+                        <span class="proyecto-link">Ver Caso de Estudio <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PREGUNTAS FRECUENTES (FAQ)
+             ========================================== -->
+        <section class="faq-section" id="faq">
+            <div class="content-wrapper">
+                <div class="section-center" style="padding-top: 0; padding-bottom: 0;">
+                    <span class="overline overline-green">PREGUNTAS FRECUENTES</span>
+                    <h2 class="title-green">Dudas habituales sobre la metodología</h2>
+                    <p class="section-subtitle">
+                        Claridad y transparencia desde el primer contacto técnico.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>¿Qué tipo de empresas se benefician más de este enfoque? <i class="fas fa-chevron-down"></i></summary>
+                        <p>Pymes y empresas que experimentan cuellos de botella por tareas manuales repetitivas, datos dispersos en hojas de cálculo no estructuradas o que buscan incorporar Inteligencia Artificial con rigor técnico y seguridad real, sin modas pasajeras.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>¿Cómo abordan la privacidad de datos al usar Inteligencia Artificial? <i class="fas fa-chevron-down"></i></summary>
+                        <p>Priorizo arquitecturas locales y privadas con modelos open-source (Ollama, Qwen, LM Studio) o entornos cerrados donde los datos corporativos nunca alimentan modelos externos, garantizando el cumplimiento de normativas de seguridad (ISO 27001 e ISO 42001).</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>¿Cómo es la dinámica de trabajo y plazos de entrega? <i class="fas fa-chevron-down"></i></summary>
+                        <p>Iniciamos con un diagnóstico técnico y de procesos sin costo. Luego estructuramos el proyecto en sprints modulares con entregables funcionales en semanas, no meses. Cada módulo agrega valor inmediato e independiente.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>¿Trabajan con sistemas y software ya existentes en la empresa? <i class="fas fa-chevron-down"></i></summary>
+                        <p>Sí. Gran parte del trabajo consiste en integrar herramientas actuales mediante APIs REST, automatizar pasajes de datos entre plataformas o construir capas analíticas sobre bases de datos preexistentes.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CTA FINAL
+             ========================================== -->
+        <section class="cta-section" id="contacto">
+            <div class="content-wrapper">
+                <div class="cta-box">
+                    <span class="overline overline-blue">HABLEMOS</span>
+                    <h2 class="title-blue">¿Empezamos a darle estructura a tus sistemas?</h2>
+                    <p>
+                        Coordinemos una sesión de diagnóstico sin compromiso para analizar los procesos, 
+                        los datos y el potencial de automatización de tu negocio.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a href="contacto.html" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.05rem;">
+                            <i class="fas fa-calendar-alt"></i> Agendar Diagnóstico Sin Cargo
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                            <i class="fab fa-whatsapp"></i> Chat Directo
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -158,14 +947,166 @@
 
     <site-footer base-path="./"></site-footer>
 
-    <script>
-        const nav = document.querySelector('.glass-nav');
-        window.addEventListener('scroll', () => {
-            nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,0.05)' : 'none';
-            nav.style.background = window.scrollY > 50 ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.85)';
-        }, { passive: true });
-    </script>
+    <!-- Componentes y Scripts -->
     <script src="./scripts/components.js"></script>
+
+    <!-- Scripts de Interactividad: Carrusel Principal, Ribbon y Filtrado de Skills -->
+    <script>
+        // ─── Filtrado Global de Skills por Categoría ───
+        function filterCategory(category) {
+            const filterBtns = document.querySelectorAll('.filter-chip');
+            const skillCards = document.querySelectorAll('.skill-category-card');
+
+            filterBtns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            skillCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    setTimeout(() => { card.style.opacity = '1'; }, 10);
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // ─── 1. Inicialización de Filtros de Skills ───
+            const filterBtns = document.querySelectorAll('.filter-chip');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const cat = btn.getAttribute('data-filter');
+                    filterCategory(cat);
+                });
+            });
+
+            // ─── 2. Inicialización del Carrusel Hero ───
+            const track = document.getElementById('hero-carousel-track');
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.hero-dot');
+            const prevBtn = document.getElementById('hero-prev-btn');
+            const nextBtn = document.getElementById('hero-next-btn');
+
+            if (track && slides.length > 0) {
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+                let autoSlideInterval;
+
+                function updateSlide(index) {
+                    currentSlide = (index + totalSlides) % totalSlides;
+                    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    slides.forEach((slide, idx) => {
+                        slide.classList.toggle('active', idx === currentSlide);
+                    });
+
+                    dots.forEach((dot, idx) => {
+                        dot.classList.toggle('active', idx === currentSlide);
+                    });
+                }
+
+                function nextSlide() {
+                    updateSlide(currentSlide + 1);
+                }
+
+                function prevSlide() {
+                    updateSlide(currentSlide - 1);
+                }
+
+                function startAutoPlay() {
+                    clearInterval(autoSlideInterval);
+                    autoSlideInterval = setInterval(nextSlide, 7000);
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        nextSlide();
+                        startAutoPlay();
+                    });
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        prevSlide();
+                        startAutoPlay();
+                    });
+                }
+
+                dots.forEach((dot, idx) => {
+                    dot.addEventListener('click', () => {
+                        updateSlide(idx);
+                        startAutoPlay();
+                    });
+                });
+
+                // Pausar con hover
+                const carouselSection = document.getElementById('inicio');
+                if (carouselSection) {
+                    carouselSection.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+                    carouselSection.addEventListener('mouseleave', startAutoPlay);
+                }
+
+                // Soporte táctil / swipe
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                track.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                track.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    if (touchEndX < touchStartX - 40) {
+                        nextSlide();
+                        startAutoPlay();
+                    }
+                    if (touchEndX > touchStartX + 40) {
+                        prevSlide();
+                        startAutoPlay();
+                    }
+                }
+
+                // Iniciar rotación automática
+                startAutoPlay();
+            }
+
+            // ─── 3. Despliegue/Colapso de Tecnologías en Skill Cards ───
+            const allSkillCards = document.querySelectorAll('.skill-category-card');
+            allSkillCards.forEach(card => {
+                const expandBtn = card.querySelector('.skill-expand-btn');
+                const toggleTrigger = card.querySelector('.skill-toggle-trigger');
+                const toggleText = toggleTrigger ? toggleTrigger.querySelector('.toggle-text') : null;
+
+                function toggleCard(e) {
+                    if (e) e.stopPropagation();
+                    const isExpanded = card.classList.toggle('expanded');
+                    if (expandBtn) {
+                        expandBtn.setAttribute('aria-expanded', isExpanded);
+                        expandBtn.setAttribute('title', isExpanded ? 'Ocultar tecnologías' : 'Desplegar tecnologías');
+                    }
+                    if (toggleTrigger) {
+                        toggleTrigger.setAttribute('aria-expanded', isExpanded);
+                    }
+                    if (toggleText) {
+                        toggleText.textContent = isExpanded ? 'Ocultar tecnologías' : 'Ver tecnologías';
+                    }
+                }
+
+                if (expandBtn) expandBtn.addEventListener('click', toggleCard);
+                if (toggleTrigger) toggleTrigger.addEventListener('click', toggleCard);
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,2 +1,49 @@
+# robots.txt — Optimizado para Motores de Búsqueda y Modelos de Inteligencia Artificial (GEO / AEO)
+
 User-agent: *
 Allow: /
+
+# OpenAI Crawlers & Search
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini & Extended AI
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Cohere
+User-agent: Cohere-ai
+Allow: /
+
+# Diffbot & Web Crawlers
+User-agent: Diffbot
+Allow: /
+
+# Declaración del Sitemap y Manifiesto de IA
+Sitemap: https://infodumper.com/sitemap.xml
+# Manifiesto LLMs: https://infodumper.com/llms.txt

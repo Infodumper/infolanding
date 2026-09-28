@@ -9,65 +9,157 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/human.css">
+    <link rel="stylesheet" href="../styles/human.css?v=6">
 </head>
 
 <body>
     <site-header base-path="../"></site-header>
 
-    <main class="content-wrapper">
-        <section class="section-center" style="padding-top: 3rem; padding-bottom: 2rem;">
-            <span class="overline">CASO DE ÉXITO</span>
-            <h1>Ecommerce <em class="serif accent-text" style="color: #c5a059;">Tienda Joyas</em></h1>
-            <p class="hero-subtitle">Plataforma integral de venta online con catálogo filtrable, control de stock y panel de administración para gestión de pedidos y productos.</p>
-        </section>
+    <main class="content-wrapper case-header-section">
+        <!-- Breadcrumb de Retorno -->
+        <a href="../index.html#casos" class="case-breadcrumb" aria-label="Volver a la sección de proyectos">
+            <i class="fas fa-arrow-left"></i> Volver a Proyectos
+        </a>
 
-        <section style="margin-top: 0;">
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #fdfaf5;">
-                <h3 style="color: #c5a059; margin-bottom: 1rem;"><i class="fas fa-bullseye" style="margin-right: 0.5rem;"></i> El Proyecto</h3>
-                <p>El objetivo fue desarrollar una tienda virtual elegante para promocionar la marca y sus productos. El desafío principal radicaba en ofrecer una experiencia de usuario refinada con opciones de búsqueda avanzadas para joyas, junto con un robusto panel de control (Admin) para la gestión completa del inventario y las ventas.</p>
-            </div>
+        <!-- Hero Card del Caso -->
+        <section class="case-hero-card">
+            <span class="overline overline-blue">CASO DE ESTUDIO · E-COMMERCE & STOCK</span>
+            <h1 class="title-blue">Ecommerce Tienda Joyas</h1>
+            <p class="case-hero-subtitle">
+                Catálogo avanzado de joyería con filtros dinámicos multinivel por material y medidas, administración de stock en tiempo real y panel de gestión de pedidos.
+            </p>
 
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #fafafa;">
-                <h3 style="color: #c5a059; margin-bottom: 1rem;"><i class="fas fa-layer-group" style="margin-right: 0.5rem;"></i> Funcionalidades Destacadas</h3>
-                <p>El desarrollo se enfocó en dos frentes: la experiencia de compra del cliente (Front-end) y el control operativo (Back-office):</p>
-                <ul style="list-style: none; padding-left: 0; margin-top: 1rem; color: var(--text-secondary);">
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-star text-accent" style="color:#c5a059; margin-right: 0.5rem;"></i> <strong>Sección de Destacados:</strong> Vitrina principal para productos en promoción y novedades.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-gem text-accent" style="color:#c5a059; margin-right: 0.5rem;"></i> <strong>Fichas de Producto Detalladas:</strong> Cada pieza cuenta con su imagen, código único, descripción completa, precio y control automático de stock.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-filter text-accent" style="color:#c5a059; margin-right: 0.5rem;"></i> <strong>Filtros Personalizados:</strong> Búsqueda avanzada por material (oro, plata, acero), tipo de producto (anillos, collares) y talles específicos.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-sort-amount-down text-accent" style="color:#c5a059; margin-right: 0.5rem;"></i> <strong>Ordenamiento Inteligente:</strong> Opciones para ordenar resultados por relevancia, precio ascendente/descendente o alfabéticamente.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-user-shield text-accent" style="color:#c5a059; margin-right: 0.5rem;"></i> <strong>Panel de Administración:</strong> Interfaz privada para la gestión de pedidos (seguimiento de estados: pendiente, enviado, entregado) y operaciones de alta o borrado de productos del catálogo.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Carrusel de imágenes -->
-        <section style="padding-top: 1rem; padding-bottom: 2rem;">
-            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-primary);">Primer Vistazo</h3>
-            <div class="hide-scrollbar" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding-bottom: 1.5rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; align-items: stretch;">
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/c5a059/fff?text=Catálogo" alt="Catálogo y Filtros" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover;">
-                    <p style="font-weight: 700; color: #c5a059; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">CATÁLOGO Y FILTROS</p>
+            <!-- Barra de Metadatos del Proyecto -->
+            <div class="case-meta-bar">
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Rubro / Dominio</span>
+                    <span class="case-meta-value">Joyería & Semijoyas</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/fdfaf5/c5a059?text=Ficha+Producto" alt="Ficha de Producto" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover; border: 1px solid #eee;">
-                    <p style="font-weight: 700; color: #c5a059; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">FICHA DE PRODUCTO</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Stack Tecnológico</span>
+                    <span class="case-meta-value">PHP 8 · MySQL · JavaScript</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/c5a059/fff?text=Panel+Admin" alt="Panel de Administración" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover;">
-                    <p style="font-weight: 700; color: #c5a059; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">PANEL DE CONTROL</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Arquitectura</span>
+                    <span class="case-meta-value">Catálogo Filtrable + Admin Panel</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Gestión</span>
+                    <span class="case-meta-value">Control de Stock en Vivo</span>
                 </div>
             </div>
         </section>
-        
-        <div style="text-align: center; margin: 4rem 0;">
-            <a href="../contacto.html" class="btn btn-primary" style="background-color: #c5a059; border-color: #c5a059;">¿NECESITAS ALGO SIMILAR?</a>
+
+        <!-- Layout en Cuadrícula Estructurada (2 Columnas) -->
+        <div class="case-layout-grid">
+            <!-- Columna Principal -->
+            <div class="case-main-col">
+                
+                <!-- 1. El Desafío -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>El Desafío & Objetivo</h3>
+                    </div>
+                    <p>
+                        Construir una tienda online con experiencia de usuario refinada que permitiera filtrar un amplio catálogo de piezas por múltiples atributos técnicos (material, tipo, medidas, stock disponible) y simplificara la administración de compras mediante un panel privado.
+                    </p>
+                </div>
+
+                <!-- 2. Funcionalidades Destacadas -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Funcionalidades Destacadas</h3>
+                    </div>
+                    <ul class="case-feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Filtros Dinámicos Combinados:</strong> Búsqueda instantánea por material (oro, plata, acero), categorías de producto y rangos de precios.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Fichas Técnicas con Stock Vivo:</strong> Visualización detallada de cada pieza con control automático de disponibilidad para evitar sobreventas.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Ordenamiento y Búsqueda Ágil:</strong> Ordenamiento inteligente por relevancia, precio y novedades con bajo consumo de recursos.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Panel de Control Administrativo:</strong> Interfaz privada para seguimiento de estados de pedidos (pendiente, armado, despachado) y gestión de catálogo.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Columna Lateral -->
+            <div class="case-sidebar-col">
+                
+                <!-- 3. Arquitectura de Datos -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Modelo Relacional</h3>
+                    </div>
+                    <p>
+                        Diseño SQL normalizado que permite búsquedas complejas indexadas en milisegundos, manteniendo el catálogo sincronizado entre la vitrina pública y el panel interno.
+                    </p>
+                </div>
+
+                <!-- 4. Impacto Operativo -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Impacto en Gestión</h3>
+                    </div>
+                    <p>
+                        Eliminación de consultas manuales de disponibilidad y agilización del despacho de pedidos en menos de 24 horas gracias a la trazabilidad del panel.
+                    </p>
+                </div>
+
+            </div>
         </div>
+
+        <!-- CTA Final -->
+        <section class="case-cta-banner">
+            <h2>¿Tenés un catálogo o inventario que querés digitalizar?</h2>
+            <p>
+                Diseño sistemas de catálogo, stock y administración a medida sin costos de suscripción recurrentes innecesarios.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="../contacto.html" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700;">
+                    <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
+                </a>
+                <a href="../index.html#casos" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">
+                    <i class="fas fa-th-large"></i> Ver Más Proyectos
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <site-footer base-path="../"></site-footer>
     <script src="../scripts/components.js"></script>
 </body>
+
 </html>

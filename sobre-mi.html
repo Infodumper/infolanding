@@ -4,106 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sobre Mí - Ignacio Vizoso. Sistemas, Datos e Inteligencia Artificial.">
+    <meta name="description" content="Sobre Mí — Ignacio Vizoso. Arquitecto de Software, Datos, Automatización e IA. Metodología: Procesos → Datos → Software → Automatización → IA.">
+    <meta name="author" content="Ignacio Vizoso">
+    <link rel="canonical" href="https://infodumper.com/sobre-mi.html">
     <title>Sobre Mí | Ignacio Vizoso</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Sobre Mí | Ignacio Vizoso — Arquitecto de Software & Consultor">
+    <meta property="og:description" content="Conoce la trayectoria, filosofía técnica y enfoque de trabajo de Ignacio Vizoso.">
+    <meta property="og:url" content="https://infodumper.com/sobre-mi.html">
+    <meta property="og:image" content="https://infodumper.com/styles/images/developer_hero.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/human.css">
+    <link rel="stylesheet" href="styles/human.css?v=5">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://infodumper.com/#person",
+      "name": "Ignacio Vizoso",
+      "jobTitle": "Arquitecto de Software y Consultor de Sistemas",
+      "url": "https://infodumper.com/sobre-mi.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/ignacio-vizoso/",
+        "https://github.com/Infodumper"
+      ]
+    }
+    </script>
 </head>
 
 <body>
     <site-header base-path="./"></site-header>
 
     <main class="content-wrapper">
-        <section class="section-center" style="padding-top: 6rem; padding-bottom: 2rem;">
-            <span class="overline">MI HISTORIA</span>
-            <h1>Especialista en <em class="serif accent-text">Sistemas Empresariales</em></h1>
+        <section class="section-center" style="padding-top: 4.5rem; padding-bottom: 2rem;">
+            <span class="overline overline-blue">PERFIL PROFESIONAL</span>
+            <h1 class="title-blue">Construyendo sistemas con sentido de negocio</h1>
+            <p class="section-subtitle">
+                Arquitecto de software y consultor enfocado en cerrar la brecha entre los procesos de las empresas 
+                y la tecnología de alto rendimiento.
+            </p>
         </section>
 
-        <section class="split-section" style="padding-top: 0;">
-            <div class="split-visual glass-visual">
-                <div class="visual-box" style="text-align: center;">
-                    <span class="hero-placeholder-icon">👋</span>
-                    <p style="font-weight: bold; color: var(--text-primary); margin: 0;">Ignacio Vizoso</p>
+        <section class="split-section" style="padding-top: 1rem; padding-bottom: 4rem;">
+            <div class="split-visual">
+                <div class="hero-illustration-card" style="margin: 0 auto; max-width: 440px;">
+                    <img src="styles/images/developer_hero.jpg" alt="Ignacio Vizoso" class="hero-developer-img">
                 </div>
             </div>
             <div class="split-content">
-                <h2>Cómo llegué hasta <em class="serif">aquí</em></h2>
+                <span class="overline overline-green">TRAYECTORIA & VISIÓN</span>
+                <h2 class="title-green">Cómo llegué hasta aquí</h2>
                 <div class="section-lead">
-                    <p>Comencé resolviendo problemas puntuales de automatización y rápidamente noté que el verdadero cuello de botella en las empresas no era la falta de software, sino la falta de lógica en cómo se estructuraban los datos y procesos.</p>
-                    <p>Así me especialicé en construir sistemas empresariales: plataformas que no solo cumplen una función, sino que integran equipos, automatizan la burocracia y escalan con el negocio.</p>
+                    <p>
+                        A lo largo de los años descubrí que el principal obstáculo en la digitalización de empresas no es 
+                        la falta de herramientas, sino la fragmentación de los datos y la ausencia de una arquitectura 
+                        ordenada que acompañe a los procesos reales de trabajo.
+                    </p>
+                    <p>
+                        Por eso mi enfoque integra desde el diseño de procesos (Jira, Notion) y la normalización de bases de datos relacionales (SQL, PostgreSQL, MySQL) 
+                        hasta el desarrollo de APIs REST modulares (FastAPI, PHP/PDO) y la adopción pragmática de Inteligencia Artificial (LLMs locales, RAG y protocolos MCP).
+                    </p>
                 </div>
 
-                <div style="margin-top: 3rem;">
-                    <h3>Mi Filosofía</h3>
+                <div style="margin-top: 2.5rem;">
+                    <h3>Pilares de mi Filosofía</h3>
                     <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
-                        <li style="margin-bottom: 1rem;">
-                            <i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i>
-                            <strong>Simplicidad:</strong> Menos herramientas, más funcionalidad.
+                        <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Simplicidad & Rendimiento:</strong> Preferencia por soluciones limpias y nativas sobre dependencias innecesarias que ralentizan o vuelven frágil la infraestructura.
+                            </div>
                         </li>
-                        <li style="margin-bottom: 1rem;">
-                            <i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i>
-                            <strong>Rendimiento:</strong> Sistemas rápidos que no frustran al usuario.
+                        <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Seguridad & Confidencialidad:</strong> Aplicación de buenas prácticas bajo estándares ISO 27001 (gestión de riesgos y SoA) e ISO 42001 (IA responsable).
+                            </div>
                         </li>
-                        <li style="margin-bottom: 1rem;">
-                            <i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i>
-                            <strong>Modularidad:</strong> Construir hoy pensando en lo que se necesitará mañana.
+                        <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem;"></i>
+                            <div>
+                                <strong>Modularidad & Escala:</strong> Desarrollar módulos que solucionan problemas inmediatos pero diseñados para crecer sin necesidad de rehacer la arquitectura.
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="section-center" style="background: rgba(255,255,255,0.02); padding: 4rem 2rem; border-radius: 12px;">
-            <span class="overline">METODOLOGÍA</span>
-            <h2>Cómo trabajo</h2>
-            <div class="process-grid" style="margin-top: 3rem;">
-                <div class="process-item">
-                    <span class="step-num">01</span>
-                    <h3>Análisis</h3>
-                    <p>Entender la raíz del problema.</p>
+        <!-- Enfoque de 5 Etapas -->
+        <section class="section-center" style="background: var(--bg-subtle); padding: 4rem 2rem; border-radius: var(--radius-lg); border: 1px solid var(--card-border);">
+            <span class="overline">ENFOQUE TRANSVERSAL</span>
+            <h2>La cadena de valor del sistema</h2>
+            <div class="pipeline-grid" style="margin-top: 2.5rem;">
+                <div class="pipeline-card">
+                    <span class="pipeline-step-badge">Paso 01</span>
+                    <h3>Procesos</h3>
+                    <p>Relevamiento funcional y eliminación de redundancias antes de escribir código.</p>
                 </div>
-                <div class="process-item">
-                    <span class="step-num">02</span>
-                    <h3>Arquitectura</h3>
-                    <p>Diseñar el sistema ideal.</p>
+                <div class="pipeline-card">
+                    <span class="pipeline-step-badge">Paso 02</span>
+                    <h3>Datos</h3>
+                    <p>Diseño relacional sólido, cómputos directos en base de datos y analítica limpia.</p>
                 </div>
-                <div class="process-item">
-                    <span class="step-num">03</span>
-                    <h3>Desarrollo</h3>
-                    <p>Construcción modular y sólida.</p>
+                <div class="pipeline-card">
+                    <span class="pipeline-step-badge">Paso 03</span>
+                    <h3>Software</h3>
+                    <p>APIs robustas, código tipado y arquitecturas modulares listas para producción.</p>
                 </div>
-                <div class="process-item">
-                    <span class="step-num">04</span>
-                    <h3>Validación</h3>
-                    <p>Pruebas en escenarios reales.</p>
+                <div class="pipeline-card">
+                    <span class="pipeline-step-badge">Paso 04</span>
+                    <h3>Automatización</h3>
+                    <p>Conexión de sistemas, reducción de horas manuales y pipelines de integración continua.</p>
                 </div>
-                <div class="process-item" style="grid-column: span 2 / auto; text-align: center;">
-                    <span class="step-num" style="justify-content: center;">05</span>
-                    <h3>Despliegue</h3>
-                    <p>Lanzamiento, documentación y entrenamiento al equipo.</p>
+                <div class="pipeline-card">
+                    <span class="pipeline-step-badge">Paso 05</span>
+                    <h3>IA</h3>
+                    <p>Modelos locales privados y agentes cognitivos para potenciar la toma de decisiones.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section-center" style="padding: 4rem 0;">
-            <span class="overline">FOCO</span>
-            <h2>Especialidades</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
-                <span style="padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 30px;">CRM</span>
-                <span style="padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 30px;">ERP</span>
-                <span style="padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 30px;">Business Intelligence</span>
-                <span style="padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 30px;">Inteligencia Artificial</span>
-                <span style="padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 30px;">Automatización</span>
+        <!-- Especialidades y Áreas -->
+        <section class="section-center" style="padding: 4.5rem 0 3rem;">
+            <span class="overline">HABILIDADES DESTACADAS</span>
+            <h2>Áreas de Actuación</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <span class="tech-badge featured" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">Python & FastAPI</span>
+                <span class="tech-badge featured" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">PHP 8+ & PDO</span>
+                <span class="tech-badge featured" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">SQL / Postgres / MySQL</span>
+                <span class="tech-badge featured" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">LLM / RAG / Agentes</span>
+                <span class="tech-badge featured" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">MCP Protocol</span>
+                <span class="tech-badge" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">Ollama & Qwen</span>
+                <span class="tech-badge" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">Pandas & NumPy</span>
+                <span class="tech-badge" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">Linux & CI/CD</span>
+                <span class="tech-badge" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">ISO 27001 & ISO 42001</span>
+                <span class="tech-badge" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">Jira & Notion</span>
+                <span class="tech-badge" style="padding: 0.6rem 1.2rem; font-size: 0.95rem;">Revit & BIM Dynamo</span>
+            </div>
+
+            <div style="margin-top: 3.5rem;">
+                <a href="contacto.html" class="btn btn-primary" style="padding: 0.85rem 2rem;">
+                    <i class="fas fa-envelope"></i> Conversar sobre un Proyecto
+                </a>
             </div>
         </section>
 
     </main>
 
     <site-footer base-path="./"></site-footer>
-<script src="./scripts/components.js"></script>
+    <script src="./scripts/components.js"></script>
 </body>
+
 </html>

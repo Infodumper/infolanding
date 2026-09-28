@@ -4,45 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contacto - Ignacio Vizoso. Sistemas, Datos e Inteligencia Artificial.">
+    <meta name="description" content="Contacto directo con Ignacio Vizoso — Arquitecto de Software, Consultor de Datos & Sistemas de Inteligencia Artificial.">
+    <meta name="author" content="Ignacio Vizoso">
+    <link rel="canonical" href="https://infodumper.com/contacto.html">
     <title>Contacto | Ignacio Vizoso</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contacto | Ignacio Vizoso — Arquitectura de Software & IA">
+    <meta property="og:description" content="Agenda una sesión de diagnóstico o contáctame para proyectos de software, datos y agentes IA.">
+    <meta property="og:url" content="https://infodumper.com/contacto.html">
+    <meta property="og:image" content="https://infodumper.com/styles/images/developer_hero.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/human.css?v=2">
+    <link rel="stylesheet" href="styles/human.css?v=5">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contacto Ignacio Vizoso",
+      "url": "https://infodumper.com/contacto.html",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://infodumper.com/#person",
+        "name": "Ignacio Vizoso"
+      }
+    }
+    </script>
 </head>
 
 <body>
     <site-header base-path="./"></site-header>
 
     <main class="content-wrapper">
-        <section class="section-contacto" style="padding-top: 3rem; min-height: 80vh;">
-            <div class="section-center">
-                <span class="overline">HABLEMOS</span>
-                <h2>¿Empezamos a darle <em class="serif">forma</em> a tu proyecto?</h2>
-                <p>Una charla sin presiones para ver cómo puedo ayudarte.</p>
+        <section class="section-contacto" style="padding-top: 4rem; padding-bottom: 5rem; min-height: 80vh;">
+            <div class="section-center" style="padding-top: 0; padding-bottom: 2rem;">
+                <span class="overline overline-blue">HABLEMOS</span>
+                <h2 class="title-blue">¿Empezamos a darle forma a tu proyecto?</h2>
+                <p class="section-subtitle">
+                    Conversemos sobre los procesos, datos o cuellos de botella de tu empresa para diseñar una solución técnica eficiente.
+                </p>
             </div>
-            <div class="form-container" style="margin-top: 1.5rem;">
+            <div class="form-container">
                 <form id="contact-form" action="#" novalidate>
                     <div class="form-row">
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
-                        <input type="text" id="empresa" name="empresa" placeholder="Tu empresa (opcional)">
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required autocomplete="name">
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa u organización (opcional)">
                     </div>
                     <div class="form-row">
-                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required autocomplete="email">
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico de contacto" required autocomplete="email">
+                        <input type="tel" id="telefono" name="telefono" placeholder="WhatsApp / Teléfono (opcional)">
                     </div>
-                    <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente el problema o cuello de botella que quieres resolver..." rows="6" required></textarea>
+                    <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente el sistema, automatización o integración que necesitas implementar..." rows="5" required></textarea>
                     
-                    <button type="submit" class="btn btn-primary btn-full">AGENDAR UNA REUNIÓN</button>
-                    <p class="form-note">También puedes contactarme directamente vía <a href="#" class="accent-link">LinkedIn</a>.</p>
+                    <button type="submit" class="btn btn-primary btn-full" style="padding: 0.95rem; font-size: 1rem;">
+                        <i class="fas fa-paper-plane"></i> ENVIAR SOLICITUD DE DIAGNÓSTICO
+                    </button>
+                    <p class="form-note">
+                        También puedes contactarme directamente vía 
+                        <a href="https://www.linkedin.com/in/ignacio-vizoso/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: none;">LinkedIn</a> 
+                        o por 
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" style="color: #25d366; font-weight: 600; text-decoration: none;">WhatsApp</a>.
+                    </p>
                 </form>
             </div>
         </section>
     </main>
 
     <site-footer base-path="./"></site-footer>
-<script src="./scripts/components.js"></script>
+    <script src="./scripts/components.js"></script>
 </body>
 </html>

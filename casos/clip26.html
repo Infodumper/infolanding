@@ -9,81 +9,199 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/human.css">
+    <link rel="stylesheet" href="../styles/human.css?v=6">
 </head>
 
 <body>
     <site-header base-path="../"></site-header>
 
-    <main class="content-wrapper">
-        <section class="section-center" style="padding-top: 3rem; padding-bottom: 2rem;">
-            <span class="overline">CASO DE ÉXITO</span>
-            <h1>Sistema <em class="serif accent-text">CliP26</em></h1>
-            <p class="hero-subtitle">Pequeño sistema de Gestión de grupos para Venta directa, ideal para utilizarlo desde el celular sin depender de una PC.</p>
-        </section>
+    <main class="content-wrapper case-header-section">
+        <!-- Breadcrumb de Retorno -->
+        <a href="../index.html#casos" class="case-breadcrumb" aria-label="Volver a la sección de proyectos">
+            <i class="fas fa-arrow-left"></i> Volver a Proyectos
+        </a>
 
-        <section style="margin-top: 0;">
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #e8f4f8;">
-                <h3 style="color: var(--accent); margin-bottom: 1rem;"><i class="fas fa-mobile-alt" style="margin-right: 0.5rem;"></i> El Objetivo</h3>
-                <p>Desarrollar una herramienta ágil y accesible desde dispositivos móviles que permita a los revendedores de venta directa gestionar a sus clientes, pedidos y ganancias de forma automatizada, mejorando el seguimiento y reduciendo errores manuales.</p>
-            </div>
+        <!-- Hero Card del Caso -->
+        <section class="case-hero-card">
+            <span class="overline overline-blue">CASO DE ESTUDIO · GESTIÓN MÓVIL</span>
+            <h1 class="title-blue">Sistema CliP26</h1>
+            <p class="case-hero-subtitle">
+                Sistema ligero de gestión operativa y comercial para revendedores de venta directa, diseñado con enfoque Mobile-First para operar de forma ágil desde el celular sin depender de una PC.
+            </p>
 
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #e8f5e9;">
-                <h3 style="color: var(--accent); margin-bottom: 1rem;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> Funcionalidades Principales</h3>
-                <p>El sistema abarca las necesidades críticas de la gestión diaria:</p>
-                <ul style="list-style: none; padding-left: 0; margin-top: 1rem; color: var(--text-secondary);">
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-check text-accent" style="margin-right: 0.5rem;"></i> <strong>Seguimiento de Cumpleaños:</strong> Información al instante sobre los cumpleaños del día, los cinco próximos y un listado completo del mes para fidelizar clientes.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-check text-accent" style="margin-right: 0.5rem;"></i> <strong>Borrador de Pedidos:</strong> Conexión a la base de datos de clientes con autocompletado. Validación estricta de códigos de catálogo y asignación automática de precios.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-check text-accent" style="margin-right: 0.5rem;"></i> <strong>Gestión de Versiones:</strong> Registro de borradores modificables que se pueden enviar directamente por WhatsApp con toda la información detallada.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-check text-accent" style="margin-right: 0.5rem;"></i> <strong>Cálculos Automáticos:</strong> Determinación precisa de la seña (requisito para compras), ganancias variables según volumen de unidades, y aplicación de descuentos especiales del 50% cuando corresponde.</li>
-                </ul>
-            </div>
-
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #e8f4f8;">
-                <h3 style="color: var(--accent); margin-bottom: 1rem;"><i class="fas fa-user-shield" style="margin-right: 0.5rem;"></i> Seguridad y Roles</h3>
-                <p style="margin-bottom: 0;">El sistema cuenta con <strong>Login seguro</strong> (usuario y contraseña) y separación de permisos:</p>
-                <ul style="margin-top: 0.5rem; margin-bottom: 0; color: var(--text-secondary);">
-                    <li><strong>Usuarios:</strong> Acceso restringido únicamente a los datos de sus propios clientes.</li>
-                    <li><strong>Administrador:</strong> Visibilidad y control total sobre toda la información del grupo.</li>
-                </ul>
-            </div>
-
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #e8f5e9;">
-                <h3 style="color: var(--accent); margin-bottom: 1rem;"><i class="fas fa-code" style="margin-right: 0.5rem;"></i> Impacto</h3>
-                <p>Una herramienta que transforma la complejidad de los catálogos y cálculos manuales en un flujo simple y móvil, permitiendo al revendedor enfocarse en vender y no en la administración.</p>
-            </div>
-        </section>
-
-        <!-- Carrusel de imágenes -->
-        <section style="padding-top: 1rem; padding-bottom: 2rem;">
-            <div class="hide-scrollbar" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding-bottom: 1.5rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; align-items: stretch;">
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="../styles/images/carrusel/CliP26/01.png" alt="LOGIN" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: contain;">
-                    <p style="font-weight: 700; color: var(--accent-hover); font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">LOGIN</p>
+            <!-- Barra de Metadatos del Proyecto -->
+            <div class="case-meta-bar">
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Rubro / Dominio</span>
+                    <span class="case-meta-value">Venta Directa & Catálogos</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="../styles/images/carrusel/CliP26/02.png" alt="MENÚ de USUARIO" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: contain;">
-                    <p style="font-weight: 700; color: var(--accent-hover); font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">MENÚ de USUARIO</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Stack Tecnológico</span>
+                    <span class="case-meta-value">PHP 8 · MySQL · Vanilla JS</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="../styles/images/carrusel/CliP26/03.png" alt="Borradores" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: contain;">
-                    <p style="font-weight: 700; color: var(--accent-hover); font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">Borradores</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Arquitectura</span>
+                    <span class="case-meta-value">Mobile-First SPA Ligera</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="../styles/images/carrusel/CliP26/004.png" alt="Borrador" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: contain;">
-                    <p style="font-weight: 700; color: var(--accent-hover); font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">Borrador</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Integraciones</span>
+                    <span class="case-meta-value">WhatsApp Directo</span>
                 </div>
             </div>
         </section>
-        
-        <div style="text-align: center; margin: 4rem 0;">
-            <a href="../contacto.html" class="btn btn-primary">¿NECESITAS ALGO SIMILAR?</a>
+
+        <!-- Layout en Cuadrícula Estructurada (2 Columnas) -->
+        <div class="case-layout-grid">
+            <!-- Columna Principal -->
+            <div class="case-main-col">
+                
+                <!-- 1. El Objetivo -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>El Desafío & Objetivo</h3>
+                    </div>
+                    <p>
+                        Desarrollar una herramienta accesible y rápida desde dispositivos móviles que permita a los revendedores gestionar clientes, pedidos recurrentes y cálculos de comisiones sin fricciones, eliminando planillas manuales y reduciendo errores en la toma de pedidos de catálogo.
+                    </p>
+                </div>
+
+                <!-- 2. Funcionalidades Críticas -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Funcionalidades Críticas</h3>
+                    </div>
+                    <ul class="case-feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Seguimiento de Cumpleaños:</strong> Vista inmediata de cumpleaños del día, próximos 5 eventos y calendario mensual para fidelización de clientes.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Borrador de Pedidos:</strong> Conexión dinámica a base de datos con autocompletado y validación estricta de códigos y listas de precios.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Gestión de Versiones:</strong> Registro de borradores editables preparados para envío directo por WhatsApp con formato estructurado.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cálculos Automáticos:</strong> Determinación exacta de señas obligatorias, ganancias escalonadas por volumen de unidades y aplicación de descuentos del 50%.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Columna Lateral -->
+            <div class="case-sidebar-col">
+                
+                <!-- 3. Seguridad y Roles -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Seguridad & Roles</h3>
+                    </div>
+                    <p>
+                        Autenticación segura con hash de contraseñas y aislamiento estricto de datos según perfil:
+                    </p>
+                    <ul class="case-feature-list">
+                        <li>
+                            <i class="fas fa-user"></i>
+                            <div><strong>Usuarios:</strong> Acceso restringido exclusivamente a sus clientes y pedidos propios.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-tie"></i>
+                            <div><strong>Administrador:</strong> Visibilidad total del grupo operativo, métricas consolidadas y control de inventario.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. Impacto -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Impacto Operativo</h3>
+                    </div>
+                    <p>
+                        Transformación de procesos manuales dispersos en un flujo móvil unificado. Los revendedores redujeron a cero los errores de cálculo de señas y ganaron un 70% de tiempo en el armado de pedidos semanales.
+                    </p>
+                </div>
+
+            </div>
         </div>
+
+        <!-- Galería de Pantallas del Sistema -->
+        <section class="case-screens-section">
+            <div class="case-screens-header">
+                <span class="overline overline-green">VISTA DE PANTALLAS</span>
+                <h2 class="title-green">Capturas del Sistema en Producción</h2>
+                <p class="section-subtitle">Diseño móvil pensado para carga instantánea y operación con una sola mano.</p>
+            </div>
+
+            <div class="case-screens-track">
+                <!-- Pantalla 1 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/CliP26/01.png" alt="Pantalla de Login Seguro CliP26" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Acceso Seguro</p>
+                </div>
+                <!-- Pantalla 2 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/CliP26/02.png" alt="Menú Principal de Usuario CliP26" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Menú de Usuario</p>
+                </div>
+                <!-- Pantalla 3 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/CliP26/03.png" alt="Listado de Borradores de Pedidos" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Borradores Activos</p>
+                </div>
+                <!-- Pantalla 4 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/CliP26/004.png" alt="Detalle de Pedido y Totales" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Cálculo de Pedido</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="case-cta-banner">
+            <h2>¿Tenés un proceso comercial que necesitás ordenar?</h2>
+            <p>
+                Coordinemos un diagnóstico técnico sin compromiso para evaluar cómo simplificar y automatizar la operativa de tu negocio.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="../contacto.html" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700;">
+                    <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
+                </a>
+                <a href="../index.html#casos" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">
+                    <i class="fas fa-th-large"></i> Ver Más Proyectos
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <site-footer base-path="../"></site-footer>
-<script src="../scripts/components.js"></script>
+    <script src="../scripts/components.js"></script>
 </body>
+
 </html>

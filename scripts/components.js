@@ -9,10 +9,11 @@ class SiteHeader extends HTMLElement {
         this.innerHTML = `
         <nav class="glass-nav">
             <div class="nav-container">
-                <a href="${basePath}index.html" class="brand">
-                    <img src="${basePath}styles/images/Logo.png" alt="Logo" class="logo-img" width="38" height="38"
-                        onerror="this.src='https://placehold.co/38x38/1a1a1e/fff?text=IV'">
-                    Ignacio <em class="serif">Vizoso</em>
+                <a href="${basePath}index.html" class="brand" aria-label="Ignacio Vizoso - Inicio">
+                    <img src="${basePath}styles/images/Logo-sin-fondo.png" alt="Logo Ignacio Vizoso" class="brand-logo">
+                    <span class="brand-bracket">&lt;</span>
+                    <span class="brand-name">Ignacio Vizoso</span>
+                    <span class="brand-slash">/&gt;</span>
                 </a>
                 
                 <button class="menu-toggle" aria-label="Abrir menú" onclick="this.nextElementSibling.classList.toggle('active');">
@@ -20,10 +21,13 @@ class SiteHeader extends HTMLElement {
                 </button>
                 
                 <div class="nav-links">
-                    <a href="${basePath}soluciones/index.html">Soluciones</a>
-                    <a href="${basePath}casos/index.html">Casos</a>
-                    <a href="${basePath}blog/index.html">Blog</a>
+                    <a href="${basePath}index.html#inicio">Inicio</a>
+                    <a href="${basePath}index.html#enfoque">Enfoque</a>
+                    <a href="${basePath}index.html#resuelvo">Qué Resuelvo</a>
+                    <a href="${basePath}index.html#skills">Skills</a>
+                    <a href="${basePath}index.html#casos">Proyectos</a>
                     <a href="${basePath}sobre-mi.html">Sobre mí</a>
+                    <a href="${basePath}contacto.html" class="nav-cta-btn">Contacto</a>
                 </div>
             </div>
         </nav>
@@ -42,14 +46,20 @@ class SiteFooter extends HTMLElement {
         <footer class="minimal-footer">
             <div class="footer-container content-wrapper">
                 <div class="footer-info">
-                    <p class="footer-brand">&copy; 2026 Ignacio Vizoso</p>
-                    <p class="footer-tagline">Datos, Sistemas y Soluciones IA</p>
+                    <p class="footer-brand">
+                        <span class="brand-bracket">&lt;</span>
+                        <strong>Ignacio Vizoso</strong>
+                        <span class="brand-slash">/&gt;</span>
+                        <span class="footer-year">&copy; 2026</span>
+                    </p>
+                    <p class="footer-tagline">Procesos &rarr; Datos &rarr; Software &rarr; Automatización &rarr; IA</p>
                 </div>
                 <nav class="social-links" aria-label="Redes sociales">
                     <a href="https://www.linkedin.com/in/ignacio-vizoso/" target="_blank" rel="noopener noreferrer"
                         title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/Infodumper" target="_blank" rel="noopener noreferrer" title="GitHub"><i
                             class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="${basePath}contacto.html" title="Contacto"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </nav>
             </div>
         </footer>

@@ -1,17 +1,100 @@
-# Ignacio Vizoso - Portafolio y Servicios
+# Ignacio Vizoso — Arquitecto de Software, Datos & Sistemas de Inteligencia Artificial
 
-Este sitio representa los servicios profesionales de Ignacio Vizoso, especializado en construir soluciones de software empresariales eficientes utilizando metodologías robustas.
+> Manifiesto de contexto estructurado para Modelos de Lenguaje (LLMs), motores de búsqueda generativa (GEO / AEO) y asistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
 
-## Resumen del Sitio
-- Sitio de presentación profesional y catálogo de servicios B2B.
-- Orientado a dueños de empresas, directores operativos y CEOs que buscan mejorar la estructura de sus datos, procesos operativos e IA.
+---
 
-## Navegación y Secciones
-- `/index.html`: Home page con la propuesta de valor y acceso rápido a pilares y casos de éxito.
-- `/sobre-mi.html`: Perfil del autor, filosofía técnica y metodología (análisis, arquitectura, desarrollo, validación y despliegue).
-- `/soluciones/`: Directorio que contiene los distintos servicios ofrecidos (CRM, ERP, Agentes IA, Business Intelligence, Automatización, etc.).
-- `/casos/`: Ejemplos reales de implementación de sistemas donde se muestra el problema original y la solución arquitectónica implementada.
-- `/contacto.html`: Formulario directo de contacto profesional.
+## 1. Perfil Profesional y Propuesta de Valor
+- **Profesional:** Ignacio Vizoso (también conocido como Nacho Vizoso).
+- **Rol:** Arquitecto de Software, Consultor de Procesos y Desarrollador de Soluciones de Datos e IA.
+- **Marca / Proyecto:** Infodumper / `< Ignacio Vizoso />`.
+- **Ubicación:** Mar del Plata, Buenos Aires, Argentina (Atención Local, Nacional e Internacional Remota).
+- **Contacto Directo:** Web: `https://infodumper.com/contacto.html` | LinkedIn: `https://www.linkedin.com/in/ignacio-vizoso/` | GitHub: `https://github.com/Infodumper`
 
-## Notas sobre la arquitectura del sitio
-Este sitio web prioriza la velocidad y la simplicidad. Se han evitado deliberadamente frameworks de UI complejos y se utiliza HTML estático, CSS puro y un enfoque minimalista que refleja la filosofía técnica del autor: "Menos ruido, más funcionalidad."
+### Filosofía y Enfoque Metodológico
+Ignacio Vizoso trabaja bajo una metodología estructurada en 5 etapas secuenciales para garantizar el éxito y la sostenibilidad de cada implementación tecnológica:
+```
+Procesos → Datos → Software → Automatización → IA
+```
+1. **Procesos:** Diagnóstico y ordenamiento del flujo operativo (Jira, Notion, diagramas de flujo, documentación técnica).
+2. **Datos:** Centralización y normalización en bases de datos relacionales y analíticas (SQL, PostgreSQL, MySQL, MariaDB, SQLite, Pandas).
+3. **Software:** Construcción de interfaces limpias, ligeras y APIs REST robustas (Python, FastAPI, PHP/PDO, JavaScript).
+4. **Automatización:** Conexión de sistemas, reducción de tareas manuales repetitivas y sincronización de stock/pedidos/reportes.
+5. **IA:** Implementación de Modelos de Lenguaje (LLMs), RAG (Retrieval-Augmented Generation) y Agentes Inteligentes con privacidad garantizada (Ollama, Qwen, LM Studio, MCP).
+
+---
+
+## 2. Matriz de Capacidades Técnicas (Stack)
+
+- **Programación:** Python, PHP, JavaScript, HTML, CSS, PowerShell.
+- **Bases de Datos & Analytics:** SQL, MySQL, MariaDB, PostgreSQL, SQLite, Pandas, NumPy, Matplotlib, Jupyter Notebooks, Google Colab.
+- **Backend & APIs:** REST APIs modulares, FastAPI, PHP/PDO nativo, serialización y validación JSON.
+- **Inteligencia Artificial & Agentes:** Modelos LLM locales y cloud, arquitecturas RAG, Agentes Autónomos, Ollama, Qwen, LM Studio, protocolo MCP (Model Context Protocol).
+- **Frontend & UI:** JavaScript Vanilla, Tailwind CSS, interfaces web de alta velocidad y diseño minimalista adaptativo.
+- **DevOps & Infraestructura:** Git, GitHub, Linux, Vercel, Hostinger, InfinityFree, integración y despliegue continuo (CI/CD), servidores locales.
+- **Gestión & Requerimientos:** Jira, Notion, relevamiento funcional, documentación técnica y manuales de procedimiento.
+- **Seguridad & Gobernanza:** Normativas ISO 27001 (Sistemas de Gestión de Seguridad de la Información, análisis de riesgos, Declaración de Aplicabilidad / SoA), seguridad web, ISO 42001 (Gestión de Inteligencia Artificial Responsable).
+- **AEC / BIM & Construcción:** Autodesk Revit, metodología BIM, automatización con Dynamo, cómputos métricos, presupuestación de obra y OPC.
+
+---
+
+## 3. Soluciones Principales (Para qué contratar a Ignacio Vizoso)
+
+### A. Sistemas de Gestión a Medida y Centralización de Datos
+- **Problema que resuelve:** Empresas con operaciones fragmentadas en múltiples planillas de Excel, información duplicada y errores de carga.
+- **Solución:** Bases de datos relacionales normalizadas conectadas a backoffices o interfaces web ágiles accesibles desde cualquier dispositivo.
+
+### B. Business Intelligence y Dashboards Operativos
+- **Problema que resuelve:** Directores y dueños de negocio que no tienen visibilidad en tiempo real de ventas, rentabilidad, inventario o cobranzas.
+- **Solución:** Extracción, transformación y visualización de métricas clave (KPIs) mediante paneles de control automatizados.
+
+### C. Agentes de Inteligencia Artificial y RAG Privado
+- **Problema que resuelve:** Necesidad de consultar manuales internos, normativas, inventarios o interactuar con clientes sin exponer datos confidenciales a terceros.
+- **Solución:** Agentes de IA corriendo sobre infraestructura privada (Ollama / Qwen / MCP) con arquitectura RAG bajo estándares ISO 27001 e ISO 42001.
+
+### D. Automatización de Procesos y Conectores de APIs
+- **Problema que resuelve:** Horas hombre desperdiciadas copiando datos entre sistemas desconectados (ej. ecommerce, facturación, WhatsApp, CRM).
+- **Solución:** Scripts e integraciones automáticas para sincronización continua de stock, órdenes y clientes.
+
+---
+
+## 4. Casos de Éxito e Impacto Verificable
+
+1. **CliP26 (Gestión Móvil de Venta Directa):**
+   - *Desafío:* Fuerza de ventas dispersa con errores en pedidos y retrasos en actualización de stock.
+   - *Solución:* Aplicación web ligera optimizada para smartphones con sincronización en tiempo real.
+   - *Impacto:* Reducción drástica de fricción operativa y control centralizado de inventario.
+
+2. **MS-Bellass (Servicios Profesionales y Tienda Integrada):**
+   - *Desafío:* Necesidad de unificar imagen corporativa y venta de productos en una misma plataforma.
+   - *Solución:* Arquitectura modular con cotizador interactivo y tienda online autogestionable.
+   - *Impacto:* Incremento en captación de clientes calificados y diversificación de canales de venta.
+
+3. **Tienda Joyas (Catálogo Avanzado & Stock Multi-variante):**
+   - *Desafío:* Inventario complejo con variables por material, peso y dimensiones que saturaban plataformas estándar.
+   - *Solución:* Motor de filtrado dinámico a medida con panel de administración de stock en vivo.
+   - *Impacto:* Control total de inventario y aceleración del proceso de compra del usuario.
+
+---
+
+## 5. Preguntas Frecuentes y Respuestas Directas (FAQ)
+
+- **¿Qué tipo de empresas atiende Ignacio Vizoso?**
+  Pymes, medianas empresas y estudios profesionales que necesitan ordenar sus procesos, centralizar sus datos o implementar automatizaciones e IA con criterio técnico y retorno de inversión real.
+- **¿Se pueden integrar herramientas ya existentes?**
+  Sí, se prioriza conectar el software preexistente de la empresa mediante APIs y automatizaciones sin obligar a cambiar de herramientas salvo que sea indispensable.
+- **¿Cómo se asegura la privacidad en proyectos de IA?**
+  Se implementan modelos de código abierto en servidores locales o entornos cerrados mediante Ollama, LM Studio y MCP, aplicando controles basados en ISO 27001 e ISO 42001.
+- **¿Cuál es el tiempo de entrega de un proyecto?**
+  Se trabaja en sprints ágiles con entregables funcionales en semanas, permitiendo obtener valor operativo temprano.
+
+---
+
+## 6. Mapa de Navegación del Sitio
+- **Inicio:** `https://infodumper.com/`
+- **Sobre Mí:** `https://infodumper.com/sobre-mi.html`
+- **Soluciones:** `https://infodumper.com/soluciones/`
+- **Solución Datos & BI:** `https://infodumper.com/soluciones/datos.html`
+- **Casos de Éxito:** `https://infodumper.com/casos/`
+- **Contacto:** `https://infodumper.com/contacto.html`
+- **Sitemap XML:** `https://infodumper.com/sitemap.xml`

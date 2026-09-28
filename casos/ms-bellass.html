@@ -4,74 +4,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Caso de Éxito: MS-Bellass - Landing para emprendedora y tienda online.">
+    <meta name="description" content="Caso de Éxito: MS-Bellass - Plataforma Web y Tienda Integrada para Servicios Profesionales.">
     <title>Caso: MS-Bellass | Ignacio Vizoso</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/human.css">
+    <link rel="stylesheet" href="../styles/human.css?v=6">
 </head>
 
 <body>
     <site-header base-path="../"></site-header>
 
-    <main class="content-wrapper">
-        <section class="section-center" style="padding-top: 3rem; padding-bottom: 2rem;">
-            <span class="overline">CASO DE ÉXITO</span>
-            <h1>Ecommerce <em class="serif accent-text">MS-Bellass</em></h1>
-            <p class="hero-subtitle">Landing page para una emprendedora que unifica la promoción de sus servicios profesionales y una tienda online de productos, todo en un mismo lugar.</p>
-        </section>
+    <main class="content-wrapper case-header-section">
+        <!-- Breadcrumb de Retorno -->
+        <a href="../index.html#casos" class="case-breadcrumb" aria-label="Volver a la sección de proyectos">
+            <i class="fas fa-arrow-left"></i> Volver a Proyectos
+        </a>
 
-        <section style="margin-top: 0;">
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #fdf5e6;">
-                <h3 style="color: #c98a6c; margin-bottom: 1rem;"><i class="fas fa-bullseye" style="margin-right: 0.5rem;"></i> El Proyecto</h3>
-                <p>El objetivo fue diseñar y desarrollar una plataforma digital integral para Mercedes, fundadora de MS-Bellass. Se requería un espacio que no solo destacara su experiencia y servicios como profesional, sino que también permitiera la venta directa de sus productos mediante una tienda integrada y fácil de navegar.</p>
-            </div>
+        <!-- Hero Card del Caso -->
+        <section class="case-hero-card">
+            <span class="overline overline-blue">CASO DE ESTUDIO · PLATAFORMA WEB</span>
+            <h1 class="title-blue">Ecommerce MS-Bellass</h1>
+            <p class="case-hero-subtitle">
+                Plataforma integral de presencia digital que unifica la promoción de servicios profesionales con una tienda online de productos de belleza y catálogo dinámico.
+            </p>
 
-            <div class="case-study" style="margin-top: 0; margin-bottom: 2rem; background: #fafafa;">
-                <h3 style="color: #c98a6c; margin-bottom: 1rem;"><i class="fas fa-layer-group" style="margin-right: 0.5rem;"></i> Arquitectura y Funcionalidades</h3>
-                <p>La estructura de la página fue pensada para guiar a los clientes de forma natural a través del universo de la marca:</p>
-                <ul style="list-style: none; padding-left: 0; margin-top: 1rem; color: var(--text-secondary);">
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-bars text-accent" style="color:#c98a6c; margin-right: 0.5rem;"></i> <strong>Menú Desplazable Lateral:</strong> Un menú intuitivo y elegante, acompañado de iconos claros y minimalistas alineados con los colores de la marca, permitiendo acceso rápido a todas las secciones.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-user-circle text-accent" style="color:#c98a6c; margin-right: 0.5rem;"></i> <strong>Presentación de Mercedes:</strong> Una sección cálida y personal donde la fundadora conecta con su audiencia, contando su historia, valores y nivel de experiencia.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-store text-accent" style="color:#c98a6c; margin-right: 0.5rem;"></i> <strong>Pequeña Tienda Integrada:</strong> Un catálogo dinámico de productos para la venta directa, diseñado sin fricciones para potenciar conversiones.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-comments text-accent" style="color:#c98a6c; margin-right: 0.5rem;"></i> <strong>Zona de Testimonios:</strong> Bloque de prueba social con opiniones reales de clientes para generar confianza.</li>
-                    <li style="margin-bottom: 0.75rem;"><i class="fas fa-envelope text-accent" style="color:#c98a6c; margin-right: 0.5rem;"></i> <strong>Formulario de Contacto:</strong> Canal de comunicación directa para consultas sobre servicios o turnos.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Carrusel de imágenes -->
-        <section style="padding-top: 1rem; padding-bottom: 2rem;">
-            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--text-primary);">Primer Vistazo</h3>
-            <div class="hide-scrollbar" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding-bottom: 1.5rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; align-items: stretch;">
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/c98a6c/fff?text=Hero+Landing" alt="Hero Landing" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover;">
-                    <p style="font-weight: 700; color: #c98a6c; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">HOME & HERO</p>
+            <!-- Barra de Metadatos del Proyecto -->
+            <div class="case-meta-bar">
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Rubro / Dominio</span>
+                    <span class="case-meta-value">Belleza, Cuidado & Asesoría</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/fdf5e6/c98a6c?text=Menu+Lateral" alt="Menú Lateral" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover; border: 1px solid #eee;">
-                    <p style="font-weight: 700; color: #c98a6c; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">MENÚ LATERAL</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Stack Tecnológico</span>
+                    <span class="case-meta-value">HTML5 · Vanilla CSS · JavaScript</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/c98a6c/fff?text=Tienda" alt="Tienda y Productos" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover;">
-                    <p style="font-weight: 700; color: #c98a6c; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">TIENDA Y PRODUCTOS</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Arquitectura</span>
+                    <span class="case-meta-value">Modular Web & E-Commerce</span>
                 </div>
-                <div style="flex: 0 0 auto; width: 85%; max-width: 350px; scroll-snap-align: start; text-align: center; background: var(--bg-surface); border-radius: 16px; border: 1px solid var(--card-border); box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; flex-direction: column;">
-                    <img src="https://placehold.co/300x500/fdf5e6/c98a6c?text=Testimonios" alt="Testimonios" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem; flex-grow: 1; object-fit: cover; border: 1px solid #eee;">
-                    <p style="font-weight: 700; color: #c98a6c; font-size: 1rem; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">OPINIONES</p>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Conversión</span>
+                    <span class="case-meta-value">Canal Directo a WhatsApp</span>
                 </div>
             </div>
         </section>
-        
-        <div style="text-align: center; margin: 4rem 0;">
-            <a href="../contacto.html" class="btn btn-primary" style="background-color: #c98a6c; border-color: #c98a6c;">¿NECESITAS ALGO SIMILAR?</a>
+
+        <!-- Layout en Cuadrícula Estructurada (2 Columnas) -->
+        <div class="case-layout-grid">
+            <!-- Columna Principal -->
+            <div class="case-main-col">
+                
+                <!-- 1. El Desafío -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>El Desafío & Objetivo</h3>
+                    </div>
+                    <p>
+                        Diseñar y desplegar una web de marca personal que transmitiera la calidez y el profesionalismo de los servicios de asesoría de imagen, integrando a su vez un catálogo interactivo con carrito de compras para venta directa de productos de catálogo.
+                    </p>
+                </div>
+
+                <!-- 2. Arquitectura y Funcionalidades -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Arquitectura & Funcionalidades</h3>
+                    </div>
+                    <ul class="case-feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Navegación Fluida con Menú Lateral:</strong> Acceso instantáneo a categorías de asesoría, talleres, maquillaje y catálogo de productos.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Tienda Integrada sin Fricciones:</strong> Carrito de compras reactivo en JavaScript nativo que sintetiza el pedido y lo envía formateado a WhatsApp.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Prueba Social & Testimonios:</strong> Bloques de reseñas reales para consolidar autoridad y confianza en la contratación de turnos.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Rendimiento & SEO Local:</strong> Estructura semántica ligera con carga instantánea y optimización GEO para búsquedas locales.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Columna Lateral -->
+            <div class="case-sidebar-col">
+                
+                <!-- 3. Experiencia de Usuario -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Enfoque UI/UX</h3>
+                    </div>
+                    <p>
+                        Estética sofisticada adaptada a la identidad de la asesora, con micro-interacciones sutiles, ribbon horizontal de servicios y paleta de tonos cálidos.
+                    </p>
+                </div>
+
+                <!-- 4. Impacto Comercial -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Impacto Comercial</h3>
+                    </div>
+                    <p>
+                        La profesional multiplicó sus consultas directas y unificó sus tres canales de venta dispersos en una sola vitrina interactiva 24/7.
+                    </p>
+                </div>
+
+            </div>
         </div>
+
+        <!-- Galería de Pantallas del Sistema -->
+        <section class="case-screens-section">
+            <div class="case-screens-header">
+                <span class="overline overline-green">VISTA DE PANTALLAS</span>
+                <h2 class="title-green">Capturas de la Web en Producción</h2>
+                <p class="section-subtitle">Diseño responsivo optimizado para máxima conversión tanto en móviles como en escritorio.</p>
+            </div>
+
+            <div class="case-screens-track">
+                <!-- Pantalla 1 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/MS-Bellass/01.png" alt="Portada de MS-Bellass" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Portada & Hero</p>
+                </div>
+                <!-- Pantalla 2 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/MS-Bellass/02.png" alt="Menú Lateral de Navegación" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Menú Lateral</p>
+                </div>
+                <!-- Pantalla 3 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/MS-Bellass/03.png" alt="Catálogo de Productos y Tienda" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Catálogo & Tienda</p>
+                </div>
+                <!-- Pantalla 4 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/MS-Bellass/04.png" alt="Sección de Testimonios y Reseñas" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Opiniones y Confianza</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="case-cta-banner">
+            <h2>¿Querés lanzar una plataforma similar para tus servicios?</h2>
+            <p>
+                Diseño arquitecturas web que combinan presencia de marca, catálogos interactivos y conversión directa.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="../contacto.html" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700;">
+                    <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
+                </a>
+                <a href="../index.html#casos" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">
+                    <i class="fas fa-th-large"></i> Ver Más Proyectos
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <site-footer base-path="../"></site-footer>
     <script src="../scripts/components.js"></script>
 </body>
+
 </html>
