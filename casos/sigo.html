@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caso de Estudio: SIGO - Sistema Integral de Gestión de Obras. Cómputo métrico y presupuestación para edificación con metodología Chandías, PostgreSQL y Supabase.">
+    <title>Caso: SIGO — Gestión de Obras & Presupuestos | Ignacio Vizoso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/human.css?v=6">
+</head>
+
+<body>
+    <site-header base-path="../"></site-header>
+
+    <main class="content-wrapper case-header-section">
+        <!-- Breadcrumb de Retorno -->
+        <a href="../index.html#casos" class="case-breadcrumb" aria-label="Volver a la sección de proyectos">
+            <i class="fas fa-arrow-left"></i> Volver a Proyectos
+        </a>
+
+        <!-- Hero Card del Caso -->
+        <section class="case-hero-card">
+            <span class="overline overline-blue">CASO DE ESTUDIO · SOFTWARE AEC</span>
+            <h1 class="title-blue">SIGO — Sistema Integral de Gestión de Obras</h1>
+            <p class="case-hero-subtitle">
+                Plataforma web de ingeniería de costos y presupuestación para obras de edificación. Su primer entregable reemplaza las planillas de cálculo tradicionales por un motor de cómputo métrico estructurado, análisis de precios unitarios (APU) en tiempo real y persistencia resiliente.
+            </p>
+
+            <!-- Barra de Metadatos del Proyecto -->
+            <div class="case-meta-bar">
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Rubro / Dominio</span>
+                    <span class="case-meta-value">AEC · Arquitectura & Construcción</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Stack Tecnológico</span>
+                    <span class="case-meta-value">PostgreSQL · Supabase · Vanilla JS</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Arquitectura</span>
+                    <span class="case-meta-value">SPA Reactiva · Offline-First · RLS</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Metodología Base</span>
+                    <span class="case-meta-value">Chandías · Desglose APU & EDT</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layout en Cuadrícula Estructurada (2 Columnas) -->
+        <div class="case-layout-grid">
+            <!-- Columna Principal -->
+            <div class="case-main-col">
+                
+                <!-- 1. El Objetivo -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>El Desafío & Objetivo</h3>
+                    </div>
+                    <p>
+                        Superar la dispersión, pérdida de versiones y fragilidad de fórmulas inherentes a las hojas de cálculo tradicionales en la presupuestación de obras. El objetivo fue consolidar un catálogo maestro de rubros, tareas e insumos en una plataforma web ultraliviana que permita estimar costos con rapidez y total rigor metodológico.
+                    </p>
+                </div>
+
+                <!-- 2. Modelo de Estimación -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>Metodología Chandías & Carga Simplificada</h3>
+                    </div>
+                    <p>
+                        Siguiendo los estándares de estimación para edificación, los trabajos se organizan en una jerarquía estricta:
+                    </p>
+                    <ul class="case-feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Desglose Jerárquico:</strong> Los trabajos de los diferentes Rubros se encuadran en Tareas, y cada tarea se descompone en sus insumos (Materiales, Mano de Obra, Equipos) y subtareas con rendimientos precalculados.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Carga Ágil en Obra:</strong> El usuario solo ingresa la cantidad según la unidad de medida (m², m³, ml, u). Los insumos y rendimientos ya están asignados, eliminando tiempos muertos de cálculo manual.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cascada de Recálculo en Vivo:</strong> Cualquier variación de costo en un insumo repercute instantáneamente en la APU, las tareas del presupuesto y la explosión porcentual global.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Preparado para EDT y Cronogramas:</strong> La estructura relacional de tareas permite alimentar a futuro una Estructura de Desglose del Trabajo (EDT/WBS) y generar diagramas de avance temporal y curvas de inversión.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Columna Lateral -->
+            <div class="case-sidebar-col">
+                
+                <!-- 3. Arquitectura de Datos -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Arquitectura PostgreSQL & Supabase</h3>
+                    </div>
+                    <p>
+                        Infraestructura moderna que combina la potencia relacional con servicios cloud ágiles:
+                    </p>
+                    <ul class="case-feature-list">
+                        <li>
+                            <i class="fas fa-server"></i>
+                            <div>
+                                <strong>PostgreSQL:</strong> Integridad referencial estricta, tipos nativos y soporte para consultas analíticas complejas sobre catálogos de cientos de tareas e insumos.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <strong>Supabase (BaaS):</strong> APIs REST instantáneas (PostgREST), autenticación y seguridad por fila (RLS - Row Level Security) para aislar datos por usuario y empresa.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-wifi"></i>
+                            <div>
+                                <strong>Resiliencia Offline-First:</strong> Sincronización bidireccional con memoria local y barrido de autorreparación que garantiza operatividad continua sin conexión.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. Impacto -->
+                <div class="case-block-card">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Impacto Operativo</h3>
+                    </div>
+                    <p>
+                        Reducción drástica del tiempo de elaboración de presupuestos ejecutivos, certeza matemática en costos directos y trazabilidad completa de compras y consumos de materiales para obras de cualquier escala.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Galería de Pantallas del Sistema -->
+        <section class="case-screens-section">
+            <div class="case-screens-header">
+                <span class="overline overline-green">VISTA DE PANTALLAS</span>
+                <h2 class="title-green">Capturas del Sistema en Producción</h2>
+                <p class="section-subtitle">Interfaz optimizada para cómputos rápidos, selección de rubros y análisis de costos unitarios.</p>
+            </div>
+
+            <div class="case-screens-track">
+                <!-- Pantalla 1 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/SIGO/02.png" alt="Análisis de Precios Unitarios y Carga de Tareas en SIGO" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Presupuesto & APU</p>
+                </div>
+                <!-- Pantalla 2 -->
+                <div class="case-screen-card">
+                    <img src="../styles/images/carrusel/SIGO/03.png" alt="Desglose Jerárquico por Rubro y Categoría en SIGO" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Clasificación por Rubros</p>
+                </div>
+                <!-- Pantalla 3 -->
+                <div class="case-screen-card card-wide">
+                    <img src="../styles/images/carrusel/SIGO/05.png" alt="Explosión de Insumos e Incidencia en Modo Oscuro - SIGO" class="case-screen-img" loading="lazy">
+                    <p class="case-screen-label">Explosión de Insumos (Dark Mode)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="case-cta-banner">
+            <h2>¿Tenés proyectos o procesos de obra que necesitás sistematizar?</h2>
+            <p>
+                Coordinemos un diagnóstico técnico sin compromiso para evaluar cómo estructurar datos, costos y flujos operativos con software a medida.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="../contacto.html" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700;">
+                    <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
+                </a>
+                <a href="../index.html#casos" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">
+                    <i class="fas fa-th-large"></i> Ver Más Proyectos
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer base-path="../"></site-footer>
+    <script src="../scripts/components.js"></script>
+</body>
+
+</html>

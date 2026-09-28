@@ -4,6 +4,7 @@
   "trailingSlash": false,
   "routes": [
     { "src": "/$", "dest": "/index.html" },
+    { "src": "/googlec396df155e146858.html", "dest": "/googlec396df155e146858.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ],
   "headers": [

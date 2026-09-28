@@ -1883,6 +1883,18 @@ textarea {
     box-shadow: 0 12px 28px -6px rgba(20, 88, 144, 0.16);
 }
 
+.case-screen-card.card-wide {
+    flex: 0 0 auto;
+}
+
+.case-screen-card.card-wide .case-screen-img {
+    width: auto;
+    height: 410px;
+    max-height: 410px;
+    max-width: 90vw;
+    object-fit: contain;
+}
+
 .case-screen-img {
     width: 100%;
     height: auto;
