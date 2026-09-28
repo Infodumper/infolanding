@@ -821,8 +821,19 @@ site-header {
     font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     flex-grow: 1;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin-top 0.25s ease, margin-bottom 0.25s ease;
+}
+
+.skill-category-card.expanded .skill-card-desc {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Collapsible Tech Badges */
@@ -846,7 +857,7 @@ site-header {
 .skill-category-card.expanded .tech-badges-list.collapsible {
     max-height: 350px;
     opacity: 1;
-    margin-top: 1rem;
+    margin-top: 0;
     padding-top: 0.85rem;
     border-top-color: var(--card-border);
 }
@@ -856,7 +867,7 @@ site-header {
     border: none;
     padding: 0.5rem 0 0;
     margin-top: auto;
-    display: inline-flex;
+    display: none;
     align-items: center;
     gap: 0.45rem;
     font-size: 0.82rem;
@@ -866,6 +877,10 @@ site-header {
     cursor: pointer;
     transition: color 0.2s ease;
     align-self: flex-start;
+}
+
+.skill-category-card.expanded .skill-toggle-trigger {
+    display: inline-flex;
 }
 
 .skill-toggle-trigger:hover {
@@ -914,14 +929,31 @@ site-header {
     background: var(--bg-main);
 }
 
-.proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+.carrusel-proyectos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.75rem;
+    padding-bottom: 1.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 2.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--card-border) transparent;
+}
+
+.carrusel-proyectos::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carrusel-proyectos::-webkit-scrollbar-thumb {
+    background: #c5cbd4;
+    border-radius: 10px;
 }
 
 .proyecto-card {
+    flex: 0 0 340px;
+    scroll-snap-align: start;
     background: #ffffff;
     border: 1px solid var(--card-border);
     border-radius: var(--radius-lg);
@@ -1900,5 +1932,11 @@ textarea {
 @media (max-width: 900px) {
     .case-layout-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .pilar-card {
+        flex: 0 0 82vw;
     }
 }
