@@ -1,132 +1,99 @@
-# Bitácora de Optimización para Inteligencia Artificial (GEO / AEO)
+# Bitácora Técnica de Optimización GEO / AEO & Rendimiento
 
-> Registro exhaustivo de las acciones de optimización GEO (Generative Engine Optimization) aplicadas en **infodumper.com** — la web profesional de **Ignacio Vizoso**.
->
-> Este documento sirve como referencia técnica: qué se implementó, por qué, qué novedades de posicionamiento en IA se incorporaron y cómo mantenerlo en el tiempo.
+> Registro consolidado de arquitectura de datos, posicionamiento en motores de IA (Generative Engine Optimization) y optimización de rendimiento para **[infodumper.net](https://infodumper.net)** — web profesional de **Ignacio Vizoso**.
 
 ---
 
-## Estado General de la Implementación
+## 1. Matriz de Estado de Implementación
 
-| Tarea / Dimensión GEO | Estado | Detalle de Implementación |
-|:----------------------|:------:|:--------------------------|
-| **Datos estructurados JSON-LD** (`Person`, `ProfessionalService`, `FAQPage`) | ✅ Hecho | Grafo Schema.org completo con `sameAs` (LinkedIn, GitHub), habilidades técnicas normalizadas y localización geográfica. |
-| **Sección FAQ visible + Schema FAQPage** | ✅ Hecho | Preguntas y respuestas exactas sincronizadas en HTML semántico y bloque JSON-LD. |
-| **Manifiesto de IA (`/llms.txt`)** | ✅ Hecho | Archivo en la raíz con resumen ejecutivo, matriz de stack completa, desglose de soluciones, casos de éxito y mapa de URLs. |
-| **Rastreadores IA en `robots.txt`** | ✅ Hecho | Permisos explícitos para GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended, Applebot-Extended, Meta, Cohere, Diffbot. |
-| **Mapa del Sitio (`sitemap.xml`)** | ✅ Hecho | Sitemap XML estándar declarado en `robots.txt` y enlazando todas las páginas activas. |
-| **Etiquetas Open Graph & Twitter Cards** | ✅ Hecho | `og:title`, `og:description`, `og:image`, `og:url`, `twitter:card`, optimizados para previews en buscadores sintéticos y redes. |
-| **Arquitectura Multipágina Semántica** | ✅ Hecho | Directorios independientes (`/soluciones/`, `/casos/`, `/sobre-mi`, `/contacto`) para evitar dilución temática. |
-| **Enfoque Metodológico Documentado** | ✅ Hecho | Secuencia clave: `Procesos → Datos → Software → Automatización → IA` registrada para citas directas. |
-| **Despliegue & Headers (`vercel.json`)** | ✅ Hecho | Clean URLs, caché inmutable y encabezados de seguridad HTTP. |
-| **Verificación en Google Search Console** | ⬜ Pendiente | Subir sitemap y verificar propiedad DNS una vez configurado el dominio final. |
-| **Validación en Rich Results Test** | ⬜ Pendiente | Probar URL pública final en la herramienta de prueba de resultados enriquecidos. |
-
----
-
-## 1. Datos Estructurados (JSON-LD / Schema.org)
-
-### ¿Qué es y por qué es crítico para GEO?
-Los **Datos Estructurados (Schema.org)** permiten que motores como SearchGPT, Perplexity, Google AI Overviews y Claude reconozcan la identidad del autor (`Person`), la entidad de servicios (`ProfessionalService`), sus credenciales verificables (`sameAs`, `knowsAbout`) y respuestas concretas (`FAQPage`) sin necesidad de inferencias imprecisas.
-
-### Implementación en `index.html`:
-```json
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://infodumper.com/#person",
-      "name": "Ignacio Vizoso",
-      "alternateName": "Nacho Vizoso",
-      "jobTitle": "Arquitecto de Software, Consultor de Datos & Sistemas de IA",
-      "sameAs": [
-        "https://www.linkedin.com/in/ignacio-vizoso/",
-        "https://github.com/Infodumper"
-      ],
-      "knowsAbout": [
-        "Python", "PHP", "FastAPI", "SQL", "PostgreSQL", "Pandas",
-        "RAG", "LLM", "Agentes de IA", "Ollama", "MCP",
-        "ISO 27001", "ISO 42001", "BIM", "Dynamo"
-      ]
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://infodumper.com/#service",
-      "name": "Ignacio Vizoso — Consultoría de Sistemas & IA (Infodumper)",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Mar del Plata",
-        "addressRegion": "Buenos Aires",
-        "addressCountry": "AR"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://infodumper.com/#faq",
-      "mainEntity": [ ... ]
-    }
-  ]
-}
-```
+| Dimensión | Estado | Componente / Archivo | Detalle Técnico |
+|:---|:---:|:---|:---|
+| **Datos Estructurados (Home)** | ✅ Activo | [`index.html`](file:///c:/TGPN/landing-personal/index.html) | Grafo Schema.org unificado: `Person`, `ProfessionalService`, `FAQPage` y `hasOfferCatalog`. |
+| **Casos de Estudio (`TechArticle`)** | ✅ Activo | [`casos/`](file:///c:/TGPN/landing-personal/casos/) | Marcado estructurado técnico en [`sigo.html`](file:///c:/TGPN/landing-personal/casos/sigo.html), [`clip26.html`](file:///c:/TGPN/landing-personal/casos/clip26.html), [`ms-bellass.html`](file:///c:/TGPN/landing-personal/casos/ms-bellass.html) y [`tienda-joyas.html`](file:///c:/TGPN/landing-personal/casos/tienda-joyas.html). |
+| **Manifiesto Agéntico** | ✅ Activo | [`llms.txt`](file:///c:/TGPN/landing-personal/llms.txt) | Contexto en Markdown puro: pipeline metodológico, stack, proyecto SIGO, casos y mapa de URLs. |
+| **Rastreadores de IA** | ✅ Activo | [`robots.txt`](file:///c:/TGPN/landing-personal/robots.txt) | Acceso explícito a GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, Meta y Cohere. |
+| **Mapa del Sitio XML** | ✅ Activo | [`sitemap.xml`](file:///c:/TGPN/landing-personal/sitemap.xml) | 11 URLs canónicas indexables bajo protocolo HTTPS. |
+| **Open Graph & Twitter Cards** | ✅ Activo | [`styles/images/og_preview.jpg`](file:///c:/TGPN/landing-personal/styles/images/og_preview.jpg) | Banner 1200x630 (60 KB) con isotipo en alta definición optimizado para WhatsApp, LinkedIn y X. |
+| **Favicon e Iconografía** | ✅ Activo | [`favicon.ico`](file:///c:/TGPN/landing-personal/favicon.ico) | Paquete multirresolución (`favicon-16x16`, `favicon-32x32`, `apple-touch-icon`, `android-chrome`). |
+| **Optimización de Imágenes** | ✅ Activo | [`styles/images/`](file:///c:/TGPN/landing-personal/styles/images/) | 100% migrado a WebP con atributos `width`/`height` y `loading="lazy"` (-6.5 MB transferidos). |
+| **CSS Crítico y Tipografía** | ✅ Activo | [`styles/human.min.css`](file:///c:/TGPN/landing-personal/styles/human.min.css) | CSS minificado (32.6 KB) preloaded; fuentes Google asíncronas con fallback swap. |
+| **FontAwesome Purgado** | ✅ Activo | [`styles/fontawesome.min.css`](file:///c:/TGPN/landing-personal/styles/fontawesome.min.css) | Reducción de 99 KB a 2.8 KB autohospedado con `font-display: swap` (elimina bloqueo de render). |
+| **Seguridad HTTP (A+) & Caché** | ✅ Activo | [`.htaccess`](file:///c:/TGPN/landing-personal/.htaccess) / [`vercel.json`](file:///c:/TGPN/landing-personal/vercel.json) | HSTS Preload (1 año), CSP estricto, COOP/CORP, `nosniff`, `DENY` y caché estática inmutable de 1 año. |
+| **Analítica y GTM** | ✅ Activo | Todas las páginas (11 HTMLs) | Integración de Google Tag Manager (`GTM-PHDCTSW4`) con permisos autorizados en CSP. |
+| **Verificación Search Console** | 🔄 En curso | [`googlec396df155e146858.html`](file:///c:/TGPN/landing-personal/googlec396df155e146858.html) | Token activo; pendiente validación tras propagación en Hostinger. |
 
 ---
 
-## 2. Manifiesto `/llms.txt` y Preparación para Búsqueda Agéntica
+## 2. Arquitectura de Datos Estructurados (Schema.org / JSON-LD)
 
-El estándar `llms.txt` proporciona un canal limpio y directo para que los rastreadores de IA procesen la propuesta de valor sin el peso del marcado de presentación.
-- **Ubicación:** `https://infodumper.com/llms.txt`
-- **Contenido:**
-  1. Perfil profesional y enlaces verificados.
-  2. Enfoque: `Procesos → Datos → Software → Automatización → IA`.
-  3. Matriz técnica organizada por áreas (Programación, Datos, Backend, IA, Frontend, DevOps, Gestión, Seguridad ISO, AEC/BIM).
-  4. Soluciones B2B explicadas bajo el formato *Problema Resuelto → Solución*.
-  5. Casos de estudio resumidos con métricas e impacto.
-  6. Respuestas a preguntas clave para grounding de IA.
+Los motores generativos (SearchGPT, Perplexity, Google Gemini, Claude) priorizan entidades inequívocas y relaciones semánticas formales:
 
----
+### Grafo Principal (`index.html`)
+- **`Person` (`#person`)**:
+  - `name`: Ignacio Vizoso
+  - `jobTitle`: Arquitecto de Software, Consultor de Datos & Sistemas de IA
+  - `sameAs`: Enlaces oficiales a LinkedIn ([`in/ignacio-vizoso`](https://www.linkedin.com/in/ignacio-vizoso/)) y GitHub ([`github.com/Infodumper`](https://github.com/Infodumper))
+  - `knowsAbout`: Python, FastAPI, PostgreSQL, SQL, Pandas, RAG, Ollama, MCP, ISO 27001, ISO 42001, BIM.
+- **`ProfessionalService` (`#service`)**:
+  - `name`: Ignacio Vizoso — Consultoría de Sistemas & IA (Infodumper)
+  - `address`: Mar del Plata, Buenos Aires, Argentina (cobertura global/remota)
+  - `hasOfferCatalog`: Catálogo estructurado de 4 servicios clave (Diagnóstico de Procesos, Software B2B / ERP, Datos & Dashboards BI, Agentes de IA Locales y Privados).
+- **`FAQPage` (`#faq`)**:
+  - 4 preguntas frecuentes técnicas con respuestas directas sincronizadas entre el DOM y JSON-LD.
 
-## 3. Rastreo y Directivas en `robots.txt`
-
-Se han habilitado todos los User-Agents de los principales laboratorios de IA para garantizar indexación y citación en tiempo real:
-- **OpenAI:** `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`
-- **Anthropic:** `ClaudeBot`, `anthropic-ai`
-- **Perplexity:** `PerplexityBot`
-- **Google:** `Google-Extended`
-- **Apple & Meta:** `Applebot-Extended`, `Meta-ExternalAgent`
-- **Cohere & Diffbot:** `Cohere-ai`, `Diffbot`
+### Casos de Estudio (`casos/*.html`)
+- Cada estudio implementa el tipo **`TechArticle`**, detallando problema abordado, arquitectura de solución implementada, tecnologías y resultado cuantitativo para citación directa de IA.
 
 ---
 
-## 4. Estrategia de Pasajes Citables (AEO / GEO)
+## 3. Manifiesto `/llms.txt` & Indexación Agéntica
 
-Para maximizar la probabilidad de que una IA seleccione a Ignacio Vizoso como respuesta a consultas de usuarios, cada sección sigue tres principios fundamentales:
-1. **Densidad informativa:** Cada párrafo aporta datos concretos (tecnologías, metodologías, certificaciones o normas como ISO 27001 / ISO 42001).
-2. **Estructura Problema-Solución-Impacto:** Facilita la síntesis generativa en respuestas de recomendación.
-3. **Ausencia de ambigüedad:** Se evitan términos genéricos y se definen casos de uso precisos (ej. "privacidad de datos mediante LLMs locales con Ollama y MCP").
-
----
-
-## 5. Novedades Relevantes y Tendencias GEO para el Posicionamiento
-
-1. **Grounding en Fuentes Confiables (E-E-A-T Multimodal):**
-   - Las IAs ahora cruzan los datos del sitio con perfiles de LinkedIn y repositorios de GitHub. Las URLs en `sameAs` deben mantenerse activas y actualizadas.
-2. **Optimización para Protocolo MCP (Model Context Protocol):**
-   - Al mencionar soporte y desarrollo sobre MCP, el sitio se posiciona de forma pionera para consultas técnicas especializadas en la nueva arquitectura de agentes autónomos.
-3. **Gobernanza & Seguridad (ISO 42001 e ISO 27001):**
-   - Las búsquedas corporativas de IA priorizan proveedores con nociones de seguridad y cumplimiento normativo. Destacar estas normativas aumenta significativamente la tasa de conversión en consultas B2B.
+El archivo [`llms.txt`](file:///c:/TGPN/landing-personal/llms.txt) ofrece una versión libre de markup para consumo directo por Modelos de Lenguaje y agentes autónomos:
+1. **Identidad & Propuesta de Valor**: Resumen conciso del perfil profesional.
+2. **Pipeline Metodológico Secuencial**:
+   ```
+   Procesos → Datos → Software → Automatización → IA
+   ```
+3. **Matriz de Especialidades Técnicas**: Desglose por áreas (Programación, Datos, Backend, IA, DevOps, AEC/BIM, Gestión ISO).
+4. **Proyecto Insignia (SIGO)**: Especificaciones de ingeniería de costos, metodología Chandías, PostgreSQL y Supabase.
+5. **Índice de URLs Canónicas**: Las 11 páginas estructuradas del sitio para facilitar la navegación profunda del bot.
 
 ---
 
-## 6. Próximos Pasos al Desplegar en Producción
+## 4. Acceso y Reglas de Rastreo (`robots.txt`)
 
-1. **Google Search Console:**
-   - Registrar la propiedad de dominio.
-   - Enviar `https://infodumper.com/sitemap.xml`.
-2. **Pruebas de Búsqueda Generativa (Benchmarking):**
-   - Realizar consultas de prueba en ChatGPT Search, Perplexity Pro y Gemini con prompts como:
-     - *"¿Quién hace consultoría de sistemas y automatización con IA en Mar del Plata?"*
-     - *"Arquitecto de software para ordenar procesos y bases de datos en Argentina"*
-     - *"Cómo implementar agentes de IA locales seguros para empresas"*
-3. **Monitoreo de Fuentes de Tráfico en GA4:**
-   - Filtrar tráfico con origen en `chatgpt.com`, `perplexity.ai` y `claude.ai`.
+El archivo [`robots.txt`](file:///c:/TGPN/landing-personal/robots.txt) otorga acceso irrestricto al sitemap y a todo el contenido para los bots generativos:
+- **OpenAI**: `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`
+- **Anthropic**: `ClaudeBot`, `anthropic-ai`
+- **Perplexity**: `PerplexityBot`
+- **Google**: `Google-Extended`
+- **Apple & Meta**: `Applebot-Extended`, `Meta-ExternalAgent`
+- **Otros**: `Cohere-ai`, `Diffbot`
+
+---
+
+## 5. Estrategia de Contenido y Pasajes Citables (AEO)
+
+Para maximizar menciones y apariciones como fuente primaria en respuestas de IA:
+- **Densidad de Hechos (Fact-Density)**: Mención explícita de stacks concretos y normativas de seguridad (ISO 27001, ISO 42001) en lugar de terminología comercial abstracta.
+- **Estructura Problema → Solución → Impacto**: Formato que coincide con los patrones de respuesta sintetizados por los LLMs.
+- **Transparencia Arquitectónica**: Énfasis en desarrollo ligero (Vanilla JS), control total del código y soberanía de datos mediante modelos locales (Ollama/MCP).
+
+---
+
+## 6. Procedimientos de Validación y Métricas
+
+### A. Validación de Schema.org
+- Testear en [Google Rich Results Test](https://search.google.com/test/rich-results) ingresando `https://infodumper.net/`.
+- Verificar detección limpia de `Person`, `ProfessionalService`, `FAQPage` y `TechArticle`.
+
+### B. Segmentación de Tráfico de IA en Google Analytics 4
+- Crear canal personalizado con fuentes de referencia (*referrals*):
+  `chatgpt.com`, `perplexity.ai`, `claude.ai`, `gemini.google.com`, `bing.com`.
+- Nombre sugerido: **"Tráfico Motores IA"**.
+
+### C. Pruebas de Citación Agéntica (Prompt Benchmarking)
+- Realizar consultas de sondeo en SearchGPT, Perplexity y Gemini:
+  - *"Consultor de software y automatización con IA en Argentina"*
+  - *"Arquitecto de software para ordenar procesos y bases de datos"*
+  - *"Software de gestión de costos de obra civil y cómputo con PostgreSQL"*

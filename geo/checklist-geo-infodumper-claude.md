@@ -1,4 +1,4 @@
-# Checklist GEO / Agentic Ready — infodumper.com (Auditoría & Seguimiento)
+# Checklist GEO / Agentic Ready — infodumper.net (Auditoría & Seguimiento)
 
 *Registro de cumplimiento de estándares de posicionamiento para Inteligencia Artificial y Búsqueda Generativa.*
 

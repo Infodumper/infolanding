@@ -4,6 +4,22 @@
    Desaturated accents, clean typography, low-contrast sophisticated surfaces.
    ========================================================================== */
 
+/* Font Display: Swap para optimización de fuentes en Lighthouse */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
 :root {
     /* Palette — Muted Light Slate & Gray Theme */
     --bg-main:          #eef1f4; /* Capa base gris claro mate */
@@ -419,6 +435,80 @@ site-header {
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.hero-trust-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--card-border);
+    font-size: 0.82rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.hero-trust-bar span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hero-trust-bar span i {
+    color: #5A8259;
+    font-size: 0.75rem;
+}
+
+.architecture-manifesto-box {
+    background: #f8fafc;
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    margin: 3rem 0 1rem;
+}
+
+.architecture-manifesto-box h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    color: var(--accent);
+    font-family: var(--font-heading);
+}
+
+.architecture-manifesto-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.case-tldr-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.case-tldr-item strong {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: #145890;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.case-tldr-item span {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    line-height: 1.4;
 }
 
 .btn {
@@ -1195,7 +1285,7 @@ site-header {
     margin-bottom: 1.25rem;
 }
 
-input, textarea {
+input, textarea, select {
     width: 100%;
     padding: 0.85rem 1.15rem;
     background: var(--bg-surface);
@@ -1208,7 +1298,7 @@ input, textarea {
     outline: none;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     border-color: var(--accent);
     background: #ffffff;
     box-shadow: 0 0 0 3px rgba(74, 107, 140, 0.12);
@@ -1952,3 +2042,5 @@ textarea {
         flex: 0 0 82vw;
     }
 }
+
+

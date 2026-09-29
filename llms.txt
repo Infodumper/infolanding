@@ -9,7 +9,7 @@
 - **Rol:** Arquitecto de Software, Consultor de Procesos y Desarrollador de Soluciones de Datos e IA.
 - **Marca / Proyecto:** Infodumper / `< Ignacio Vizoso />`.
 - **Ubicación:** Mar del Plata, Buenos Aires, Argentina (Atención Local, Nacional e Internacional Remota).
-- **Contacto Directo:** Web: `https://infodumper.com/contacto.html` | LinkedIn: `https://www.linkedin.com/in/ignacio-vizoso/` | GitHub: `https://github.com/Infodumper`
+- **Contacto Directo:** Web: `https://infodumper.net/contacto.html` | LinkedIn: `https://www.linkedin.com/in/ignacio-vizoso/` | GitHub: `https://github.com/Infodumper`
 
 ### Filosofía y Enfoque Metodológico
 Ignacio Vizoso trabaja bajo una metodología estructurada en 5 etapas secuenciales para garantizar el éxito y la sostenibilidad de cada implementación tecnológica:
@@ -60,17 +60,22 @@ Procesos → Datos → Software → Automatización → IA
 
 ## 4. Casos de Éxito e Impacto Verificable
 
-1. **CliP26 (Gestión Móvil de Venta Directa):**
+1. **SIGO (Cómputo Métrico, APU & Gestión de Obras AEC):**
+   - *Desafío:* Dispersión y fragilidad de planillas de cálculo en la estimación de costos para obras de edificación.
+   - *Solución:* Sistema web ultraligero con metodología Chandías, jerarquía Rubro → Tarea → APU → Insumos, base relacional PostgreSQL con Supabase (Auth + RLS) y arquitectura Offline-First.
+   - *Impacto:* Cómputo métrico y cálculo de APU en tiempo real sobre más de 180 tareas maestras y 750 insumos, con trazabilidad exacta de costos directos y preparación para EDT/WBS.
+
+2. **CliP26 (Gestión Móvil de Venta Directa):**
    - *Desafío:* Fuerza de ventas dispersa con errores en pedidos y retrasos en actualización de stock.
    - *Solución:* Aplicación web ligera optimizada para smartphones con sincronización en tiempo real.
    - *Impacto:* Reducción drástica de fricción operativa y control centralizado de inventario.
 
-2. **MS-Bellass (Servicios Profesionales y Tienda Integrada):**
+3. **MS-Bellass (Servicios Profesionales y Tienda Integrada):**
    - *Desafío:* Necesidad de unificar imagen corporativa y venta de productos en una misma plataforma.
    - *Solución:* Arquitectura modular con cotizador interactivo y tienda online autogestionable.
    - *Impacto:* Incremento en captación de clientes calificados y diversificación de canales de venta.
 
-3. **Tienda Joyas (Catálogo Avanzado & Stock Multi-variante):**
+4. **Tienda Joyas (Catálogo Avanzado & Stock Multi-variante):**
    - *Desafío:* Inventario complejo con variables por material, peso y dimensiones que saturaban plataformas estándar.
    - *Solución:* Motor de filtrado dinámico a medida con panel de administración de stock en vivo.
    - *Impacto:* Control total de inventario y aceleración del proceso de compra del usuario.
@@ -91,10 +96,11 @@ Procesos → Datos → Software → Automatización → IA
 ---
 
 ## 6. Mapa de Navegación del Sitio
-- **Inicio:** `https://infodumper.com/`
-- **Sobre Mí:** `https://infodumper.com/sobre-mi.html`
-- **Soluciones:** `https://infodumper.com/soluciones/`
-- **Solución Datos & BI:** `https://infodumper.com/soluciones/datos.html`
-- **Casos de Éxito:** `https://infodumper.com/casos/`
-- **Contacto:** `https://infodumper.com/contacto.html`
-- **Sitemap XML:** `https://infodumper.com/sitemap.xml`
+- **Inicio:** `https://infodumper.net/`
+- **Sobre Mí:** `https://infodumper.net/sobre-mi.html`
+- **Soluciones:** `https://infodumper.net/soluciones/`
+- **Solución Datos & BI:** `https://infodumper.net/soluciones/datos.html`
+- **Casos de Éxito:** `https://infodumper.net/casos/`
+- **Caso SIGO:** `https://infodumper.net/casos/sigo.html`
+- **Contacto:** `https://infodumper.net/contacto.html`
+- **Sitemap XML:** `https://infodumper.net/sitemap.xml`

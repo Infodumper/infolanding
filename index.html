@@ -3,37 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PHDCTSW4');</script>
+    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Ignacio Vizoso — Arquitecto de Software, Datos, Automatización y Agentes de Inteligencia Artificial. Enfoque: Procesos → Datos → Software → Automatización → IA.">
     <meta name="author" content="Ignacio Vizoso">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://infodumper.com/">
+    <link rel="canonical" href="https://infodumper.net/">
     <title>Ignacio Vizoso | Software Architect & AI Systems</title>
+
+    <!-- Favicon / Icono de pestaña (Cerebrito) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <!-- Open Graph / Redes Sociales & AI Search Engines -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ignacio Vizoso | Sistemas & IA">
     <meta property="og:title" content="Ignacio Vizoso — Arquitecto de Software, Datos & Agentes IA">
     <meta property="og:description" content="Especialista en transformar complejidad operativa en software ágil, bases de datos confiables, automatizaciones de alto rendimiento y agentes de IA aplicados.">
-    <meta property="og:url" content="https://infodumper.com/">
-    <meta property="og:image" content="https://infodumper.com/styles/images/developer_hero_coworking_drawing.jpg">
+    <meta property="og:url" content="https://infodumper.net/">
+    <meta property="og:image" content="https://infodumper.net/styles/images/og_preview.jpg">
+    <meta property="og:image:secure_url" content="https://infodumper.net/styles/images/og_preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ignacio Vizoso — Arquitecto de Software & Consultor">
     <meta property="og:locale" content="es_AR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ignacio Vizoso — Arquitecto de Software, Datos & Agentes IA">
     <meta name="twitter:description" content="Especialista en transformar complejidad operativa en software ágil, bases de datos confiables y agentes de IA.">
-    <meta name="twitter:image" content="https://infodumper.com/styles/images/developer_hero_coworking_drawing.jpg">
+    <meta name="twitter:image" content="https://infodumper.net/styles/images/og_preview.jpg">
 
-    <!-- Google Fonts: Outfit & JetBrains Mono -->
+    <!-- CSS Principal Minificado y Precargado -->
+    <link rel="preload" href="styles/human.min.css?v=6" as="style">
+    <link rel="stylesheet" href="styles/human.min.css?v=6">
+
+    <!-- Fuentes Google Optimizadas (Carga Asíncrona No Bloqueante) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/human.css?v=5">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+    </noscript>
+
+    <!-- FontAwesome Local Optimizado con font-display: swap (No Bloqueante) -->
+    <link rel="preload" as="style" href="styles/fontawesome.min.css">
+    <link rel="stylesheet" href="styles/fontawesome.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="styles/fontawesome.min.css">
+    </noscript>
 
     <!-- Datos Estructurados JSON-LD (Schema.org) para Motores de Búsqueda y GEO -->
     <script type="application/ld+json">
@@ -42,13 +71,13 @@
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://infodumper.com/#person",
+          "@id": "https://infodumper.net/#person",
           "name": "Ignacio Vizoso",
           "alternateName": "Nacho Vizoso",
           "jobTitle": "Arquitecto de Software, Consultor de Datos & Sistemas de IA",
           "description": "Especialista en diseño de procesos, bases de datos relacionales, backend modular, automatizaciones y agentes de inteligencia artificial aplicados al negocio.",
-          "url": "https://infodumper.com/sobre-mi.html",
-          "image": "https://infodumper.com/styles/images/developer_hero_coworking_drawing.jpg",
+          "url": "https://infodumper.net/sobre-mi.html",
+          "image": "https://infodumper.net/styles/images/developer_hero_coworking_drawing.webp",
           "sameAs": [
             "https://www.linkedin.com/in/ignacio-vizoso/",
             "https://github.com/Infodumper"
@@ -67,11 +96,11 @@
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://infodumper.com/#service",
+          "@id": "https://infodumper.net/#service",
           "name": "Ignacio Vizoso — Consultoría de Sistemas & IA (Infodumper)",
-          "url": "https://infodumper.com/",
+          "url": "https://infodumper.net/",
           "founder": {
-            "@id": "https://infodumper.com/#person"
+            "@id": "https://infodumper.net/#person"
           },
           "address": {
             "@type": "PostalAddress",
@@ -93,12 +122,50 @@
               "name": "Remoto / Global"
             }
           ],
-          "description": "Consultoría y arquitectura de software para empresas: transformación de procesos operativos en bases de datos relacionales, backend modular, automatizaciones y agentes de inteligencia artificial.",
-          "priceRange": "$$"
+          "description": "Consultoría y arquitectura de software para emprendedores y pymes: transformación de procesos operativos en bases de datos relacionales, backend modular, automatizaciones y agentes de inteligencia artificial.",
+          "priceRange": "$$",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Consultoría y Arquitectura de Software",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Diagnóstico de Procesos y Flujos de Trabajo",
+                  "description": "Análisis de cuellos de botella operativos y diseño de arquitectura de optimización."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Desarrollo de Software B2B y Sistemas de Gestión",
+                  "description": "Desarrollo a medida de CRM, ERP y plataformas web de alto rendimiento sin costos de suscripción."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Bases de Datos Relacionales & Dashboards BI",
+                  "description": "Modelado PostgreSQL/MySQL, pipelines analíticos con Pandas y tableros de control en tiempo real."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Implementación de Agentes de IA Locales y Privados",
+                  "description": "Agentes cognitivos autónomos, sistemas RAG corporativos sobre datos privados con modelos locales (Ollama/Qwen)."
+                }
+              }
+            ]
+          }
         },
         {
           "@type": "FAQPage",
-          "@id": "https://infodumper.com/#faq",
+          "@id": "https://infodumper.net/#faq",
           "mainEntity": [
             {
               "@type": "Question",
@@ -140,6 +207,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHDCTSW4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <site-header base-path="./"></site-header>
 
     <main>
@@ -153,7 +224,7 @@
                 
                 <!-- Slide 1: Datos y BI -->
                 <div class="hero-slide active" data-slide="0">
-                    <img src="styles/images/carrusel/slide_datos_bi.jpg" alt="Datos y Business Intelligence" class="hero-slide-bg" loading="eager" fetchpriority="high">
+                    <img src="styles/images/carrusel/slide_datos_bi.webp" alt="Datos y Business Intelligence" class="hero-slide-bg" width="800" height="500" loading="eager" fetchpriority="high">
                     <div class="hero-slide-overlay"></div>
                     <div class="hero-slide-content">
                         <span class="hero-slide-kicker"><i class="fas fa-database"></i> 01 / Arquitectura de Datos</span>
@@ -174,7 +245,7 @@
 
                 <!-- Slide 2: Sistemas y Automatizaciones -->
                 <div class="hero-slide" data-slide="1">
-                    <img src="styles/images/carrusel/slide_sistemas_auto.jpg" alt="Sistemas y Automatizaciones" class="hero-slide-bg" loading="lazy">
+                    <img src="styles/images/carrusel/slide_sistemas_auto.webp" alt="Sistemas y Automatizaciones" class="hero-slide-bg" width="800" height="500" loading="lazy" decoding="async">
                     <div class="hero-slide-overlay"></div>
                     <div class="hero-slide-content">
                         <span class="hero-slide-kicker kicker-green"><i class="fas fa-cogs"></i> 02 / Software & Operativa</span>
@@ -195,7 +266,7 @@
 
                 <!-- Slide 3: Agentes de IA -->
                 <div class="hero-slide" data-slide="2">
-                    <img src="styles/images/carrusel/slide_agentes_ia.jpg" alt="Agentes de Inteligencia Artificial" class="hero-slide-bg" loading="lazy">
+                    <img src="styles/images/carrusel/slide_agentes_ia.webp" alt="Agentes de Inteligencia Artificial" class="hero-slide-bg" width="800" height="500" loading="lazy" decoding="async">
                     <div class="hero-slide-overlay"></div>
                     <div class="hero-slide-content">
                         <span class="hero-slide-kicker"><i class="fas fa-brain"></i> 03 / IA Aplicada</span>
@@ -216,7 +287,7 @@
 
                 <!-- Slide 4: AEC (Arquitectura, Ingeniería y Construcción) -->
                 <div class="hero-slide" data-slide="3">
-                    <img src="styles/images/carrusel/slide_aec_bim.jpg" alt="AEC Arquitectura Ingeniería y Construcción" class="hero-slide-bg" loading="lazy">
+                    <img src="styles/images/carrusel/slide_aec_bim.webp" alt="AEC Arquitectura Ingeniería y Construcción" class="hero-slide-bg" width="800" height="500" loading="lazy" decoding="async">
                     <div class="hero-slide-overlay"></div>
                     <div class="hero-slide-content">
                         <span class="hero-slide-kicker kicker-green"><i class="fas fa-cubes"></i> 04 / Ingeniería & Modelado</span>
@@ -352,8 +423,7 @@
                         <h2 class="hero-role">Arquitecto de Software & Consultor de Sistemas</h2>
 
                         <p class="hero-tagline">
-                            Especialista en transformar la complejidad operativa en software ágil, bases de datos confiables, 
-                            automatizaciones de alto rendimiento y agentes de inteligencia artificial aplicados al negocio.
+                            Arquitectura de Software y Consultoría de Procesos para emprendedores que superaron las hojas de cálculo y buscan sistemas a medida sin suscripciones eternas.
                         </p>
 
                         <!-- Pipeline Enfoque Pill -->
@@ -390,16 +460,24 @@
                             <a href="contacto.html" class="btn btn-primary">
                                 <i class="fas fa-calendar-check"></i> Agendar Diagnóstico
                             </a>
-                            <a href="#skills" class="btn btn-outline">
-                                <i class="fas fa-code"></i> Explorar Stack
+                            <a href="#proyectos" class="btn btn-outline">
+                                <i class="fas fa-laptop-code"></i> Explorar Casos &darr;
                             </a>
+                        </div>
+
+                        <!-- Trust Bar -->
+                        <div class="hero-trust-bar">
+                            <span><i class="fas fa-check"></i> +15 Años en Procesos & Obra</span>
+                            <span><i class="fas fa-check"></i> Software Propietario</span>
+                            <span><i class="fas fa-check"></i> Sistemas en Producción</span>
+                            <span><i class="fas fa-check"></i> Sin Vendor Lock-in</span>
                         </div>
                     </div>
 
                     <!-- Right: Developer at Desk Illustration -->
                     <div class="hero-illustration-col">
                         <div class="hero-illustration-card">
-                            <img src="styles/images/developer_hero_coworking_drawing.jpg" alt="Ignacio Vizoso - Arquitectura de Software e IA" class="hero-developer-img">
+                            <img src="styles/images/developer_hero_coworking_drawing.webp" alt="Ignacio Vizoso - Arquitectura de Software e IA" class="hero-developer-img" width="496" height="370" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -494,7 +572,7 @@
                     <span class="overline overline-blue">QUÉ RESUELVO</span>
                     <h2 class="title-blue">Tres pilares para un crecimiento sostenible</h2>
                     <p class="section-subtitle">
-                        Soluciones arquitectónicas diseñadas para empresas que necesitan orden, escala y automatización.
+                        Soluciones arquitectónicas diseñadas para emprendedores y pymes que necesitan orden, escala y automatización.
                     </p>
                 </div>
 
@@ -544,6 +622,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- ==========================================
              STACK TÉCNICO & SKILLS (PERFIL TÉCNICO COMPLETO)
@@ -683,9 +762,11 @@
                         </div>
                         <p class="skill-card-desc">Creación de APIs REST rápidas y seguras con tipado estricto, manejo transaccional PDO y estructuración JSON.</p>
                         <div class="tech-badges-list collapsible">
+                            <span class="tech-badge featured">Supabase (BaaS)</span>
                             <span class="tech-badge featured">REST API</span>
                             <span class="tech-badge featured">FastAPI</span>
                             <span class="tech-badge">PHP / PDO</span>
+                            <span class="tech-badge">PostgREST</span>
                             <span class="tech-badge">JSON</span>
                         </div>
                         <button class="skill-toggle-trigger" type="button" aria-expanded="false">
@@ -838,6 +919,14 @@
                     </div>
 
                 </div>
+
+                <!-- Architecture Philosophy Callout -->
+                <div class="architecture-manifesto-box">
+                    <h4><i class="fas fa-microchip"></i> Filosofía de Arquitectura: Carga Instantánea &amp; Cero Dependencias</h4>
+                    <p>
+                        Priorizo <strong>Vanilla JavaScript</strong>, motores nativos y bases de datos relacionales robustas (PostgreSQL / SQLite) sobre frameworks pesados y cambiantes. El resultado: interfaces que cargan en menos de 1 segundo, independencia total de proveedores ("no vendor lock-in") y sistemas corporativos con ciclo de vida útil extendido por años sin costos mensuales de suscripción.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -854,20 +943,20 @@
                     </p>
                 </div>
 
-                <div class="carrusel-proyectos">
+                <div class="carrusel-proyectos" id="proyectos">
                     <!-- Caso 1: SIGO -->
                     <a href="casos/sigo.html" class="proyecto-card">
-                        <span class="proyecto-tag">Software AEC</span>
+                        <span class="proyecto-tag" style="background: rgba(20, 88, 144, 0.12); color: #145890; font-weight: 700;">★ PROYECTO INSIGNIA · AEC</span>
                         <h3>SIGO</h3>
-                        <p>Sistema Integral de Gestión de Obras. Cómputo métrico y presupuestación para edificación con metodología Chandías, PostgreSQL y Supabase.</p>
+                        <p>Plataforma de ingeniería de costos. Cómputo métrico y cálculo de APU en tiempo real sobre +180 tareas maestras con metodología Chandías, PostgreSQL y Supabase.</p>
                         <span class="proyecto-link">Ver Caso de Estudio <i class="fas fa-arrow-right"></i></span>
                     </a>
 
                     <!-- Caso 2: CliP26 -->
                     <a href="casos/clip26.html" class="proyecto-card">
-                        <span class="proyecto-tag">Gestión Móvil</span>
+                        <span class="proyecto-tag">Gestión Móvil B2B</span>
                         <h3>CliP26</h3>
-                        <p>Sistema ligero de gestión de grupos operativos y venta directa con sincronización en tiempo real y optimizado para uso en dispositivos móviles.</p>
+                        <p>Gestión operativa móvil para venta directa. -70% de tiempo en toma de pedidos semanales y 0% margen de error en señas con sincronización en tiempo real.</p>
                         <span class="proyecto-link">Ver Caso de Estudio <i class="fas fa-arrow-right"></i></span>
                     </a>
 
@@ -956,7 +1045,7 @@
     <site-footer base-path="./"></site-footer>
 
     <!-- Componentes y Scripts -->
-    <script src="./scripts/components.js"></script>
+    <script src="./scripts/components.js" defer></script>
 
     <!-- Scripts de Interactividad: Carrusel Principal, Ribbon y Filtrado de Skills -->
     <script>
@@ -1113,6 +1202,7 @@
                 if (expandBtn) expandBtn.addEventListener('click', toggleCard);
                 if (toggleTrigger) toggleTrigger.addEventListener('click', toggleCard);
             });
+
         });
     </script>
 </body>

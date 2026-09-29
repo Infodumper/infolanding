@@ -10,7 +10,7 @@ class SiteHeader extends HTMLElement {
         <nav class="glass-nav">
             <div class="nav-container">
                 <a href="${basePath}index.html" class="brand" aria-label="Ignacio Vizoso - Inicio">
-                    <img src="${basePath}styles/images/Logo-sin-fondo.png" alt="Logo Ignacio Vizoso" class="brand-logo">
+                    <img src="${basePath}styles/images/logo_nav.webp" alt="Logo Ignacio Vizoso" class="brand-logo" width="34" height="34">
                     <span class="brand-bracket">&lt;</span>
                     <span class="brand-name">Ignacio Vizoso</span>
                     <span class="brand-slash">/&gt;</span>

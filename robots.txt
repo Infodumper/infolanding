@@ -45,5 +45,5 @@ User-agent: Diffbot
 Allow: /
 
 # Declaración del Sitemap y Manifiesto de IA
-Sitemap: https://infodumper.com/sitemap.xml
-# Manifiesto LLMs: https://infodumper.com/llms.txt
+Sitemap: https://infodumper.net/sitemap.xml
+# Manifiesto LLMs: https://infodumper.net/llms.txt

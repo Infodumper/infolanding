@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://infodumper.com/</loc>
+        <loc>https://infodumper.net/</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/sobre-mi.html</loc>
+        <loc>https://infodumper.net/sobre-mi.html</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/soluciones/</loc>
+        <loc>https://infodumper.net/soluciones/</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/soluciones/datos.html</loc>
+        <loc>https://infodumper.net/soluciones/datos.html</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/casos/</loc>
+        <loc>https://infodumper.net/casos/</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/casos/clip26.html</loc>
+        <loc>https://infodumper.net/casos/clip26.html</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/casos/ms-bellass.html</loc>
+        <loc>https://infodumper.net/casos/ms-bellass.html</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/casos/tienda-joyas.html</loc>
+        <loc>https://infodumper.net/casos/tienda-joyas.html</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://infodumper.com/contacto.html</loc>
+        <loc>https://infodumper.net/casos/sigo.html</loc>
+        <lastmod>2026-09-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://infodumper.net/contacto.html</loc>
         <lastmod>2026-09-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
