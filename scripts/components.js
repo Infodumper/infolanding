@@ -16,7 +16,7 @@ class SiteHeader extends HTMLElement {
                     <span class="brand-slash">/&gt;</span>
                 </a>
                 
-                <button class="menu-toggle" aria-label="Abrir menú" onclick="this.nextElementSibling.classList.toggle('active');">
+                <button class="menu-toggle" aria-label="Abrir menú">
                     <i class="fas fa-bars"></i>
                 </button>
                 
@@ -32,6 +32,14 @@ class SiteHeader extends HTMLElement {
             </div>
         </nav>
         `;
+
+        const menuToggle = this.querySelector('.menu-toggle');
+        const navLinks = this.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
     }
 }
 

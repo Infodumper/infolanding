@@ -28,17 +28,17 @@
     # Protección XSS legado (compatibilidad con analizadores)
     Header always set X-XSS-Protection "1; mode=block"
 
-    # Content-Security-Policy (CSP) Robusta:
-    # - scripts: 'self', inline (necesario para ROI y FAQ), cdnjs
+    # Content-Security-Policy (CSP) Robusta para Grado A+:
+    # - scripts: 'self', cdnjs, Google Tag Manager (Strict CSP sin 'unsafe-inline')
     # - estilos: 'self', inline, Google Fonts, cdnjs
     # - fuentes: 'self', Google Fonts gstatic, cdnjs, data:
-    # - imágenes: 'self', data:, https:, blob:
-    # - conexiones: 'self'
+    # - imágenes: 'self', data:, https:, blob:, Google Tag Manager
+    # - conexiones: 'self', Google Analytics
     # - objetos/plugins: 'none'
     # - base-uri: 'self'
     # - form-action: 'self'
     # - frame-ancestors: 'none' (anti-clickjacking)
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https: blob: https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'self' https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https: blob: https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'self' https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
 </IfModule>
 
 # ------------------------------------------------------------------------------

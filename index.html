@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PHDCTSW4');</script>
+    <script src="./scripts/gtm.js" defer></script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -48,21 +44,13 @@
     <link rel="preload" href="styles/human.min.css?v=6" as="style">
     <link rel="stylesheet" href="styles/human.min.css?v=6">
 
-    <!-- Fuentes Google Optimizadas (Carga Asíncrona No Bloqueante) -->
+    <!-- Fuentes Google Optimizadas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
-    </noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
 
-    <!-- FontAwesome Local Optimizado con font-display: swap (No Bloqueante) -->
-    <link rel="preload" as="style" href="styles/fontawesome.min.css">
-    <link rel="stylesheet" href="styles/fontawesome.min.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="styles/fontawesome.min.css">
-    </noscript>
+    <!-- FontAwesome Local -->
+    <link rel="stylesheet" href="styles/fontawesome.min.css">
 
     <!-- Datos Estructurados JSON-LD (Schema.org) para Motores de Búsqueda y GEO -->
     <script type="application/ld+json">
@@ -233,7 +221,7 @@
                             Modelado relacional riguroso, pipelines con SQL/Pandas y tableros analíticos en tiempo real para tomar decisiones estratégicas con certeza matemática.
                         </p>
                         <div class="hero-slide-actions">
-                            <a href="#skills" class="btn-hero-primary" onclick="filterCategory('datos')">
+                            <a href="#skills" class="btn-hero-primary" data-filter="datos">
                                 <i class="fas fa-layer-group"></i> Ver Stack de Datos
                             </a>
                             <a href="contacto.html" class="btn-hero-secondary">
@@ -275,7 +263,7 @@
                             Agentes cognitivos autónomos y sistemas de recuperación sobre datos privados corporativos con modelos locales (Ollama/Qwen) y seguridad ISO 42001.
                         </p>
                         <div class="hero-slide-actions">
-                            <a href="#skills" class="btn-hero-primary" onclick="filterCategory('ia')">
+                            <a href="#skills" class="btn-hero-primary" data-filter="ia">
                                 <i class="fas fa-robot"></i> Explorar Agentes
                             </a>
                             <a href="contacto.html" class="btn-hero-secondary">
@@ -296,7 +284,7 @@
                             Automatización algorítmica con Dynamo y Revit, estructuración de cómputos métricos, presupuestos y control técnico integral para proyectos de construcción.
                         </p>
                         <div class="hero-slide-actions">
-                            <a href="#skills" class="btn-hero-primary" onclick="filterCategory('bim')" style="background: #5A8259;">
+                            <a href="#skills" class="btn-hero-primary" data-filter="bim" style="background: #5A8259;">
                                 <i class="fas fa-drafting-compass"></i> Ver Especialidad AEC
                             </a>
                             <a href="contacto.html" class="btn-hero-secondary">
@@ -335,7 +323,7 @@
                 <div class="ribbon-scroll" id="ribbon-scroll">
                     
                     <!-- 1. IA & Agentes -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('ia')" aria-label="Ver especialidad IA y Agentes">
+                    <a href="#skills" class="ribbon-item" data-filter="ia" aria-label="Ver especialidad IA y Agentes">
                         <div class="ribbon-icon-wrapper" style="color: #726c8d; background: #ebeaf2;">
                             <i class="fas fa-robot"></i>
                         </div>
@@ -343,7 +331,7 @@
                     </a>
 
                     <!-- 2. Programación -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('programacion')" aria-label="Ver especialidad Programación">
+                    <a href="#skills" class="ribbon-item" data-filter="programacion" aria-label="Ver especialidad Programación">
                         <div class="ribbon-icon-wrapper" style="color: #4a6b8c; background: #e3ebf2;">
                             <i class="fas fa-code"></i>
                         </div>
@@ -351,7 +339,7 @@
                     </a>
 
                     <!-- 3. Datos & Analítica -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('datos')" aria-label="Ver especialidad Datos y Analítica">
+                    <a href="#skills" class="ribbon-item" data-filter="datos" aria-label="Ver especialidad Datos y Analítica">
                         <div class="ribbon-icon-wrapper" style="color: #528999; background: #e3edf0;">
                             <i class="fas fa-database"></i>
                         </div>
@@ -359,7 +347,7 @@
                     </a>
 
                     <!-- 4. Backend & APIs -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('backend')" aria-label="Ver especialidad Backend y APIs">
+                    <a href="#skills" class="ribbon-item" data-filter="backend" aria-label="Ver especialidad Backend y APIs">
                         <div class="ribbon-icon-wrapper" style="color: #558273; background: #e5ede8;">
                             <i class="fas fa-network-wired"></i>
                         </div>
@@ -367,7 +355,7 @@
                     </a>
 
                     <!-- 5. Seguridad & Normas -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('seguridad')" aria-label="Ver especialidad Seguridad y Normas">
+                    <a href="#skills" class="ribbon-item" data-filter="seguridad" aria-label="Ver especialidad Seguridad y Normas">
                         <div class="ribbon-icon-wrapper" style="color: #995d6a; background: #f0e6e8;">
                             <i class="fas fa-shield-halved"></i>
                         </div>
@@ -375,7 +363,7 @@
                     </a>
 
                     <!-- 6. DevOps & Infra -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('devops')" aria-label="Ver especialidad DevOps e Infraestructura">
+                    <a href="#skills" class="ribbon-item" data-filter="devops" aria-label="Ver especialidad DevOps e Infraestructura">
                         <div class="ribbon-icon-wrapper" style="color: #526071; background: #e8ecf0;">
                             <i class="fas fa-cloud-arrow-up"></i>
                         </div>
@@ -383,7 +371,7 @@
                     </a>
 
                     <!-- 7. Frontend & UI -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('frontend')" aria-label="Ver especialidad Frontend y UI">
+                    <a href="#skills" class="ribbon-item" data-filter="frontend" aria-label="Ver especialidad Frontend y UI">
                         <div class="ribbon-icon-wrapper" style="color: #9b7a4e; background: #f2ebe3;">
                             <i class="fas fa-laptop-code"></i>
                         </div>
@@ -391,7 +379,7 @@
                     </a>
 
                     <!-- 8. Gestión & Req. -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('gestion')" aria-label="Ver especialidad Gestión y Requerimientos">
+                    <a href="#skills" class="ribbon-item" data-filter="gestion" aria-label="Ver especialidad Gestión y Requerimientos">
                         <div class="ribbon-icon-wrapper" style="color: #836787; background: #eee6f0;">
                             <i class="fas fa-tasks"></i>
                         </div>
@@ -399,7 +387,7 @@
                     </a>
 
                     <!-- 9. AEC / BIM -->
-                    <a href="#skills" class="ribbon-item" onclick="filterCategory('bim')" aria-label="Ver especialidad AEC y BIM">
+                    <a href="#skills" class="ribbon-item" data-filter="bim" aria-label="Ver especialidad AEC y BIM">
                         <div class="ribbon-icon-wrapper" style="color: #8c7349; background: #f0ebe1;">
                             <i class="fas fa-cubes"></i>
                         </div>
@@ -1046,165 +1034,7 @@
 
     <!-- Componentes y Scripts -->
     <script src="./scripts/components.js" defer></script>
-
-    <!-- Scripts de Interactividad: Carrusel Principal, Ribbon y Filtrado de Skills -->
-    <script>
-        // ─── Filtrado Global de Skills por Categoría ───
-        function filterCategory(category) {
-            const filterBtns = document.querySelectorAll('.filter-chip');
-            const skillCards = document.querySelectorAll('.skill-category-card');
-
-            filterBtns.forEach(btn => {
-                if (btn.getAttribute('data-filter') === category) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            skillCards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                    setTimeout(() => { card.style.opacity = '1'; }, 10);
-                } else {
-                    card.style.display = 'none';
-                    card.style.opacity = '0';
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // ─── 1. Inicialización de Filtros de Skills ───
-            const filterBtns = document.querySelectorAll('.filter-chip');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const cat = btn.getAttribute('data-filter');
-                    filterCategory(cat);
-                });
-            });
-
-            // ─── 2. Inicialización del Carrusel Hero ───
-            const track = document.getElementById('hero-carousel-track');
-            const slides = document.querySelectorAll('.hero-slide');
-            const dots = document.querySelectorAll('.hero-dot');
-            const prevBtn = document.getElementById('hero-prev-btn');
-            const nextBtn = document.getElementById('hero-next-btn');
-
-            if (track && slides.length > 0) {
-                let currentSlide = 0;
-                const totalSlides = slides.length;
-                let autoSlideInterval;
-
-                function updateSlide(index) {
-                    currentSlide = (index + totalSlides) % totalSlides;
-                    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-                    
-                    slides.forEach((slide, idx) => {
-                        slide.classList.toggle('active', idx === currentSlide);
-                    });
-
-                    dots.forEach((dot, idx) => {
-                        dot.classList.toggle('active', idx === currentSlide);
-                    });
-                }
-
-                function nextSlide() {
-                    updateSlide(currentSlide + 1);
-                }
-
-                function prevSlide() {
-                    updateSlide(currentSlide - 1);
-                }
-
-                function startAutoPlay() {
-                    clearInterval(autoSlideInterval);
-                    autoSlideInterval = setInterval(nextSlide, 7000);
-                }
-
-                if (nextBtn) {
-                    nextBtn.addEventListener('click', () => {
-                        nextSlide();
-                        startAutoPlay();
-                    });
-                }
-
-                if (prevBtn) {
-                    prevBtn.addEventListener('click', () => {
-                        prevSlide();
-                        startAutoPlay();
-                    });
-                }
-
-                dots.forEach((dot, idx) => {
-                    dot.addEventListener('click', () => {
-                        updateSlide(idx);
-                        startAutoPlay();
-                    });
-                });
-
-                // Pausar con hover
-                const carouselSection = document.getElementById('inicio');
-                if (carouselSection) {
-                    carouselSection.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-                    carouselSection.addEventListener('mouseleave', startAutoPlay);
-                }
-
-                // Soporte táctil / swipe
-                let touchStartX = 0;
-                let touchEndX = 0;
-
-                track.addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                }, { passive: true });
-
-                track.addEventListener('touchend', (e) => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe();
-                }, { passive: true });
-
-                function handleSwipe() {
-                    if (touchEndX < touchStartX - 40) {
-                        nextSlide();
-                        startAutoPlay();
-                    }
-                    if (touchEndX > touchStartX + 40) {
-                        prevSlide();
-                        startAutoPlay();
-                    }
-                }
-
-                // Iniciar rotación automática
-                startAutoPlay();
-            }
-
-            // ─── 3. Despliegue/Colapso de Tecnologías en Skill Cards ───
-            const allSkillCards = document.querySelectorAll('.skill-category-card');
-            allSkillCards.forEach(card => {
-                const expandBtn = card.querySelector('.skill-expand-btn');
-                const toggleTrigger = card.querySelector('.skill-toggle-trigger');
-                const toggleText = toggleTrigger ? toggleTrigger.querySelector('.toggle-text') : null;
-
-                function toggleCard(e) {
-                    if (e) e.stopPropagation();
-                    const isExpanded = card.classList.toggle('expanded');
-                    if (expandBtn) {
-                        expandBtn.setAttribute('aria-expanded', isExpanded);
-                        expandBtn.setAttribute('title', isExpanded ? 'Ocultar tecnologías' : 'Desplegar tecnologías');
-                    }
-                    if (toggleTrigger) {
-                        toggleTrigger.setAttribute('aria-expanded', isExpanded);
-                    }
-                    if (toggleText) {
-                        toggleText.textContent = isExpanded ? 'Ocultar tecnologías' : 'Ver tecnologías';
-                    }
-                }
-
-                if (expandBtn) expandBtn.addEventListener('click', toggleCard);
-                if (toggleTrigger) toggleTrigger.addEventListener('click', toggleCard);
-            });
-
-        });
-    </script>
+    <script src="./scripts/main.js" defer></script>
 </body>
 
 </html>
