@@ -30,7 +30,7 @@
     
     --text-primary:     #1e293b; /* Slate 800 — nítido pero no negro puro */
     --text-secondary:   #526071; /* Slate 600 atenuado */
-    --text-muted:       #8392a5; /* Slate 400 grisáceo */
+    --text-muted:       #6b7a8d; /* Slate 500 para mayor contraste (AAA) */
     
     /* Muted Accent Colors (Mismos tonos, mucho más apagados/desaturados) */
     --accent:           #4a6b8c; /* Azul acero mate desaturado */
@@ -177,7 +177,7 @@ h3.title-green {
 }
 
 .overline.overline-green {
-    color: #5A8259;
+    color: #3b5a3a;
 }
 
 .overline.overline-blue {
@@ -1071,7 +1071,7 @@ site-header {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #5A8259;
+    color: #3b5a3a;
     background: #eef5ee;
     border: 1px solid rgba(90, 130, 89, 0.2);
     padding: 0.3rem 0.7rem;
