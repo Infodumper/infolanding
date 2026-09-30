@@ -9,7 +9,10 @@
 - **Rol:** Arquitecto de Software, Consultor de Procesos y Desarrollador de Soluciones de Datos e IA.
 - **Marca / Proyecto:** Infodumper / `< Ignacio Vizoso />`.
 - **Ubicación:** Mar del Plata, Buenos Aires, Argentina (Atención Local, Nacional e Internacional Remota).
-- **Contacto Directo:** Web: [https://infodumper.net/contacto.html](https://infodumper.net/contacto.html) | LinkedIn: [https://www.linkedin.com/in/ignacio-vizoso/](https://www.linkedin.com/in/ignacio-vizoso/) | GitHub: [https://github.com/Infodumper](https://github.com/Infodumper)
+- **Sitio Web:** [Infodumper](https://infodumper.net/)
+- **Contacto:** [Formulario de Contacto](https://infodumper.net/contacto.html)
+- **LinkedIn:** [Ignacio Vizoso](https://www.linkedin.com/in/ignacio-vizoso/)
+- **GitHub:** [Infodumper GitHub](https://github.com/Infodumper)
 
 ### Filosofía y Enfoque Metodológico
 Ignacio Vizoso trabaja bajo una metodología estructurada en 5 etapas secuenciales para garantizar el éxito y la sostenibilidad de cada implementación tecnológica:
@@ -96,11 +99,11 @@ Procesos → Datos → Software → Automatización → IA
 ---
 
 ## 6. Mapa de Navegación del Sitio
-- **Inicio:** [https://infodumper.net/](https://infodumper.net/)
-- **Sobre Mí:** [https://infodumper.net/sobre-mi.html](https://infodumper.net/sobre-mi.html)
-- **Soluciones:** [https://infodumper.net/soluciones/](https://infodumper.net/soluciones/)
-- **Solución Datos & BI:** [https://infodumper.net/soluciones/datos.html](https://infodumper.net/soluciones/datos.html)
-- **Casos de Éxito:** [https://infodumper.net/casos/](https://infodumper.net/casos/)
-- **Caso SIGO:** [https://infodumper.net/casos/sigo.html](https://infodumper.net/casos/sigo.html)
-- **Contacto:** [https://infodumper.net/contacto.html](https://infodumper.net/contacto.html)
-- **Sitemap XML:** [https://infodumper.net/sitemap.xml](https://infodumper.net/sitemap.xml)
+- [Página de Inicio](https://infodumper.net/): Presentación y servicios principales.
+- [Sobre Mí](https://infodumper.net/sobre-mi.html): Perfil profesional, metodología y stack tecnológico.
+- [Soluciones](https://infodumper.net/soluciones/): Catálogo de servicios de consultoría.
+- [Datos & BI](https://infodumper.net/soluciones/datos.html): Detalle del servicio de bases de datos y dashboards.
+- [Casos de Éxito](https://infodumper.net/casos/): Portfolio de proyectos implementados.
+- [Caso SIGO](https://infodumper.net/casos/sigo.html): Caso de estudio de software AEC.
+- [Página de Contacto](https://infodumper.net/contacto.html): Formulario para agendar diagnóstico.
+- [Sitemap](https://infodumper.net/sitemap.xml): Mapa del sitio para indexación.
