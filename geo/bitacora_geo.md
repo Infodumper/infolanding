@@ -32,7 +32,7 @@ Los motores generativos (SearchGPT, Perplexity, Google Gemini, Claude) priorizan
 - **`Person` (`#person`)**:
   - `name`: Ignacio Vizoso
   - `jobTitle`: Arquitecto de Software, Consultor de Datos & Sistemas de IA
-  - `sameAs`: Enlaces oficiales a LinkedIn ([`in/ignacio-vizoso`](https://www.linkedin.com/in/ignacio-vizoso/)) y GitHub ([`github.com/Infodumper`](https://github.com/Infodumper))
+  - `sameAs`: Enlaces oficiales a LinkedIn ([`in/ignacio-vizoso`](https://www.linkedin.com/in/ignacio-vizoso/)), GitHub ([`github.com/Infodumper`](https://github.com/Infodumper)) e Instagram ([`@infodumper.au`](https://www.instagram.com/infodumper.au/))
   - `knowsAbout`: Python, FastAPI, PostgreSQL, SQL, Pandas, RAG, Ollama, MCP, ISO 27001, ISO 42001, BIM.
 - **`ProfessionalService` (`#service`)**:
   - `name`: Ignacio Vizoso — Consultoría de Sistemas & IA (Infodumper)
