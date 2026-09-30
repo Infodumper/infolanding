@@ -9,7 +9,7 @@
 - **Rol:** Arquitecto de Software, Consultor de Procesos y Desarrollador de Soluciones de Datos e IA.
 - **Marca / Proyecto:** Infodumper / `< Ignacio Vizoso />`.
 - **Ubicación:** Mar del Plata, Buenos Aires, Argentina (Atención Local, Nacional e Internacional Remota).
-- **Contacto Directo:** Web: `https://infodumper.net/contacto.html` | LinkedIn: `https://www.linkedin.com/in/ignacio-vizoso/` | GitHub: `https://github.com/Infodumper`
+- **Contacto Directo:** Web: [https://infodumper.net/contacto.html](https://infodumper.net/contacto.html) | LinkedIn: [https://www.linkedin.com/in/ignacio-vizoso/](https://www.linkedin.com/in/ignacio-vizoso/) | GitHub: [https://github.com/Infodumper](https://github.com/Infodumper)
 
 ### Filosofía y Enfoque Metodológico
 Ignacio Vizoso trabaja bajo una metodología estructurada en 5 etapas secuenciales para garantizar el éxito y la sostenibilidad de cada implementación tecnológica:
@@ -96,11 +96,11 @@ Procesos → Datos → Software → Automatización → IA
 ---
 
 ## 6. Mapa de Navegación del Sitio
-- **Inicio:** `https://infodumper.net/`
-- **Sobre Mí:** `https://infodumper.net/sobre-mi.html`
-- **Soluciones:** `https://infodumper.net/soluciones/`
-- **Solución Datos & BI:** `https://infodumper.net/soluciones/datos.html`
-- **Casos de Éxito:** `https://infodumper.net/casos/`
-- **Caso SIGO:** `https://infodumper.net/casos/sigo.html`
-- **Contacto:** `https://infodumper.net/contacto.html`
-- **Sitemap XML:** `https://infodumper.net/sitemap.xml`
+- **Inicio:** [https://infodumper.net/](https://infodumper.net/)
+- **Sobre Mí:** [https://infodumper.net/sobre-mi.html](https://infodumper.net/sobre-mi.html)
+- **Soluciones:** [https://infodumper.net/soluciones/](https://infodumper.net/soluciones/)
+- **Solución Datos & BI:** [https://infodumper.net/soluciones/datos.html](https://infodumper.net/soluciones/datos.html)
+- **Casos de Éxito:** [https://infodumper.net/casos/](https://infodumper.net/casos/)
+- **Caso SIGO:** [https://infodumper.net/casos/sigo.html](https://infodumper.net/casos/sigo.html)
+- **Contacto:** [https://infodumper.net/contacto.html](https://infodumper.net/contacto.html)
+- **Sitemap XML:** [https://infodumper.net/sitemap.xml](https://infodumper.net/sitemap.xml)

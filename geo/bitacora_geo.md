@@ -97,3 +97,11 @@ Para maximizar menciones y apariciones como fuente primaria en respuestas de IA:
   - *"Consultor de software y automatización con IA en Argentina"*
   - *"Arquitecto de software para ordenar procesos y bases de datos"*
   - *"Software de gestión de costos de obra civil y cómputo con PostgreSQL"*
+
+---
+
+## 7. Historial de Auditorías y Correcciones
+
+### Resolución de Auditoría de Accesibilidad y Visibilidad (Lighthouse)
+- **`index.html` (Accesibilidad ARIA):** Se corrigió la estructura del árbol de accesibilidad en el componente del carrusel (`#hero-dots-container`). Se removieron los atributos `role="tablist"` y `role="tab"` que generaban advertencias de jerarquía ARIA (hijos inválidos), garantizando validación perfecta y manteniendo la semántica con botones nativos.
+- **`llms.txt` (Visibilidad para Agentes):** Se actualizaron todos los enlaces (Contacto y Mapa del Sitio) al formato estándar de Markdown `[texto](URL)`. Esto resolvió la advertencia que indicaba que el archivo carecía de enlaces válidos, asegurando que los LLMs y rastreadores web puedan interpretar correctamente las rutas.
