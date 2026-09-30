@@ -39,7 +39,7 @@
 
 ## 5. Confianza y Autoridad (E-E-A-T)
 
-- [x] **Autoría Verificable**: Enlaces a perfiles públicos reales de LinkedIn y GitHub.
+- [x] **Autoría Verificable**: Enlaces a perfiles públicos reales de LinkedIn, GitHub e Instagram.
 - [x] **Marco de Seguridad y Gobernanza**: Mención a normas ISO 27001 e ISO 42001.
 - [x] **Canales de Contacto Directo**: Vías funcionales de comunicación.
 - [ ] **Testimonios de Clientes**: A incorporar en futuras etapas de proyectos.
@@ -48,5 +48,6 @@
 
 ## 6. Medición y Monitoreo
 
-- [ ] **Configuración en GA4**: Segmentación de tráfico de motores generativos.
+- [x] **Configuración Base GTM y GA4**: Contenedor `GTM-PHDCTSW4` y eventos de conversión (`click_social`, `click_contact_link`, `generate_lead`) activos.
+- [ ] **Configuración en GA4**: Segmentación de tráfico de motores generativos (canales personalizados para ChatGPT, Perplexity, Claude, Gemini).
 - [ ] **Auditoría periódica de citas**: Verificación de menciones en SearchGPT, Perplexity y Gemini.

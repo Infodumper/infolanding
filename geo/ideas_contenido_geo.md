@@ -55,10 +55,11 @@ Las IAs valoran fuertemente la estructura **Desafío → Arquitectura Implementa
 ### [Nombre del Cliente / Proyecto] — [Tipo de Solución]
 - **Contexto & Desafío Inicial:** Descripción concisa del cuello de botella o problema operativo.
 - **Enfoque Metodológico Aplicado:** 
-  1. Relevamiento y diseño de procesos (Jira / Notion).
-  2. Modelado de datos en SQL.
-  3. Desarrollo de backend modular (FastAPI / PHP) e interfaz ligera.
-  4. Automatización e integración de IA aplicada.
+  1. **Procesos:** Relevamiento, diagnóstico de cuellos de botella y estandarización de flujos operativos.
+  2. **Datos:** Modelado relacional SQL (PostgreSQL/MySQL), esquemas normalizados y consistencia transaccional.
+  3. **Software:** Desarrollo modular de backend (FastAPI / PHP PDO) e interfaces frontend nativas ligeras.
+  4. **Automatización:** Conexión de servicios, APIs REST y sincronización de eventos en tiempo real.
+  5. **IA:** Despliegue de agentes contextuales (RAG), modelos locales privados (Ollama) y protocolos MCP.
 - **Tecnologías Clave:** [Listado del stack utilizado].
 - **Resultados & Métricas de Impacto:**
   - Reducción del tiempo de respuesta en un X%.
