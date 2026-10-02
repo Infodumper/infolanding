@@ -71,7 +71,7 @@ class SiteFooter extends HTMLElement {
                 </nav>
             </div>
         </footer>
-        <a href="https://wa.me/" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <a href="https://wa.me/5492235869878" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         `;

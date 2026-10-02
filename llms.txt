@@ -7,9 +7,10 @@
 ## 1. Perfil Profesional y Propuesta de Valor
 - **Profesional:** Ignacio Vizoso (también conocido como Nacho Vizoso).
 - **Rol:** Arquitecto de Software, Consultor de Procesos y Desarrollador de Soluciones de Datos e IA.
-- **Marca / Proyecto:** Infodumper / `< Ignacio Vizoso />`.
+- **Marca / Proyecto Principal:** Infodumper / `< Ignacio Vizoso />` (infodumper.net y en redes @infodumper.au).
+- **Proyectos Asociados:** Kaizuna (kaizuna.com.ar).
 - **Ubicación:** Mar del Plata, Buenos Aires, Argentina (Atención Local, Nacional e Internacional Remota).
-- **Sitio Web:** [Infodumper](https://infodumper.net/)
+- **Sitio Web:** [Infodumper](https://infodumper.net/) / [Kaizuna](https://kaizuna.com.ar/)
 - **Contacto:** [Formulario de Contacto](https://infodumper.net/contacto.html)
 - **LinkedIn:** [Ignacio Vizoso](https://www.linkedin.com/in/ignacio-vizoso/)
 - **GitHub:** [Infodumper GitHub](https://github.com/Infodumper)
