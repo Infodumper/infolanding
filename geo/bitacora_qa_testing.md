@@ -1,141 +1,126 @@
-# 🧪 Bitácora Técnica & Guía de Implementación: Suite de QA y Testing Web Automatizado
+# 🧪 Bitácora Técnica: Suite de QA y Validación Estática Automatizada
 
-> **Registro técnico consolidado de arquitectura de pruebas, aseguramiento de calidad (QA), detección de enlaces 404, validación de datos estructurados Schema.org, paridad CSS y blindaje de despliegues en [infodumper.net](https://infodumper.net).**  
+> **Registro técnico de diseño, alcance, limitaciones y resultados de la suite de pruebas internas para [infodumper.net](https://infodumper.net).**  
 > **Autor:** Ignacio Vizoso (Infodumper) — *Arquitecto de Software, Consultor de Procesos & Sistemas de IA*  
-> **Metodología:** $\text{Procesos} \rightarrow \text{Datos} \rightarrow \text{Software} \rightarrow \text{Automatización} \rightarrow \text{IA}$  
-> **Versión:** 1.0 (Auditoría Integral de Arquitectura Web Estática 2026)
+> **Metodología:** Procesos → Datos → Software → Automatización → IA  
+> **Versión:** 2.0 (Revisión técnica y metodológica)
 
 ---
 
-## 📊 1. Resumen Ejecutivo & Ficha Técnica
+## 📊 1. Resumen Ejecutivo & Estado Actual
 
-| Métrica / Parámetro | Valor Obtenido | Estado |
-|:---|:---:|:---:|
-| **Comprobaciones Ejecutadas** | **335 checks automáticos** | ✅ Aprobado (100%) |
-| **Comprobaciones Exitosas** | **335** | ✅ Cero regresiones |
-| **Fallos Críticos (Errors)** | **0** | 🛡️ Cero deuda técnica |
-| **Rotura de Enlaces (404s)** | **0** | 🔗 Integridad relacional total |
-| **Desincronización CSS** | **0 bytes de divergencia** | 🎨 Paridad `human.css` = `human.min.css` |
-| **Archivos HTML Auditados** | **13 páginas** | 📄 Cobertura del 100% del árbol web |
-| **Tiempo Total de Ejecución** | **~0.8 segundos** | ⚡ Ultraligero y de ejecución instantánea |
-| **Runtime & Dependencias** | Python 3.10+ Estándar Puro | 🪶 Cero paquetes externos (`node_modules` free) |
-| **Automatización CI/CD** | GitHub Actions (`qa.yml`) | 🚀 Bloqueo preventivo antes del deploy |
+| Parámetro | Valor | Detalle Técnico |
+|:---|:---:|:---|
+| **Comprobaciones Realizadas** | **351** | Aserciones unitarias sobre la estructura de archivos en disco. |
+| **Comprobaciones Exitosas** | **351** | Cero errores bloqueantes en la ejecución actual. |
+| **Errores Bloqueantes (Fails)** | **0** | Sin enlaces locales rotos, sin fallos de sintaxis JSON-LD y con jerarquía H1 consistente. |
+| **Advertencias Informativas (Warns)** | **33** | Subpáginas secundarias (`blog/`, `casos/`, `soluciones/`, `recursos/`) con metadatos Open Graph incompletos o sin bloque JSON-LD dedicado. |
+| **Estado de Minificación CSS** | **Sincronizado** | `human.min.css` (37.1 KB) generado de forma determinista desde `human.css` (50.2 KB), logrando un 26% de reducción. |
+| **Tiempo de Ejecución** | **~0.8 segundos** | Suite local y en CI sin sobrecarga de runtime. |
+| **Runtime & Dependencias** | Python 3.13 (CI) / 3.10+ (Local) | Librería estándar exclusivamente (`html.parser`, `urllib`, `pathlib`, `json`, `xml`). Cero dependencias en `node_modules`. |
+| **Integración Continua** | GitHub Actions (`qa.yml`) | Ejecución en cada `push` y `pull_request` con `permissions: contents: read`. |
 
 ---
 
-## ⚡ 2. El Problema: El Mito de la Inmunidad en Webs Estáticas
+## ⚡ 2. El Problema: Fragilidad Silenciosa en Plataformas Estáticas
 
-En el desarrollo de software moderno y plataformas web minimalistas (HTML5 semántico, Vanilla CSS y Web Components nativos), suele imperar un sesgo cognitivo común:
+En arquitecturas web estáticas construidas con HTML5 semántico, Vanilla CSS y Web Components nativos, prescindir de frameworks pesados aporta velocidad y simplicidad operativa. Sin embargo, surge un mito frecuente: suponer que una web estática no requiere pruebas continuas.
 
-> *"Al ser una web puramente estática sin base de datos en cliente ni runtime backend pesado, no se puede romper. Por ende, no necesita tests."*
+La experiencia demuestra que las webs estáticas sufren una degradación silenciosa fácil de pasar por alto:
 
-La práctica en entornos reales demuestra que **las plataformas estáticas sufren una degradación técnica invisible y constante**:
+* **Enlaces locales rotos (404s en disco):** Al reorganizar carpetas (`blog/`, `casos/`, `recursos/`), una discrepancia en rutas relativas (`./` frente a `../`) genera enlaces muertos que los editores convencionales no detectan.
+* **Anclas fragmentadas (`#id` huérfanas):** Botones de navegación o llamadas a la acción que apuntan a `#skills` o `#casos` después de que el elemento destino fue renombrado o eliminado del DOM.
+* **Datos estructurados inválidos (Schema.org):** Un error de sintaxis en un bloque JSON-LD (como una coma final sobrante) provoca que Google, ChatGPT Search o Perplexity ignoren por completo las entidades declaradas, perdiendo la oportunidad de enriquecer la indexación.
+* **Fallas jerárquicas de SEO y accesibilidad:** Omitir el encabezado `<h1>`, duplicar la etiqueta `<main>` o carecer del atributo `alt` en imágenes.
+* **Desfase de estilos:** Editar la hoja de estilos de desarrollo (`human.css`) y olvidar regenerar la versión minificada para producción (`human.min.css`), provocando que los cambios no se reflejen en los usuarios finales.
+
+---
+
+## 🎯 3. Alcance y Limitaciones: Qué Cubre y Qué NO Cubre
+
+Para mantener una evaluación técnica honesta, es fundamental delimitar con claridad el alcance de esta suite frente a herramientas de testing dinámico más pesadas:
 
 ```
-[Mito Tradicional]
-Web Estática = Rápida = Libre de Errores -> Nadie audita -> Enlaces 404 y JSON-LD roto -> Penalización en Google / IA
-
-[Enfoque Riguroso Infodumper]
-Web Estática -> 335 Tests Automatizados (< 0.8s) -> CI/CD con GitHub Actions -> Cero Deuda Técnica en Producción
+┌───────────────────────────────────────────────┬───────────────────────────────────────────────┐
+│              QUÉ CUBRE ESTA SUITE             │             QUÉ NO CUBRE (FUERA DE ALCANCE)   │
+├───────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ • Existencia física en disco de CSS, JS,      │ • Comportamiento dinámico de JavaScript       │
+│   imágenes y documentos HTML enlazados.       │   (eventos clic, lógica de estado, modales).  │
+│ • Resolución de anclas locales y remotas      │ • Validación de red en enlaces externos       │
+│   (#id) presentes en el marcado estático.     │   (no hace llamadas HTTP a sitios terceros).  │
+│ • Enlaces declarados en plantillas de         │ • Envío, validación ni endpoints del          │
+│   Web Components (scripts/components.js).     │   formulario (#contact-form).                 │
+│ • Sintaxis JSON y estructura Schema.org.      │ • Medición de Core Web Vitals, velocidad de   │
+│ • Presencia del atributo alt en imágenes.     │   renderizado ni rendimiento (Lighthouse).    │
+│ • Paridad y minificación exacta entre         │ • Accesibilidad profunda (contraste cromático,│
+│   human.css y human.min.css.                  │   árbol de accesibilidad para lectores).      │
+│ • Consistencia entre sitemap.xml y archivos   │ • Atributos srcset ni llamadas url() en CSS.  │
+└───────────────────────────────────────────────┴───────────────────────────────────────────────┘
 ```
 
-### Los 5 Puntos de Fuga Invisibles:
-1. **Ruptura de Enlaces Relativos (404s Silenciosos):** Al reestructurar directorios (`blog/`, `casos/`, `recursos/`), una discrepancia en rutas relativas (`./` vs `../` o rutas absolutas mal formadas) crea enlaces muertos que ningún linter básico de texto detecta.
-2. **Anclas Fragmentadas (`#id` Huérfanas):** Botones CTA o menús que apuntan a `#skills`, `#enfoque` o `#casos` tras renombrar una sección o un identificador en el DOM.
-3. **Corrupción en Datos Estructurados (Schema.org):** Una coma huérfana, comillas sin escapar o sintaxis JSON inválida en un bloque `<script type="application/ld+json">` impide que Google, SearchGPT, Perplexity y Claude interpreten la entidad del profesional o sus servicios.
-4. **Degradación Jerárquica (SEO & Accesibilidad):** Ausencia de un encabezado `<h1>`, múltiples `<main>` en una misma página, o imágenes sin atributo `alt` descriptivo.
-5. **Divergencia de Hojas de Estilo:** Modificar el archivo de desarrollo (`human.css`) y olvidar compilar/sincronizar el archivo minificado de producción (`human.min.css`), provocando discrepancias visuales impredecibles.
+> **Propósito:** Esta suite no sustituye a herramientas especializadas como Lighthouse CI, Playwright o validadores formales de W3C. Actúa como una **primera línea de defensa ultrarrápida (< 1 s)**, con cero dependencias externas, ideal para ejecutarse localmente antes de cada commit y en GitHub Actions.
 
 ---
 
-## ⚙️ 3. Arquitectura del Motor de QA (`tests/qa_suite.py`)
+## ⚙️ 4. Arquitectura de la Suite (`tests/qa_suite.py`)
 
-Para auditar el proyecto sin introducir dependencias de cientos de megabytes (`Puppeteer`, `Playwright`, `Selenium`, etc.), construimos un **motor nativo en Python 3 puro** basado en análisis léxico del DOM y resolución matemática de grafos de navegación:
+La herramienta se implementa en un único script de Python que utiliza exclusivamente módulos de la librería estándar:
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          SUITE DE QA AUTOMATIZADA                               │
-│                         tests/qa_suite.py (Python 3)                            │
-└────────────────────────────────────────┬────────────────────────────────────────┘
-                                         │
-    ┌─────────────────┬──────────────────┼─────────────────┬──────────────────┐
-    ▼                 ▼                  ▼                 ▼                  ▼
-[MÓDULO 1]        [MÓDULO 2]         [MÓDULO 3]        [MÓDULO 4]         [MÓDULO 5]
-SEO Semántico     Integridad de      Schema.org        Infraestructura    Higiene y
-& Accesibilidad   Enlaces & Assets   JSON-LD           GEO & Agentes      Paridad CSS
-• <title>         • CSS en disco     • Sintaxis JSON   • robots.txt       • human.css vs
-• Single <h1>     • JS en disco      • @context oficial• sitemap.xml        human.min.css
-• Single <main>   • Img en disco     • @graph tipado   • llms.txt denso   • Placeholders
-• Meta & OG tags  • Enlaces 404      • Entidades válidas (GEO / AEO)        href="#"
-• alt en <img>    • Anclas #id
-```
-
-### Librerías Utilizadas (Librería Estándar Exclusiva):
-* `html.parser.HTMLParser`: Tokenizador nativo de eventos SAX para extraer etiquetas, atributos y texto sin costo de renderizado.
-* `json`: Parser estricto para certificar la validez de los grafos JSON-LD.
-* `xml.etree.ElementTree`: Validador de árboles XML para auditar `sitemap.xml`.
-* `pathlib.Path` & `urllib.parse`: Motor algebraico para resolver rutas de sistema de archivos relativas al directorio raíz.
+* **Tokenización HTML (`html.parser.HTMLParser`):** Extrae etiquetas, atributos y texto secuencialmente mediante un parser SAX liviano, sin la sobrecarga de montar un navegador headless ni construir un árbol DOM complejo.
+* **Resolución de Rutas (`pathlib.Path` y `urllib.parse`):** Resuelve algebraicamente las rutas relativas en disco respecto a la ubicación del archivo emisor, verificando la existencia real del asset o subpágina.
+* **Validación de Datos Estructurados (`json`):** Intenta parsear cada bloque `<script type="application/ld+json">`. Si el parser de Python arroja `json.JSONDecodeError`, la prueba falla de inmediato reportando la línea y el error exacto.
+* **Auditoría XML (`xml.etree.ElementTree`):** Parsea `sitemap.xml`, extrae las etiquetas `<loc>` y verifica que cada URL canónica declarada tenga su archivo físico en el repositorio.
+* **Minificación Determinista (`re`):** Normaliza y minifica `styles/human.css` eliminando comentarios y espacios redundantes, comparando el resultado string por string contra `styles/human.min.css`.
 
 ---
 
-## 🔍 4. Detalle de los 5 Módulos de Validación
+## 🔍 5. Desglose de los 5 Módulos de Control
 
-### Módulo 1: SEO Semántico, Estructura HTML5 & Accesibilidad (A11y)
-Cada uno de los 13 archivos HTML es parseado secuencialmente verificando:
-* **Título (`<title>`):** Presencia obligatoria y longitud mínima (> 8 caracteres).
-* **Jerarquía de Encabezados:** Exactamente **un único `<h1>`** por página. Si una página tiene 0 o más de 1, el test falla.
-* **Contenedor Semántico:** Exactamente **un único elemento `<main>`** estructural.
-* **Metadatos Esenciales:** 
-  - `meta description` (> 20 caracteres obligatorios).
-  - Open Graph tags indispensables: `og:title`, `og:description`, `og:image` y `og:url`.
-* **Accesibilidad de Imágenes:** Cada elemento `<img>` debe contar con un atributo `alt` no vacío y descriptivo.
+### Módulo 1: Estructura HTML5, SEO Semántico & Accesibilidad
+* **Título (`<title>`):** Debe existir y tener una longitud mínima descriptiva (> 8 caracteres).
+* **Jerarquía de Encabezados:** Exige exactamente **un único `<h1>`** por documento. Múltiples `<h1>` o la ausencia del mismo generan un fallo.
+* **Semántica:** Exactamente un único elemento `<main>` por página.
+* **Accesibilidad en Imágenes (WCAG 2.1):** Comprueba que cada etiqueta `<img>` tenga el atributo `alt` definido. Se permite `alt=""` para imágenes puramente decorativas, cumpliendo con la pauta WCAG para no obligar a redactar descripciones artificiales en recursos visuales secundarios.
+* **Metadatos Open Graph:** Comprueba `og:title`, `og:description`, `og:image` y `og:url`. Si faltan en la página principal se considera crítico; en subpáginas genera una advertencia de completitud.
 
-### Módulo 2: Integridad Relacional de Enlaces & Assets (Cero 404s)
-Construye una matriz de dependencias cruzadas en dos pasadas:
-1. **Indexación de Anclas:** En la primera pasada, extrae y almacena en un diccionario en memoria todos los `id="..."` existentes en cada uno de los archivos HTML.
-2. **Auditoría de Enlaces:**
-   - **Hojas de Estilo (`<link rel="stylesheet">`):** Verifica que el archivo CSS referenciado exista físicamente en disco.
-   - **Scripts (`<script src="...">`):** Verifica la existencia física de los módulos JavaScript (`components.js`, `gtm.js`, etc.).
-   - **Imágenes (`<img src="...">`):** Valida que el asset WebP o JPG exista en `styles/images/`.
-   - **Hipervínculos (`<a href="...">`):** 
-     - Resuelve rutas relativas inter-carpeta (ej: `../blog/index.html` llamado desde `casos/sigo.html`).
-     - Si el enlace incluye un fragmento (ej: `index.html#casos`), consulta la matriz de IDs del archivo de destino y certifica que el elemento `#casos` realmente exista.
+### Módulo 2: Integridad de Enlaces y Recursos en Disco
+Se ejecuta en dos fases:
+1. **Recolección de Identificadores:** Escanea los 13 archivos HTML y recopila en memoria un índice de todos los `id="..."` existentes.
+2. **Auditoría Cruzada:**
+   * **Assets:** Comprueba que los `<link rel="stylesheet">`, `<script src="...">` e `<img src="...">` existan en disco.
+   * **Hipervínculos (`<a href="...">`):** Valida que la ruta destino exista. Si incluye ancla (ej: `index.html#skills`), consulta el índice de IDs del archivo destino y verifica que el elemento exista.
+   * **Web Components:** Lee `scripts/components.js`, extrae los enlaces contenidos en las plantillas del encabezado y pie modular (`site-header` y `site-footer`) y valida que apunten a rutas y anclas reales.
 
-### Módulo 3: Validación Estricta de Datos Estructurados (Schema.org JSON-LD)
-* **Extracción de Bloques:** Localiza todos los nodos `<script type="application/ld+json">`.
-* **Parser JSON:** Detecta de forma temprana errores fatales como comas al final de listas, comillas mal cerradas o caracteres de escape ilegales.
-* **Validación de Esquema:** Confirma que el `@context` sea `https://schema.org` y que las entidades declaradas correspondan a tipos reconocidos (`Person`, `ProfessionalService`, `ProfilePage`, `TechArticle`, `FAQPage`, etc.).
+### Módulo 3: Validación de Schema.org JSON-LD
+* Certifica que la sintaxis JSON sea válida y libre de errores de puntuación.
+* Verifica que el `@context` declarado apunte a `https://schema.org`.
+* Confirma la presencia de tipos reconocidos (`Person`, `ProfessionalService`, `ProfilePage`, `TechArticle`, etc.).
 
-### Módulo 4: Infraestructura GEO / AEO & Rastreadores de IA
-Audita la infraestructura de indexación agéntica requerida por SearchGPT, Claude, Gemini y Perplexity:
-* **`robots.txt`:** Certifica que exista en la raíz, que declare la ruta del `Sitemap:` y que contenga directivas claras para rastreadores de IA (`GPTBot`, `ClaudeBot`, `PerplexityBot`, etc.).
-* **`sitemap.xml`:** Extrae cada entrada `<loc>` y valida matemáticamente que la página correspondiente exista físicamente en el repositorio.
-* **`llms.txt`:** Certifica la existencia del manifiesto agéntico en Markdown puro y valida que cuente con suficiente densidad semántica (> 200 caracteres de contenido estructurado).
+### Módulo 4: Infraestructura GEO / AEO & Rastreo
+* **`robots.txt`:** Valida su presencia, la declaración de la directiva `Sitemap:` y la configuración explícita de directivas para rastreadores (como GPTBot, ClaudeBot o PerplexityBot).
+* **`sitemap.xml`:** Confirma que cada entrada `<loc>` corresponda a un archivo HTML indexable existente en el repositorio.
+* **`llms.txt`:** Verifica la presencia y densidad de contenido del manifiesto en Markdown estructurado. *Nota técnica:* `llms.txt` es una propuesta emergente de la comunidad para facilitar contexto resumido a modelos de lenguaje; su adopción por buscadores tradicionales continúa en evolución.
 
-### Módulo 5: Higiene de Estilos & Paridad de Entornos
-* **Paridad CSS:** Compara el tamaño en bytes y contenido de `styles/human.css` (entorno de edición) contra `styles/human.min.css` (entorno de producción). Si existe una discrepancia mayor a 50 bytes, se emite una advertencia de desincronización.
-* **Detección de Enlaces Huérfanos:** Rastrea y alerta sobre enlaces que contengan `href="#"` sin destino específico asignado.
+### Módulo 5: Higiene de Estilos & Minificación
+* Genera la versión minificada de `styles/human.css` en memoria y la compara directamente con `styles/human.min.css`. Si el archivo minificado en disco no coincide de forma exacta con la versión derivada del fuente, emite una advertencia de desincronización.
+* Detecta enlaces con `href="#"` residuales que no tengan un propósito interactivo asignado.
 
 ---
 
-## 🛠️ 5. Hallazgos Reales y Correcciones Implementadas
+## 🛠️ 6. Diagnósticos Reales y Ajustes Realizados
 
-En la fase de diagnóstico inicial, la suite detectó y permitió resolver fallos reales antes de que alcanzaran producción:
+Durante la implementación y ejecución de la suite se detectaron aspectos que requirieron intervención directa:
 
-| # | Archivo Afectado | Fallo Detectado por la Suite | Tipo de Error | Corrección Implementada |
-|:---:|:---|:---|:---:|:---|
-| **1** | [`contacto.html`](file:///c:/TGPN/web-infodumper/contacto.html) | Ausencia de etiqueta `<h1>` (tenía `<h2>` en su lugar). | Jerarquía SEO | Se elevó el titular principal a `<h1>`, restaurando la jerarquía semántica. |
-| **2** | [`blog/index.html`](file:///c:/TGPN/web-infodumper/blog/index.html) | 4 enlaces en el aside apuntaban a subpáginas inexistentes (`arquitectura.html`, etc.). | Error 404 Silencioso | Se reorientaron los enlaces hacia las secciones activas correspondientes en `index.html#skills`. |
-| **3** | [`recursos/`](file:///c:/TGPN/web-infodumper/recursos/) | Nuevas guías y documentos PDF agregados. | Enlaces no verificados | La suite validó que `guia-geo-madurez-agentica.html`, `guia-gtm-medicion-web.html` y los PDFs asociados existan en disco. |
-| **4** | [`styles/human.min.css`](file:///c:/TGPN/web-infodumper/styles/human.min.css) | Desfase tras agregar los estilos del bloque Kaizuna. | Higiene CSS | Se sincronizó byte a byte el archivo minificado con `human.css`. |
+1. **Jerarquía en `contacto.html`:** La página utilizaba un `<h2>` como título principal. Se corrigió a `<h1>`, restableciendo la jerarquía semántica requerida por las pautas de accesibilidad y SEO.
+2. **Enlaces en el lateral de `blog/index.html`:** Enlaces que apuntaban a archivos individuales inexistentes (`arquitectura.html`, `inteligencia-artificial.html`). Se reorientaron temporalmente hacia las anclas correspondientes de `index.html#skills` como solución transitoria mientras se desarrollan las publicaciones completas.
+3. **Caché en Producción e Iconografía:** Tras añadir las nuevas secciones de perfil, el hosting continuó sirviendo una versión previa de la hoja de estilos debido a directivas de caché estática inmutable. Se resolvió incrementando el parámetro de versión (`?v=7`) en todos los archivos HTML y agregando las definiciones Unicode faltantes en `styles/fontawesome.min.css`.
 
 ---
 
-## 🚀 6. Automatización de Integración Continua (CI/CD)
+## 🚀 7. Integración Continua (CI) y Consideraciones de Despliegue
 
-Para garantizar que ningún desarrollador, asistente de IA o colaborador suba código roto al repositorio, la suite se integró en **GitHub Actions**:
+La suite se ejecuta automáticamente mediante GitHub Actions configurado en `.github/workflows/qa.yml`:
 
-### Archivo: `.github/workflows/qa.yml`
 ```yaml
 name: Automated QA & Integrity Audit
 
@@ -145,6 +130,9 @@ on:
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   qa-audit:
@@ -164,43 +152,19 @@ jobs:
           python tests/qa_suite.py --verbose
 ```
 
-### Regla de Calidad:
-> Si un solo test falla (por ejemplo, un enlace roto `404` o un JSON-LD mal formateado), el job termina con **código de error 1**, bloqueando el pull request o alertando del fallo en el commit inmediatamente.
+### ⚠️ Consideración Operativa sobre Despliegues:
+* En un flujo donde se hace `push` directo a la rama `main`, el workflow de GitHub Actions se ejecuta en paralelo y notifica el resultado del commit, **pero no cancela por sí solo un despliegue automático** que el proveedor de hosting (como Vercel o Hostinger) inicie al detectar cambios en `main`.
+* Para lograr un bloqueo preventivo real antes del despliegue, es necesario:
+  1. Activar reglas de protección de rama (*Branch Protection Rules*) en GitHub exigiendo que el check `qa-audit` pase exitosamente (*Required Status Check*).
+  2. Canalizar los cambios obligatoriamente mediante *Pull Requests* hacia `main`.
+  3. O bien condicionar el despliegue del hosting al webhook de éxito del workflow de GitHub Actions.
 
 ---
 
-## 📈 7. Resultados Finales de la Ejecución
+## 💡 8. Conclusiones Metodológicas
 
-Al ejecutar la suite en la versión definitiva de `infodumper.net`:
-
-```text
-======================================================
-🔎 INICIANDO SUITE DE QA AUTOMATIZADA — INFODUMPER.NET
-Archivos HTML auditados: 13
-======================================================
-
-1. Evaluando SEO, Accesibilidad & Metadatos HTML...
-2. Verificando Integridad de Enlaces Internos & Assets...
-3. Validando Datos Estructurados Schema.org (JSON-LD)...
-4. Verificando Infraestructura de Rastreo & Agentes (GEO / AEO)...
-5. Comprobando Higiene y Sincronización CSS...
-
-======================================================
-📊 RESUMEN DE EJECUCIÓN QA
-Total de comprobaciones : 335
-Comprobaciones exitosas  : 335
-Comprobaciones fallidas  : 0
-Advertencias detectadas  : 33 (Metadatos secundarios de subpáginas)
-======================================================
-
-🎉 TODOS LOS TESTS PASARON EXITOSAMENTE. SISTEMA 100% OPERATIVO.
-```
-
----
-
-## 💡 8. Lecciones Aprendidas & Recomendaciones para Arquitectos
-
-1. **La velocidad no compensa la fragilidad:** Una página web puede cargar en 200 ms, pero si sus enlaces internos devuelven error 404 o su Schema.org no parsea, su valor de negocio se degrada de inmediato.
-2. **Testing sin fricción:** Implementar suites en Python puro sin dependencias pesadas permite correr 335 comprobaciones en 800 milisegundos, tanto en local como en CI/CD, eliminando la pereza de testear antes de cada commit.
-3. **GEO (Generative Engine Optimization) exige rigor sintáctico:** Los rastreadores de Inteligencia Artificial (Perplexity, SearchGPT) no toleran errores de parseo en JSON-LD ni en `llms.txt`. La automatización del QA es la única forma de garantizar una indexación agéntica impecable.
-4. **Soberanía y simplicidad técnica:** No hace falta sobrecargar la infraestructura con decenas de herramientas SaaS externas para auditar la integridad de una plataforma web.
+1. **Rigor técnico sobre grandilocuencia:** Una suite de 350 comprobaciones estáticas es una herramienta práctica y sumamente útil para evitar descuidos tontos (un 404, un JSON inválido, un H1 faltante). No necesita adjetivos inflados para demostrar su valor.
+2. **Transparencia en las limitaciones:** Documentar con honestidad lo que una herramienta no cubre refuerza la credibilidad del equipo técnico y permite complementar las pruebas estáticas con auditorías dinámicas (Lighthouse, pruebas manuales y validación de formularios).
+3. **Mantenimiento del ciclo de valor:**  
+   Procesos → Datos → Software → Automatización → IA.  
+   Aplicar automatización al control de calidad del software cierra el ciclo metodológico, asegurando que cada entrega mantenga un estándar predecible y profesional.
