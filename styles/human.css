@@ -2043,4 +2043,306 @@ textarea {
     }
 }
 
+/* === SOBRE MÍ / PROFILE SECTION === */
+.about-hero-section {
+    padding: 4.5rem 0 2.5rem;
+    text-align: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 3.5rem;
+    align-items: start;
+    margin-bottom: 4.5rem;
+}
+
+.about-visual-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 5.5rem;
+}
+
+.about-meta-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.about-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--bg-subtle);
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+}
+
+.about-meta-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.about-meta-item:first-child {
+    padding-top: 0;
+}
+
+.about-meta-item i {
+    color: var(--accent);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.about-meta-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.about-content-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-lead-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.about-philosophy-card {
+    margin-top: 2rem;
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem 2.25rem;
+    box-shadow: var(--card-shadow);
+}
+
+.about-philosophy-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #145890;
+}
+
+.about-skills-section {
+    padding: 4.5rem 0 3.5rem;
+    text-align: center;
+}
+
+.skills-cloud-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 2.25rem auto 3.25rem;
+    max-width: 880px;
+}
+
+.skills-cloud-wrap .tech-badge {
+    padding: 0.55rem 1.15rem;
+    font-size: 0.92rem;
+    border-radius: var(--radius-md);
+}
+
+.about-cta-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .about-visual-col {
+        position: static;
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* === BLOQUE ECOSISTEMA: INFODUMPER & KAIZUNA === */
+.ecosystem-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2.5rem;
+}
+
+.ecosystem-intro {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.ecosystem-intro strong {
+    color: var(--text-primary);
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.75rem 0 1.5rem;
+}
+
+.ecosystem-col {
+    background: var(--bg-surface);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ecosystem-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    background: rgba(74, 107, 140, 0.12);
+    color: var(--accent);
+    align-self: flex-start;
+    margin-bottom: 0.85rem;
+}
+
+.ecosystem-badge.badge-kaizuna {
+    background: rgba(85, 130, 115, 0.12);
+    color: var(--accent-emerald);
+}
+
+.ecosystem-col h3 {
+    font-size: 1.3rem;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+}
+
+.ecosystem-subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+}
+
+.ecosystem-col.kaizuna-col .ecosystem-subtitle {
+    color: var(--accent-emerald);
+}
+
+.ecosystem-col p {
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.ecosystem-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.ecosystem-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ecosystem-list li i {
+    color: var(--accent);
+    font-size: 0.75rem;
+}
+
+.ecosystem-col.kaizuna-col .ecosystem-list li i {
+    color: var(--accent-emerald);
+}
+
+.ecosystem-link-wrap {
+    margin-top: auto;
+    padding-top: 0.75rem;
+}
+
+.ecosystem-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent-emerald);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ecosystem-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.ecosystem-footer-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: rgba(74, 107, 140, 0.05);
+    border-left: 3px solid var(--accent);
+    padding: 0.9rem 1.15rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.ecosystem-footer-note i {
+    color: var(--accent);
+    margin-top: 0.2rem;
+    font-size: 0.95rem;
+}
+
+.ecosystem-footer-note strong {
+    color: var(--text-primary);
+}
+
+.link-subtle {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.link-subtle:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+    .ecosystem-card {
+        padding: 1.5rem;
+    }
+}
+
+
 

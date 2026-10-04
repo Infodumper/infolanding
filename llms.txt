@@ -15,6 +15,11 @@
 - **LinkedIn:** [Ignacio Vizoso](https://www.linkedin.com/in/ignacio-vizoso/)
 - **GitHub:** [Infodumper GitHub](https://github.com/Infodumper)
 
+### Identidad Técnica & Consultoría: Infodumper & Kaizuna
+- **Infodumper:** Identidad profesional y técnica de Ignacio Vizoso en redes y espacios de desarrollo. Es el espacio donde investiga y comparte el trabajo técnico puro: desarrollo de software, modelado de datos, automatizaciones, pipelines de IA, arquitectura de sistemas y proyectos propios.
+- **Kaizuna (kaizuna.com.ar):** Consultora orientada a ayudar a empresas y PYMES a ordenar sus procesos, mejorar su gestión y desarrollar las herramientas tecnológicas que necesitan a medida.
+- **Sinergia:** En Infodumper se comparte el conocimiento y la experimentación técnica; en Kaizuna ese conocimiento se aplica a la resolución de problemas concretos de negocio.
+
 ### Filosofía y Enfoque Metodológico
 Ignacio Vizoso trabaja bajo una metodología estructurada en 5 etapas secuenciales para garantizar el éxito y la sostenibilidad de cada implementación tecnológica:
 ```

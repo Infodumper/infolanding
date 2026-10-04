@@ -26,6 +26,7 @@ class SiteHeader extends HTMLElement {
                     <a href="${basePath}index.html#resuelvo">Qué Resuelvo</a>
                     <a href="${basePath}index.html#skills">Skills</a>
                     <a href="${basePath}index.html#casos">Proyectos</a>
+                    <a href="${basePath}index.html#recursos">Recursos</a>
                     <a href="${basePath}sobre-mi.html">Sobre mí</a>
                     <a href="${basePath}contacto.html" class="nav-cta-btn">Contacto</a>
                 </div>

@@ -1,6 +1,9 @@
 # `< Ignacio Vizoso />` — web-infodumper (infodumper.net)
 
-> Sitio web profesional, portafolio de arquitectura técnica y plataforma de consultoría de **Ignacio Vizoso (Infodumper)** — Arquitecto de Software, Consultor de Procesos & Sistemas de IA.
+> Sitio web profesional, portafolio de arquitectura técnica y plataforma de **Ignacio Vizoso**.
+> 
+> - **Infodumper:** Identidad técnica y profesional en redes y espacios de desarrollo (software, datos, automatización, IA, arquitectura y proyectos propios).
+> - **Kaizuna:** Consultora donde ese conocimiento técnico se aplica a ayudar a empresas y PYMES a ordenar sus procesos, mejorar su gestión y desarrollar sus herramientas tecnológicas.
 
 ---
 

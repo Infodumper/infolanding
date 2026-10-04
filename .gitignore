@@ -34,3 +34,7 @@ infodumper.md
 
 # Carruseles
 carrusel*/
+
+# Tests & CI (temporalmente local)
+tests/
+.github/
