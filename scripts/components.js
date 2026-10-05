@@ -16,11 +16,11 @@ class SiteHeader extends HTMLElement {
                     <span class="brand-slash">/&gt;</span>
                 </a>
                 
-                <button class="menu-toggle" aria-label="Abrir menú">
-                    <i class="fas fa-bars"></i>
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
                 
-                <div class="nav-links">
+                <div class="nav-links" id="primary-nav">
                     <a href="${basePath}index.html#inicio">Inicio</a>
                     <a href="${basePath}index.html#enfoque">Enfoque</a>
                     <a href="${basePath}index.html#resuelvo">Qué Resuelvo</a>
@@ -36,9 +36,82 @@ class SiteHeader extends HTMLElement {
 
         const menuToggle = this.querySelector('.menu-toggle');
         const navLinks = this.querySelector('.nav-links');
+        const icon = menuToggle ? menuToggle.querySelector('i') : null;
+
         if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+            const toggleMenu = (e) => {
+                if (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                const isOpen = navLinks.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+                if (icon) {
+                    if (isOpen) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            };
+
+            const closeMenu = () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.setAttribute('aria-label', 'Abrir menú');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            };
+
+            menuToggle.addEventListener('click', toggleMenu);
+
+            // Manejo de clics en los enlaces de navegación
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href') || '';
+                    if (href.includes('#')) {
+                        const hash = href.split('#')[1];
+                        const isCurrentPage = !link.pathname || 
+                            link.pathname === window.location.pathname ||
+                            (window.location.pathname === '/' && link.pathname.endsWith('index.html')) ||
+                            (window.location.pathname.endsWith('index.html') && (link.pathname === '/' || link.pathname.endsWith('index.html')));
+
+                        if (isCurrentPage && hash) {
+                            const target = document.getElementById(hash);
+                            if (target) {
+                                e.preventDefault();
+                                closeMenu();
+                                target.scrollIntoView({ behavior: 'smooth' });
+                                if (history.pushState) {
+                                    history.pushState(null, '', '#' + hash);
+                                }
+                                return;
+                            }
+                        }
+                    }
+                    closeMenu();
+                });
+            });
+
+            // Cerrar menú al hacer clic fuera del componente
+            document.addEventListener('click', (e) => {
+                if (!this.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Cerrar con tecla Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeMenu();
+                }
             });
         }
     }
@@ -72,8 +145,8 @@ class SiteFooter extends HTMLElement {
                 </nav>
             </div>
         </footer>
-        <a href="https://wa.me/5492235869878" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/5492235869878" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
         `;
     }
