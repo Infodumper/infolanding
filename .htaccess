@@ -56,6 +56,10 @@
     RewriteCond %{HTTP_HOST} ^www\.infodumper\.net$ [NC]
     RewriteRule ^(.*)$ https://infodumper.net/$1 [L,R=301]
 
+    # Redirigir index.html directo a la raíz o subdirectorio correspondiente (evita URLs alternativas duplicadas)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index\.html\ HTTP/ [NC]
+    RewriteRule ^(.*)index\.html$ https://infodumper.net/$1 [R=301,L]
+
     # Servir archivos .html transparentemente si se llama sin extensión (Clean URLs)
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}\.html -f

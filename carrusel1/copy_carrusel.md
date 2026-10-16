@@ -1,12 +1,12 @@
 # Copy y Guía de Publicación: Carrusel GEO (Instagram)
 
 > **Formato de imágenes:** 4:5 Portrait (`1080 x 1350 px`)  
-> **Ubicación:** `carrusel1/1.jpeg` a `carrusel1/8.jpeg`  
+> **Ubicación:** `carrusel1/1.jpeg` a `carrusel1/9.jpeg`  
 > **Tema:** Bitácora GEO, Madurez Agéntica y las 3 Claves Técnicas para ser citado por Inteligencias Artificiales.
 
 ---
 
-## 📱 Secuencia de Diapositivas (Carrusel de 8 láminas)
+## 📱 Secuencia de Diapositivas (Carrusel de 9 láminas)
 
 | # | Archivo | Titular Principal | Badge | Función Narrativa |
 |:---:|:---|:---|:---:|:---|
@@ -17,7 +17,8 @@
 | **5** | `5.jpeg` | *Schema.org (JSON-LD): Estructura sin errores.* | `🧱 Grafo Semántico` | **Pilar 1:** Grafo de entidades para que la IA entienda quién eres, tus servicios y FAQs sin alucinar. |
 | **6** | `6.jpeg` | *El Manifiesto /llms.txt: Tu web en el idioma de la IA.* | `📄 Protocolo` | **Pilar 2:** Archivo Markdown directo en la raíz sin maquetación visual para lectura rápida de bots. |
 | **7** | `7.jpeg` | *robots.txt abierto: Acceso libre a los bots de IA.* | `🛡️ Permisos IA` | **Pilar 3:** Reglas de acceso sin bloqueos para GPTBot, ClaudeBot, PerplexityBot, etc. |
-| **8** | `8.jpeg` | *¿Tu web está lista? Audítala con GEO.* | `🚀 Siguiente Paso` | **Cierre & CTA:** Llamado a la acción para auditar el sitio web y visitar `infodumper.net`. |
+| **8** | `8.jpeg` | *¿Tu web está lista? Audítala con GEO.* | `🚀 Siguiente Paso` | **Transición:** Llamado a la acción para auditar el sitio web y visitar `infodumper.net`. |
+| **9** | `9.jpeg` | *Comenta GEO en esta publicación y te envío el acceso a la Bitácora GEO.* | `💬 Comenta GEO` | **Lead Magnet / Interacción:** Llamado a comentar para disparar el envío de la bitácora técnica. |
 
 ---
 
@@ -49,7 +50,9 @@ Permisos explícitos a rastreadores como GPTBot, ClaudeBot o PerplexityBot. Si l
 
 ¿Tu web está preparada para la era de la búsqueda generativa?
 
-📖 Lee la Bitácora GEO completa con todas las auditorías y pruebas en infodumper.net o contáctame por mensaje directo para coordinar un diagnóstico de tu sitio.
+💬 Comenta "GEO" en esta publicación y te envío por privado el acceso completo a la Bitácora GEO con todas las pruebas y auditorías detalladas.
+
+(También puedes leerla directamente en infodumper.net o escribirle a Ignacio por mensaje directo).
 
 ---
 #GEO #AEO #InteligenciaArtificial #SEO #SoftwareArchitecture #ArquitecturaDeSoftware #LLMs #ChatGPT #Perplexity #TechTrends #Infodumper #DesarrolloWeb #MadurezAgentica #MarketingB2B

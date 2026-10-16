@@ -9,7 +9,7 @@ class SiteHeader extends HTMLElement {
         this.innerHTML = `
         <nav class="glass-nav">
             <div class="nav-container">
-                <a href="${basePath}index.html" class="brand" aria-label="Ignacio Vizoso - Inicio">
+                <a href="${basePath}" class="brand" aria-label="Ignacio Vizoso - Inicio">
                     <img src="${basePath}styles/images/logo_nav.webp" alt="Logo Ignacio Vizoso" class="brand-logo" width="34" height="34">
                     <span class="brand-bracket">&lt;</span>
                     <span class="brand-name">Ignacio Vizoso</span>
@@ -21,12 +21,12 @@ class SiteHeader extends HTMLElement {
                 </button>
                 
                 <div class="nav-links" id="primary-nav">
-                    <a href="${basePath}index.html#inicio">Inicio</a>
-                    <a href="${basePath}index.html#enfoque">Enfoque</a>
-                    <a href="${basePath}index.html#resuelvo">Qué Resuelvo</a>
-                    <a href="${basePath}index.html#skills">Skills</a>
-                    <a href="${basePath}index.html#casos">Proyectos</a>
-                    <a href="${basePath}index.html#recursos">Recursos</a>
+                    <a href="${basePath}#inicio">Inicio</a>
+                    <a href="${basePath}#enfoque">Enfoque</a>
+                    <a href="${basePath}#resuelvo">Qué Resuelvo</a>
+                    <a href="${basePath}#skills">Skills</a>
+                    <a href="${basePath}#casos">Proyectos</a>
+                    <a href="${basePath}#recursos">Recursos</a>
                     <a href="${basePath}sobre-mi.html">Sobre mí</a>
                     <a href="${basePath}contacto.html" class="nav-cta-btn">Contacto</a>
                 </div>
@@ -141,6 +141,7 @@ class SiteFooter extends HTMLElement {
                         title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/Infodumper" target="_blank" rel="noopener noreferrer" title="GitHub"><i
                             class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="${basePath}sobre-mi.html" title="Sobre mí"><i class="fas fa-user" aria-hidden="true"></i></a>
                     <a href="${basePath}contacto.html" title="Contacto"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </nav>
             </div>

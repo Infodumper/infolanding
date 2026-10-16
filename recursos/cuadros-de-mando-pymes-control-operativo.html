@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script src="../scripts/gtm.js" defer></script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cómo pasar de datos dispersos a un cuadro de mando útil para el control operativo de una pyme: proceso, indicadores, calidad de datos y automatización.">
+    <link rel="canonical" href="https://infodumper.net/recursos/cuadros-de-mando-pymes-control-operativo.html">
+    <title>Cuadros de mando para pymes: control operativo | Recursos | Ignacio Vizoso</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <!-- CSS Principal Minificado y Precargado -->
+    <link rel="preload" href="../styles/human.min.css?v=8" as="style">
+    <link rel="stylesheet" href="../styles/human.min.css?v=8">
+
+    <!-- Fuentes Google Optimizadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+
+    <!-- FontAwesome Local -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css?v=3">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cuadros de mando para pymes: control operativo | Ignacio Vizoso">
+    <meta property="og:description" content="Cómo pasar de datos dispersos a un cuadro de mando útil para el control operativo de una pyme: proceso, indicadores, calidad de datos y automatización.">
+    <meta property="og:url" content="https://infodumper.net/recursos/cuadros-de-mando-pymes-control-operativo.html">
+    <meta property="og:image" content="https://infodumper.net/styles/images/og_preview.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cuadros de mando para pymes: control operativo | Ignacio Vizoso">
+    <meta name="twitter:description" content="Cómo pasar de datos dispersos a un cuadro de mando útil para el control operativo de una pyme: proceso, indicadores, calidad de datos y automatización.">
+    <meta name="twitter:image" content="https://infodumper.net/styles/images/og_preview.jpg">
+
+    <!-- Estilos específicos para lectura técnica de artículo -->
+    <style>
+        .article-prose {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        .article-prose p {
+            margin-bottom: 1.35rem;
+            font-size: 1.04rem;
+            line-height: 1.75;
+        }
+
+        .article-prose h2 {
+            font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+            color: #145890;
+            margin-top: 2.75rem;
+            margin-bottom: 1.15rem;
+            line-height: 1.25;
+            scroll-margin-top: 5rem;
+        }
+
+        .article-prose h3 {
+            font-size: 1.22rem;
+            color: #145890;
+            margin-top: 1.85rem;
+            margin-bottom: 0.75rem;
+            scroll-margin-top: 5rem;
+        }
+
+        .article-highlight-box {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 1.75rem;
+            margin: 2rem 0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .article-highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-quote {
+            background: rgba(20, 88, 144, 0.04);
+            border-left: 3px solid #145890;
+            padding: 1rem 1.35rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 1.75rem 0;
+        }
+
+        .article-table-wrap {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            background: #ffffff;
+            box-shadow: var(--card-shadow);
+        }
+
+        .article-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .article-table th {
+            background: var(--bg-surface);
+            color: #145890;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            padding: 1rem 1.25rem;
+            border-bottom: 2px solid var(--card-border);
+            letter-spacing: -0.01em;
+        }
+
+        .article-table td {
+            padding: 0.95rem 1.25rem;
+            border-bottom: 1px solid var(--bg-subtle);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .article-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .article-table tr:hover td {
+            background: rgba(74, 107, 140, 0.02);
+        }
+
+        .article-table td strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .step-item {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            padding: 1.35rem 1.5rem;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition-base);
+        }
+
+        .step-item:hover {
+            border-color: #145890;
+            transform: translateY(-2px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .step-number {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-full);
+            background: rgba(20, 88, 144, 0.1);
+            color: #145890;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-body h4 {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .step-body p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .bullet-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .bullet-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            padding: 1.35rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .bullet-card h4 {
+            font-size: 1.05rem;
+            color: #145890;
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bullet-card h4 i {
+            color: #5A8259;
+            font-size: 0.9rem;
+        }
+
+        .bullet-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .toc-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            position: sticky;
+            top: 5rem;
+        }
+
+        .toc-title {
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #145890;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.88rem;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            line-height: 1.35;
+            padding: 0.25rem 0;
+        }
+
+        .toc-list a:hover {
+            color: #145890;
+            transform: translateX(3px);
+        }
+
+        .toc-num {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            min-width: 1.25rem;
+        }
+
+        .sidebar-consulting-card {
+            background: linear-gradient(135deg, rgba(20, 88, 144, 0.05) 0%, rgba(90, 130, 89, 0.05) 100%);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: var(--card-shadow);
+            text-align: left;
+        }
+
+        .sidebar-consulting-card h4 {
+            margin: 0 0 0.5rem 0;
+            color: #145890;
+            font-size: 1.1rem;
+        }
+
+        .sidebar-consulting-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 960px) {
+            .case-layout-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .toc-card {
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .case-cta-banner .btn {
+            background: #ffffff !important;
+            color: #145890 !important;
+            font-weight: 700 !important;
+            border: 2px solid #ffffff !important;
+            transition: var(--transition-fast);
+        }
+
+        .case-cta-banner .btn:hover {
+            background: #f1f5f9 !important;
+            border-color: #f1f5f9 !important;
+            color: #0f4675 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://infodumper.net/recursos/cuadros-de-mando-pymes-control-operativo.html#article",
+          "headline": "Cuadros de mando para pymes: control operativo",
+          "description": "Cómo pasar de datos dispersos a un cuadro de mando útil para el control operativo de una pyme: proceso, indicadores, calidad de datos y automatización.",
+          "url": "https://infodumper.net/recursos/cuadros-de-mando-pymes-control-operativo.html",
+          "datePublished": "2026-10-15",
+          "dateModified": "2026-10-15",
+          "inLanguage": "es",
+          "author": {
+            "@type": "Person",
+            "@id": "https://infodumper.net/#person",
+            "name": "Ignacio Vizoso"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Infodumper",
+            "url": "https://infodumper.net/"
+          },
+          "keywords": [
+            "cuadro de mando",
+            "pymes",
+            "control operativo",
+            "indicadores",
+            "calidad de datos",
+            "SQL",
+            "Python",
+            "Power BI"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://infodumper.net/recursos/cuadros-de-mando-pymes-control-operativo.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es un cuadro de mando operativo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es una herramienta que muestra el estado actual de una actividad, compara los resultados con los objetivos, los plazos o las condiciones esperadas, e identifica las situaciones que requieren intervención."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por dónde se empieza?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Por un diagnóstico: qué necesita controlar la empresa, qué decisiones debe tomar y qué información tiene disponible. El resultado debería ser una lista priorizada de preguntas de negocio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hace falta inteligencia artificial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No siempre. Si una regla puede expresarse con precisión, como detectar facturas vencidas o pedidos que han superado su fecha comprometida, una consulta SQL o un programa convencional suele ser suficiente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Un cuadro de mando garantiza más ventas o menos costes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Por sí mismo, no. Las mejoras dependen de los problemas detectados, de las decisiones que se tomen y de la capacidad de llevarlas a la práctica."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHDCTSW4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <site-header base-path="../"></site-header>
+
+    <main class="content-wrapper case-header-section">
+        <!-- Breadcrumb de Retorno -->
+        <a href="../index.html#recursos" class="case-breadcrumb" aria-label="Volver a la sección de recursos">
+            <i class="fas fa-arrow-left"></i> Volver a Recursos
+        </a>
+
+        <!-- Hero Card del Artículo -->
+        <section class="case-hero-card">
+            <span class="overline overline-blue">RECURSOS / GUÍA TÉCNICA · CONTROL OPERATIVO</span>
+            <h1 class="title-blue">Cuadros de mando para pymes: control operativo</h1>
+            <p class="case-hero-subtitle">
+                De los datos dispersos a las decisiones que mejoran el negocio: una metodología integral sobre procesos, indicadores clave, calidad de datos y automatización.
+            </p>
+
+            <!-- Barra de Metadatos del Artículo -->
+            <div class="case-meta-bar">
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Autor</span>
+                    <span class="case-meta-value">Ignacio Vizoso (Infodumper)</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Categoría</span>
+                    <span class="case-meta-value">Recursos · Business Intelligence &amp; Pymes</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Enfoque Técnico</span>
+                    <span class="case-meta-value">Procesos &rarr; Datos &rarr; Software &rarr; Automatización</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Herramientas</span>
+                    <span class="case-meta-value">SQL · Python · Power BI</span>
+                </div>
+            </div>
+
+            <!-- Etiquetas Temáticas -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem;">
+                <span class="tech-badge featured"><i class="fas fa-chart-pie"></i> Cuadro de mando</span>
+                <span class="tech-badge"><i class="fas fa-building"></i> Pymes</span>
+                <span class="tech-badge"><i class="fas fa-sliders-h"></i> Control operativo</span>
+                <span class="tech-badge"><i class="fas fa-bullseye"></i> Indicadores &amp; KPIs</span>
+                <span class="tech-badge"><i class="fas fa-check-double"></i> Calidad de datos</span>
+                <span class="tech-badge"><i class="fas fa-database"></i> SQL</span>
+                <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+                <span class="tech-badge"><i class="fas fa-project-diagram"></i> Power BI</span>
+            </div>
+
+            <!-- Resumen Ejecutivo (Executive Summary Box) -->
+            <div class="architecture-manifesto-box" style="margin-top: 2rem; margin-bottom: 0;">
+                <h4><i class="fas fa-bookmark" style="margin-right: 0.5rem;"></i> En resumen</h4>
+                <ul class="case-feature-list" style="margin-top: 0.75rem;">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>El control operativo consiste en <strong>detectar desvíos mientras todavía se puede actuar</strong>, no solo en analizar lo que ya ha pasado.</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Antes de diseñar el cuadro de mando hay que <strong>ordenar el proceso y definir las reglas de negocio</strong>: qué es un pedido retrasado, una deuda vencida o una venta rentable.</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Es mejor empezar con <strong>pocos indicadores bien definidos</strong> que con muchos gráficos.</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>La <strong>calidad de los datos</strong> determina la calidad del cuadro de mando.</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Un cuadro de mando informa; es el <strong>proceso de trabajo</strong> el que convierte esa información en acción.</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Layout en 2 Columnas: Contenido Principal + Sidebar -->
+        <div class="case-layout-grid" style="grid-template-columns: 2fr 1fr; gap: 2.5rem; align-items: start;">
+            
+            <!-- Columna Principal de Lectura -->
+            <article class="case-main-col article-prose">
+                
+                <!-- Bloque Introductorio -->
+                <div class="case-block-card" style="font-size: 1.05rem;">
+                    <p>
+                        En muchas pymes, la información necesaria para gestionar el negocio ya existe. Está en hojas de cálculo de Excel, sistemas de facturación, registros de ventas, cuentas de clientes, inventarios y correos electrónicos.
+                    </p>
+                    <p>
+                        El problema no siempre es la falta de información. Muchas veces, el problema es que esa información está dispersa, se actualiza de manera irregular o no está organizada para responder las preguntas que necesita resolver quien dirige la empresa:
+                    </p>
+                    <div style="background: var(--bg-surface); border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.65rem;">
+                            <li style="display: flex; align-items: center; gap: 0.65rem; color: #145890; font-weight: 600;">
+                                <i class="fas fa-question-circle" style="color: #5A8259;"></i> ¿Cuánto hemos vendido realmente?
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.65rem; color: #145890; font-weight: 600;">
+                                <i class="fas fa-question-circle" style="color: #5A8259;"></i> ¿Qué clientes tienen pagos pendientes?
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.65rem; color: #145890; font-weight: 600;">
+                                <i class="fas fa-question-circle" style="color: #5A8259;"></i> ¿Qué productos dejan mejor margen?
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.65rem; color: #145890; font-weight: 600;">
+                                <i class="fas fa-question-circle" style="color: #5A8259;"></i> ¿Dónde se acumulan los retrasos?
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.65rem; color: #145890; font-weight: 600;">
+                                <i class="fas fa-question-circle" style="color: #5A8259;"></i> ¿Estamos cumpliendo los objetivos o solamente estamos trabajando más?
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                        Un cuadro de mando bien diseñado permite responder a estas preguntas sin depender de que alguien prepare manualmente un informe cada vez que hay que tomar una decisión.
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        Pero construir un buen cuadro de mando no consiste simplemente en conectar una base de datos y elegir algunos gráficos. Para que sea útil, primero hay que entender qué necesita controlar la empresa, cómo funciona el proceso y qué grado de fiabilidad tienen los datos disponibles.
+                    </p>
+                </div>
+
+                <!-- Sección 1 -->
+                <div class="case-block-card" id="sec-1">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-binoculars"></i>
+                        </div>
+                        <h3>1. Control operativo: saber qué está pasando mientras todavía podemos actuar</h3>
+                    </div>
+                    <p>
+                        El control operativo consiste en observar el funcionamiento cotidiano de una empresa para detectar desvíos, identificar problemas y tomar medidas correctoras a tiempo.
+                    </p>
+                    <p>
+                        No es lo mismo analizar cuánto vendimos el mes pasado que detectar hoy que una parte de los pedidos todavía no se ha entregado. El primer dato permite evaluar resultados; el segundo puede ayudar a evitar una consecuencia negativa.
+                    </p>
+                    <p>
+                        Un cuadro de mando operativo debería responder a tres preguntas fundamentales:
+                    </p>
+                    
+                    <div class="bullet-cards">
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-eye"></i> ¿Qué está pasando?</h4>
+                            <p>Mostrar el estado actual de una actividad o proceso operativo en tiempo real.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-compress-arrows-alt"></i> ¿Qué se está desviando?</h4>
+                            <p>Comparar los resultados con los objetivos, los plazos o las condiciones esperadas.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-hand-paper"></i> ¿Dónde intervenir?</h4>
+                            <p>Identificar las situaciones críticas que requieren atención y permitir su seguimiento.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-highlight-box">
+                        <h4 style="margin: 0 0 0.5rem 0; color: #145890;"><i class="fas fa-truck-loading" style="margin-right: 0.5rem;"></i> El ejemplo de la distribuidora</h4>
+                        <p>
+                            Pensemos en una distribuidora que recibe pedidos, prepara entregas y administra las cuentas de sus clientes. Su responsable puede conocer la facturación del mes y, aun así, desconocer cuántos pedidos siguen pendientes, qué entregas están retrasadas o qué clientes concentran los saldos vencidos.
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            La facturación es importante, pero no describe por sí sola el estado de la operación. Un cuadro de mando de control operativo debería integrar esas dimensiones y ayudar a pasar de una visión general del negocio a una lista concreta de situaciones que requieren una acción.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sección 2 -->
+                <div class="case-block-card" id="sec-2">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>2. Antes del cuadro de mando, hay que ordenar el proceso</h3>
+                    </div>
+                    <p>
+                        Mi punto de partida es entender el negocio antes de elegir la herramienta.
+                    </p>
+                    <p>
+                        Una empresa puede tener un sistema de gestión costoso y seguir dependiendo de hojas de cálculo manuales para saber qué ocurre. También puede trabajar con archivos relativamente sencillos y tener un control operativo eficaz.
+                    </p>
+                    <p>
+                        La diferencia no está necesariamente en la tecnología. Está en cómo se organiza la información y cómo se utiliza.
+                    </p>
+                    <p>
+                        Antes de desarrollar un cuadro de mando, conviene identificar con rigor:
+                    </p>
+
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-body">
+                                <h4>El proceso</h4>
+                                <p>Qué actividades se realizan y en qué orden cronológico exacto.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-body">
+                                <h4>Los responsables</h4>
+                                <p>Quién registra la información primaria y quién tiene la autoridad para actuar sobre ella.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-body">
+                                <h4>Los datos disponibles</h4>
+                                <p>De qué sistemas, bases de datos o archivos provienen los registros.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-body">
+                                <h4>Las reglas de negocio</h4>
+                                <p>Cómo se define exactamente un pedido pendiente, una deuda vencida o una venta rentable.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-body">
+                                <h4>Los puntos de control</h4>
+                                <p>Qué situaciones requieren seguimiento continuo y cuáles son los límites de tolerancia aceptables.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Por ejemplo, si una empresa quiere medir los pedidos retrasados, primero debe establecer cuándo se considera que un pedido está retrasado. ¿Desde la fecha prometida de entrega? ¿Desde la fecha de preparación? ¿Se excluyen los pedidos suspendidos por el cliente?
+                    </p>
+                    <p>
+                        Sin una definición compartida, dos personas pueden calcular el mismo indicador y obtener resultados diferentes, ambos aparentemente correctos.
+                    </p>
+                    <div class="article-quote">
+                        Un cuadro de mando no debería ser el lugar donde se descubren por primera vez las reglas del negocio. Debería reflejar reglas que la empresa entiende y puede verificar.
+                    </div>
+                </div>
+
+                <!-- Sección 3 -->
+                <div class="case-block-card" id="sec-3">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>3. Los indicadores tienen que servir para decidir</h3>
+                    </div>
+                    <p>
+                        Un error habitual es intentar mostrar todo lo que se puede medir. Cuantos más gráficos se añaden, mayor es el riesgo de que la información importante quede escondida entre datos secundarios.
+                    </p>
+                    <p>
+                        Es preferible comenzar con pocos indicadores vinculados directamente con los objetivos de la empresa.
+                    </p>
+
+                    <div class="article-table-wrap">
+                        <table class="article-table">
+                            <thead>
+                                <tr>
+                                    <th>Área</th>
+                                    <th>Indicador Clave</th>
+                                    <th>Pregunta que ayuda a responder</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ventas</strong></td>
+                                    <td>Facturación del período frente al objetivo</td>
+                                    <td>¿Estamos cumpliendo el objetivo comercial establecido?</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rentabilidad</strong></td>
+                                    <td>Margen bruto estimado</td>
+                                    <td>¿Qué ventas o productos aportan mayor margen real?</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pedidos</strong></td>
+                                    <td>Pedidos pendientes de entrega</td>
+                                    <td>¿Qué volumen de trabajo permanece sin completar?</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Entregas</strong></td>
+                                    <td>Porcentaje de entregas a tiempo</td>
+                                    <td>¿Estamos cumpliendo los plazos prometidos al cliente?</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cobros</strong></td>
+                                    <td>Saldo vencido</td>
+                                    <td>¿Qué importe requiere seguimiento activo de cobro?</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Clientes</strong></td>
+                                    <td>Clientes activos y frecuencia de compra</td>
+                                    <td>¿Cómo evoluciona nuestra retención comercial?</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Stock</strong></td>
+                                    <td>Productos por debajo del mínimo</td>
+                                    <td>¿Qué artículos específicos necesitan reposición urgente?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        Cada indicador necesita una definición precisa. El margen bruto, por ejemplo, no es lo mismo que la facturación. Si se conoce el importe vendido y el coste correspondiente, puede calcularse el margen bruto como la diferencia entre ambos. Sin embargo, ese resultado no equivale al beneficio neto de la empresa: todavía pueden existir gastos operativos, financieros, impositivos y otros conceptos.
+                    </p>
+                    <p>
+                        La misma precaución se aplica a los cobros. Un saldo vencido no siempre representa una deuda incobrable, y una venta registrada no significa necesariamente que el dinero ya haya entrado.
+                    </p>
+                    <div class="article-quote">
+                        <strong>Medir bien implica distinguir conceptos que, aunque parezcan similares, representan realidades diferentes.</strong>
+                    </div>
+                </div>
+
+                <!-- Sección 4 -->
+                <div class="case-block-card" id="sec-4">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>4. La calidad de los datos determina la calidad del cuadro de mando</h3>
+                    </div>
+                    <p>
+                        Un cuadro de mando puede presentar gráficos impecables y producir conclusiones equivocadas. Esto ocurre cuando existen registros duplicados, fechas incorrectas, clientes identificados de distintas maneras, importes inconsistentes o información que no se actualiza a tiempo.
+                    </p>
+                    <p>
+                        Por eso, antes de visualizar los datos, es necesario revisar su calidad mediante cinco controles prácticos:
+                    </p>
+
+                    <div class="bullet-cards">
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-puzzle-piece"></i> Integridad</h4>
+                            <p>Verificar si faltan campos o datos indispensables para calcular los indicadores.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-balance-scale"></i> Consistencia</h4>
+                            <p>Comprobar que los mismos conceptos utilicen criterios equivalentes en todos los sistemas.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-fingerprint"></i> Unicidad</h4>
+                            <p>Identificar y purgar registros duplicados que distorsionan los totales y promedios.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-calendar-check"></i> Validez</h4>
+                            <p>Asegurar que fechas, cantidades, importes y categorías respeten las reglas y rangos esperados.</p>
+                        </div>
+                        <div class="bullet-card" style="grid-column: 1 / -1;">
+                            <h4><i class="fas fa-clock"></i> Actualización</h4>
+                            <p>Monitorear cuándo se registró la información en origen y cuándo se incorporó por última vez al cuadro de mando.</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        En una primera etapa, muchos de estos controles pueden realizarse con consultas SQL, hojas de cálculo o scripts de Python. SQL permite consultar, agrupar y relacionar información almacenada en bases de datos. Python, mediante bibliotecas como pandas, permite limpiar archivos, normalizar valores, detectar inconsistencias y automatizar tareas repetitivas.
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        No siempre hace falta construir una infraestructura compleja. A veces, una consulta bien diseñada y un proceso de actualización documentado resuelven una parte importante del problema. Lo fundamental es que los resultados puedan verificarse y que las limitaciones de los datos sean conocidas.
+                    </p>
+                </div>
+
+                <!-- Sección 5 -->
+                <div class="case-block-card" id="sec-5">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>5. Cómo construir un cuadro de mando útil sin embarcarse en un proyecto interminable</h3>
+                    </div>
+                    <p>
+                        Una implementación inicial puede organizarse de manera ágil y sostenible en cinco etapas:
+                    </p>
+
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-body">
+                                <h4>Etapa 1. Diagnóstico</h4>
+                                <p>Identificar qué necesita controlar la empresa, qué decisiones debe tomar y qué información tiene disponible. El resultado debe ser una lista priorizada de preguntas de negocio, no una colección de gráficos deseados.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-body">
+                                <h4>Etapa 2. Revisión y preparación de los datos</h4>
+                                <p>Inventariar los archivos y sistemas disponibles, verificar sus estructuras y detectar problemas de calidad. Si provienen de varias fuentes, definir cómo se relacionan para evitar relaciones incorrectas entre tablas.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-body">
+                                <h4>Etapa 3. Modelo de datos</h4>
+                                <p>Organizar la información para que las consultas y cálculos sean consistentes. Desde archivos estructurados con consultas SQL hasta un modelo relacional normalizado con entidades de clientes, pedidos, productos y pagos.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-body">
+                                <h4>Etapa 4. Visualización</h4>
+                                <p>Construir una primera versión con indicadores prioritarios, su evolución, comparaciones clave y el detalle necesario para investigar desvíos. Herramientas como Power BI o Looker Studio facilitan conectar fuentes e informes visuales.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-body">
+                                <h4>Etapa 5. Validación y seguimiento</h4>
+                                <p>Comparar los resultados del cuadro de mando con los registros originales. Establecer quién revisa los indicadores, con qué frecuencia y qué hacer ante un desvío. Asegurar que el cuadro indique su última fecha de refresco.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-bottom: 0;">
+                        El resultado de estas cinco etapas no debería ser solamente un informe publicado. Debería ser una herramienta incorporada al trabajo cotidiano.
+                    </p>
+                </div>
+
+                <!-- Sección 6 -->
+                <div class="case-block-card" id="sec-6">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>6. Un ejemplo práctico: del registro de pedidos al control operativo</h3>
+                    </div>
+                    <p>
+                        Imaginemos una pyme que gestiona sus ventas mediante una base de datos y algunos archivos complementarios. Cada pedido tiene un cliente, una fecha, un importe y un estado. Las entregas se registran en otro conjunto de datos y los cobros se controlan por separado.
+                    </p>
+                    <p>
+                        A partir de esa información se puede construir un cuadro de mando estructurado en tres niveles jerárquicos:
+                    </p>
+
+                    <div class="bullet-cards">
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-chart-line"></i> Nivel 1: Visión General</h4>
+                            <p>Facturación del período, pedidos recibidos, pedidos pendientes, entregas retrasadas y saldo total vencido.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-filter"></i> Nivel 2: Análisis Detallado</h4>
+                            <p>Filtros por período, cliente, responsable, producto o estado para aislar en qué segmento se concentran los cuellos de botella.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-play-circle"></i> Nivel 3: Acción</h4>
+                            <p>El responsable identifica pedidos críticos que requieren atención inmediata, asigna seguimiento y verifica su resolución.</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Hay una distinción importante: un cuadro de mando que muestra un pedido retrasado no necesariamente permite modificar su estado ni avisar al responsable. Esa capacidad requiere una integración con el sistema de gestión, una aplicación complementaria o un procedimiento operativo definido.
+                    </p>
+                    <div class="article-quote">
+                        La visualización informa. El proceso de trabajo convierte esa información en una intervención concreta.
+                    </div>
+                    <p style="margin-bottom: 0;">
+                        También conviene separar lo que el sistema conoce de lo que solamente estima. Por ejemplo, el saldo vencido puede calcularse con certeza a partir de facturas, vencimientos y pagos registrados. En cambio, atribuir un retraso a una causa determinada exige contar con información que permita justificar esa conclusión.
+                    </p>
+                </div>
+
+                <!-- Sección 7 -->
+                <div class="case-block-card" id="sec-7">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>7. Automatización: reducir el trabajo manual sin perder el control</h3>
+                    </div>
+                    <p>
+                        Una vez que el cuadro de mando demuestra su utilidad, se puede evaluar qué tareas conviene automatizar para eliminar fricción operativa:
+                    </p>
+
+                    <ul class="case-feature-list" style="margin-bottom: 1.5rem;">
+                        <li>
+                            <i class="fas fa-file-import"></i>
+                            <div>Importar archivos y planillas periódicamente sin intervención manual.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-sync-alt"></i>
+                            <div>Ejecutar consultas programadas para recalcular indicadores de rendimiento.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-spell-check"></i>
+                            <div>Validar registros nuevos y detectar errores en el momento de la carga.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-bell"></i>
+                            <div>Identificar situaciones que superan umbrales límite y enviar alertas a los responsables.</div>
+                        </li>
+                    </ul>
+
+                    <div class="article-highlight-box">
+                        <h4 style="margin: 0 0 0.5rem 0; color: #145890;"><i class="fas fa-brain" style="margin-right: 0.5rem;"></i> ¿Cuándo hace falta Inteligencia Artificial?</h4>
+                        <p>
+                            No todas las automatizaciones requieren IA. Si una regla puede expresarse de manera precisa —por ejemplo, detectar facturas vencidas o pedidos que superaron su fecha prometida—, una consulta SQL o un programa convencional suele ser suficiente y mucho más robusto.
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            La IA resulta útil en escenarios específicos: clasificar observaciones no estructuradas, resumir informes cualitativos, interpretar consultas en lenguaje natural o ayudar a detectar anomalías complejas. Pero su incorporación tiene sentido cuando existe un problema concreto que lo justifica: <strong>añadir IA a un proceso desordenado no lo vuelve fiable automáticamente</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sección 8 -->
+                <div class="case-block-card" id="sec-8">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>8. Seguridad y trazabilidad: quién ve los datos y cómo se obtienen</h3>
+                    </div>
+                    <p>
+                        Los cuadros de mando pueden reunir información comercial, financiera y operativa sensible que no debería estar disponible para todas las personas de la organización.
+                    </p>
+                    <p>
+                        Por eso, la implementación debe contemplar los permisos de acceso por roles, la protección estricta de credenciales de conexión, el tratamiento de datos personales y los canales mediante los que se comparten los tableros.
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        Asimismo, conviene documentar el origen de cada indicador, sus reglas de cálculo y la fecha de refresco. Si un importe cambia, debe ser posible determinar si se modificó el registro original, la fórmula, el período analizado o el proceso de extracción de datos. En una pyme, estos controles pueden implementarse progresivamente sin requerir burocracia excesiva.
+                    </p>
+                </div>
+
+                <!-- Sección 9 -->
+                <div class="case-block-card" id="sec-9">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>9. Qué resultados puede esperar una pyme</h3>
+                    </div>
+                    <p>
+                        Un cuadro de mando no garantiza por sí mismo un aumento de las ventas, una reducción de costes o una mejora de la rentabilidad. Esas mejoras dependen de los problemas detectados, de las decisiones que se tomen y de la capacidad de llevarlas a la práctica.
+                    </p>
+                    <p>
+                        Sin embargo, una implementación bien planteada contribuye decisivamente a:
+                    </p>
+
+                    <div class="bullet-cards">
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-hourglass-half"></i> Ahorro de tiempo</h4>
+                            <p>Reducir horas semanales dedicadas a preparar y compilar informes manuales.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-bolt"></i> Anticipación</h4>
+                            <p>Detectar retrasos, desvíos y cuellos de botella con días de margen para corregirlos.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-ruler-combined"></i> Criterios uniformes</h4>
+                            <p>Asegurar que todas las áreas calculen márgenes y deudas bajo la misma fórmula.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-users-cog"></i> Mejor coordinación</h4>
+                            <p>Alinear los objetivos comerciales con las capacidades reales de entrega y cobro.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-clipboard-check"></i> Seguimiento real</h4>
+                            <p>Verificar objetivamente si las medidas correctoras aplicadas resuelven el problema.</p>
+                        </div>
+                        <div class="bullet-card">
+                            <h4><i class="fas fa-network-wired"></i> Menor dependencia</h4>
+                            <p>Evitar que el conocimiento operativo quede concentrado en una única persona.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-bottom: 0;">
+                        Para evaluar el resultado, conviene establecer una situación inicial y medir los cambios: cuánto tiempo se dedicaba antes a preparar el informe semanal, cuántos pedidos retrasados se detectaban fuera de plazo o qué proporción de los registros requería corrección. Sin esa referencia inicial, es imposible distinguir una mejora real de una impresión subjetiva.
+                    </p>
+                </div>
+
+                <!-- Sección 10 -->
+                <div class="case-block-card" id="sec-10">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>10. El cuadro de mando es una parte del sistema de gestión</h3>
+                    </div>
+                    <p>
+                        El valor de un cuadro de mando no está en la cantidad de indicadores ni en el aspecto visual de sus gráficos. Está en su capacidad para ayudar a comprender lo que ocurre, identificar qué necesita atención y comprobar si las decisiones tomadas producen el resultado esperado.
+                    </p>
+                    <p>
+                        Por eso, en una pyme, el desarrollo de estas herramientas debe comenzar siempre por las personas, los procesos y las necesidades operativas. Después se define cómo organizar los datos, qué indicadores utilizar y qué herramientas permiten sostener la solución a largo plazo.
+                    </p>
+                    <div class="article-highlight-box">
+                        <p style="margin: 0; font-size: 1.05rem; font-weight: 600; color: #145890;">
+                            En mi enfoque de trabajo, la tecnología tiene que responder a una necesidad del negocio. No se trata de incorporar sistemas porque estén disponibles, sino de construir herramientas que ayuden a trabajar mejor.
+                        </p>
+                    </div>
+                    <div class="article-quote" style="font-size: 1.1rem; text-align: center;">
+                        <strong>El objetivo no es tener más datos a la vista. Es disponer de información fiable para gestionar mejor la operación.</strong>
+                    </div>
+                </div>
+
+                <!-- Sección 11: Preguntas Frecuentes -->
+                <div class="case-block-card" id="sec-faq">
+                    <div class="case-block-header">
+                        <div class="case-block-icon">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <h3>Preguntas frecuentes</h3>
+                    </div>
+                    
+                    <div class="faq-list" style="margin-top: 1.5rem;">
+                        <details class="faq-item">
+                            <summary>
+                                <span>¿Qué es un cuadro de mando operativo?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <p>
+                                Es una herramienta que muestra el estado actual de una actividad, compara los resultados con los objetivos, los plazos o las condiciones esperadas, e identifica las situaciones que requieren intervención inmediata.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>¿Por dónde se empieza?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <p>
+                                Por un diagnóstico: qué necesita controlar la empresa, qué decisiones debe tomar y qué información tiene disponible. El resultado debería ser una lista priorizada de preguntas de negocio, no una lista de gráficos.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>¿Hace falta inteligencia artificial?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <p>
+                                No siempre. Si una regla puede expresarse con precisión, como detectar facturas vencidas o pedidos que han superado su fecha comprometida, una consulta SQL o un programa convencional suele ser suficiente y más estable.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>¿Un cuadro de mando garantiza más ventas o menos costes?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <p>
+                                Por sí mismo, no. Las mejoras dependen de los problemas detectados, de las decisiones que se tomen y de la capacidad organizativa de llevarlas a la práctica en el día a día.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloque Kaizuna & Aplicación en la Pyme -->
+                <div class="ecosystem-card" style="margin-top: 1rem;">
+                    <span class="overline overline-green">KAIZUNA · CONSULTORÍA OPERATIVA</span>
+                    <h3 class="title-green" style="margin-bottom: 0.85rem;">¿Querés aplicar este modelo en tu empresa?</h3>
+                    <p class="ecosystem-intro">
+                        En <strong>Kaizuna</strong> ayudamos a ordenar procesos, datos y herramientas digitales para mejorar el control operativo de empresas y pymes.
+                    </p>
+                    <p class="ecosystem-intro">
+                        Procesos, datos y herramientas digitales orientados a resolver problemas concretos de gestión sin sobrediseñar soluciones innecesarias.
+                    </p>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://kaizuna.com.ar/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #558273; border-color: #558273;">
+                            <i class="fas fa-external-link-alt"></i> Visitar Kaizuna
+                        </a>
+                        <a href="../contacto.html" class="btn btn-outline">
+                            <i class="fas fa-calendar-alt"></i> Agendar Diagnóstico
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Columna Lateral: Índice Sticky & Accesos Rápidos -->
+            <aside class="case-sidebar-col">
+                
+                <!-- Tabla de Contenidos Interactiva (TOC) -->
+                <nav class="toc-card" aria-label="Índice del artículo">
+                    <div class="toc-title">
+                        <i class="fas fa-list-ul"></i> Contenidos del artículo
+                    </div>
+                    <ul class="toc-list">
+                        <li><a href="#sec-1"><span class="toc-num">01.</span> Control operativo</a></li>
+                        <li><a href="#sec-2"><span class="toc-num">02.</span> Ordenar el proceso</a></li>
+                        <li><a href="#sec-3"><span class="toc-num">03.</span> Indicadores para decidir</a></li>
+                        <li><a href="#sec-4"><span class="toc-num">04.</span> Calidad de los datos</a></li>
+                        <li><a href="#sec-5"><span class="toc-num">05.</span> Etapas de construcción</a></li>
+                        <li><a href="#sec-6"><span class="toc-num">06.</span> Ejemplo práctico</a></li>
+                        <li><a href="#sec-7"><span class="toc-num">07.</span> Automatización &amp; IA</a></li>
+                        <li><a href="#sec-8"><span class="toc-num">08.</span> Seguridad y trazabilidad</a></li>
+                        <li><a href="#sec-9"><span class="toc-num">09.</span> Resultados esperados</a></li>
+                        <li><a href="#sec-10"><span class="toc-num">10.</span> Sistema de gestión</a></li>
+                        <li><a href="#sec-faq"><span class="toc-num">11.</span> Preguntas frecuentes</a></li>
+                    </ul>
+
+                    <!-- Tarjeta de Contacto & Consultoría -->
+                    <div class="sidebar-consulting-card">
+                        <h4>Consultoría Kaizuna</h4>
+                        <p>¿Tenés datos dispersos en hojas de cálculo y necesitás un control operativo claro?</p>
+                        <a href="../contacto.html" class="btn btn-primary" style="width: 100%; font-size: 0.88rem; padding: 0.6rem 1rem;">
+                            <i class="fas fa-calendar-check"></i> Diagnóstico sin cargo
+                        </a>
+                    </div>
+                </nav>
+
+            </aside>
+
+        </div>
+
+        <!-- CTA Banner Final -->
+        <section class="case-cta-banner">
+            <h2>¿Querés ordenar la información operativa de tu pyme?</h2>
+            <p>
+                Coordinemos una sesión de diagnóstico sin compromiso para evaluar el estado de tus procesos, la calidad de tus datos y cómo estructurar un cuadro de mando útil para tu equipo.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="../contacto.html" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700; border: 2px solid #ffffff;">
+                    <i class="fas fa-calendar-check" style="color: #145890;"></i> Agendar Diagnóstico
+                </a>
+                <a href="https://wa.me/5492235869878" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700; border: 2px solid #ffffff;">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i> Chat Directo
+                </a>
+                <a href="../index.html#recursos" class="btn btn-primary" style="background: #ffffff; color: #145890 !important; font-weight: 700; border: 2px solid #ffffff;">
+                    <i class="fas fa-arrow-left" style="color: #145890;"></i> Más Recursos
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer base-path="../"></site-footer>
+
+    <script src="../scripts/components.js?v=8" defer></script>
+</body>
+
+</html>
