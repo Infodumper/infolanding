@@ -1026,34 +1026,104 @@
         </section>
 
         <!-- ==========================================
-             RECURSOS Y BITÁCORAS
+             RECURSOS, ARTÍCULOS Y BITÁCORAS
              ========================================== -->
-        <section class="recursos-section" id="recursos" style="background-color: var(--surface); padding-top: 5rem; padding-bottom: 5rem; border-top: 1px solid var(--border-color);">
+        <section class="recursos-section" id="recursos" style="background-color: var(--surface); padding-top: 4.5rem; padding-bottom: 4.5rem; border-top: 1px solid var(--border-color);">
             <div class="content-wrapper">
-                <div class="section-center" style="padding-top: 0; padding-bottom: 2rem;">
-                    <span class="overline overline-blue">RECURSOS GRATUITOS</span>
-                    <h2 class="title-blue">Bitácoras y Guías Técnicas</h2>
+                <div class="section-center" style="padding-top: 0; padding-bottom: 2.5rem;">
+                    <span class="overline overline-blue">RECURSOS &amp; PUBLICACIONES</span>
+                    <h2 class="title-blue">Artículos, Bitácoras y Guías</h2>
                     <p class="section-subtitle">
-                        Accede a mis documentos de diseño e implementación sobre estrategias tecnológicas, medición web y despliegue de sistemas de inteligencia artificial.
+                        Análisis prácticos, metodologías de trabajo y guías técnicas de implementación sobre datos, gestión operativa e inteligencia artificial.
                     </p>
                 </div>
 
-                <div class="pipeline-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
-                    <!-- Guía 1 -->
-                    <div class="pipeline-card" style="text-align: center;">
-                        <div style="font-size: 2.5rem; color: #726c8d; margin-bottom: 1rem;"><i class="fas fa-file-pdf"></i></div>
-                        <h3 style="margin-bottom: 0.5rem;">Madurez Agéntica (GEO)</h3>
-                        <p style="margin-bottom: 1.5rem;">Transición de sistemas estáticos a arquitecturas basadas en agentes autónomos enfocadas en GEO.</p>
-                        <a href="recursos/guia-geo-madurez-agentica.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Ver Documento</a>
+                <div style="max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem;">
+                    
+                    <!-- Sub-bloque 1: Artículos Técnicos -->
+                    <div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.65rem;">
+                            <h3 style="margin: 0; font-size: 1.25rem; color: #145890; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-newspaper" style="color: var(--accent); font-size: 1.1rem;"></i> Artículos
+                            </h3>
+                            <span class="overline" style="margin: 0; font-size: 0.75rem;">Publicaciones</span>
+                        </div>
+
+                        <!-- Card de Artículo 1 -->
+                        <article style="background: #ffffff; border: 1px solid var(--card-border); border-radius: var(--radius-lg); padding: 1.85rem 2rem; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; transition: var(--transition-base);">
+                            <div style="flex: 1 1 500px; min-width: 280px;">
+                                <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                                    <span class="status-badge" style="background: rgba(20, 88, 144, 0.1); color: #145890; font-weight: 700; font-size: 0.75rem;">Control Operativo</span>
+                                    <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);"><i class="far fa-clock"></i> ~8 min de lectura</span>
+                                    <span class="status-badge" style="background: #eef5ee; color: #5A8259; font-weight: 700; border: 1px solid rgba(90, 130, 89, 0.25); font-size: 0.72rem;"><i class="fas fa-circle" style="font-size: 0.5rem; vertical-align: middle;"></i> Nuevo</span>
+                                </div>
+                                <h3 style="font-size: 1.35rem; color: #145890; margin-bottom: 0.65rem; line-height: 1.3;">
+                                    <a href="recursos/cuadros-de-mando-pymes-control-operativo.html" style="color: inherit; text-decoration: none;">Cuadros de mando para pymes: control operativo</a>
+                                </h3>
+                                <p style="margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                                    Cómo pasar de datos dispersos a un cuadro de mando útil para el control operativo de una pyme: proceso, indicadores, calidad de datos y automatización con SQL, Python y Power BI.
+                                </p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                                    <span class="tech-badge">SQL</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Power BI</span>
+                                    <span class="tech-badge">KPIs</span>
+                                </div>
+                            </div>
+                            <div style="flex-shrink: 0;">
+                                <a href="recursos/cuadros-de-mando-pymes-control-operativo.html" class="btn btn-primary" style="padding: 0.8rem 1.6rem; font-size: 0.95rem; white-space: nowrap;">
+                                    <i class="fas fa-book-open"></i> Leer Artículo
+                                </a>
+                            </div>
+                        </article>
                     </div>
 
-                    <!-- Guía 2 -->
-                    <div class="pipeline-card" style="text-align: center;">
-                        <div style="font-size: 2.5rem; color: #528999; margin-bottom: 1rem;"><i class="fas fa-file-pdf"></i></div>
-                        <h3 style="margin-bottom: 0.5rem;">Medición Web (GTM)</h3>
-                        <p style="margin-bottom: 1.5rem;">Arquitectura de medición asíncrona para captura de conversiones con Tag Manager y GA4.</p>
-                        <a href="recursos/guia-gtm-medicion-web.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Ver Documento</a>
+                    <!-- Sub-bloque 2: Bitácoras y Guías Técnicas (Compactas) -->
+                    <div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.65rem;">
+                            <h3 style="margin: 0; font-size: 1.25rem; color: #145890; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fas fa-file-pdf" style="color: #558273; font-size: 1.1rem;"></i> Bitácoras &amp; Guías Técnicas
+                            </h3>
+                            <span class="overline" style="margin: 0; font-size: 0.75rem;">Documentos PDF</span>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                            <!-- Guía 1 -->
+                            <div style="background: #ffffff; border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 1.35rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--card-shadow); transition: var(--transition-base);">
+                                <div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                                        <span class="status-badge" style="background: rgba(114, 108, 141, 0.12); color: #726c8d; font-size: 0.72rem;">Guía GEO / IA</span>
+                                        <i class="fas fa-file-pdf" style="color: #726c8d; font-size: 1.15rem;"></i>
+                                    </div>
+                                    <h4 style="font-size: 1.15rem; color: #145890; margin-bottom: 0.45rem;">Madurez Agéntica (GEO)</h4>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                        Transición de sistemas estáticos a arquitecturas basadas en agentes autónomos enfocadas en GEO.
+                                    </p>
+                                </div>
+                                <a href="recursos/guia-geo-madurez-agentica.html" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 0.6rem 1rem; font-size: 0.88rem;">
+                                    Ver Documento <i class="fas fa-arrow-right" style="margin-left: 0.35rem; font-size: 0.8rem;"></i>
+                                </a>
+                            </div>
+
+                            <!-- Guía 2 -->
+                            <div style="background: #ffffff; border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 1.35rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--card-shadow); transition: var(--transition-base);">
+                                <div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                                        <span class="status-badge" style="background: rgba(82, 137, 153, 0.12); color: #528999; font-size: 0.72rem;">Analítica &amp; GTM</span>
+                                        <i class="fas fa-file-pdf" style="color: #528999; font-size: 1.15rem;"></i>
+                                    </div>
+                                    <h4 style="font-size: 1.15rem; color: #145890; margin-bottom: 0.45rem;">Medición Web (GTM)</h4>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+                                        Arquitectura de medición asíncrona para captura de conversiones con Tag Manager y GA4.
+                                    </p>
+                                </div>
+                                <a href="recursos/guia-gtm-medicion-web.html" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 0.6rem 1rem; font-size: 0.88rem;">
+                                    Ver Documento <i class="fas fa-arrow-right" style="margin-left: 0.35rem; font-size: 0.8rem;"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
